@@ -22,7 +22,7 @@ export default {
 
   <div class="ms-container">  
     <Header :icons="store.socialIcons" :links="store.headerLinks"></Header> 
-    <HeroImage image="../../public/images/bg.jpeg" :title="store.MyName" :description="store.MyInfo"></HeroImage>  
+    <HeroImage buttonActivated image="../../public/images/bg.jpeg"  :title="store.MyName" :description="store.MyInfo"></HeroImage>  
   </div>
 
 </template>

@@ -1,6 +1,8 @@
 <script lang="ts">
+
 export default{
     name: 'Header',
+   
     props: {
 
     links: {
@@ -29,6 +31,8 @@ export default{
         <img src="" alt="Logo">
           <a v-for="link in links" :key="index" :href="link.href"> {{link.text}}</a>     
       </div>  
+
+    
     </section>
 
 </template>
@@ -40,7 +44,7 @@ export default{
     position: fixed;
     z-index: 999;
     width: 100%;
-    height: 10vh;
+    min-height: 10vh;
     background-color: rgba(0, 0, 0, 0.3);
 
     a{
