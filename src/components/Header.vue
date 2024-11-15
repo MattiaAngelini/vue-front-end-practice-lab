@@ -37,12 +37,15 @@ export default{
 @use '../assets/styles/generic.scss' as *;
 
   section{
-
-    background-color: $secondary-color;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.3);
 
     a{
       text-decoration: none;
-      color: $main-color;
+      color: white;
     }  
 
     .links{
@@ -57,7 +60,7 @@ export default{
       height: 30px;
       width: 30px;
       margin-right: 2%;
-      background-color: white;
+      background-color: black;
       padding: 4px;
       border-radius: 100%;
     }

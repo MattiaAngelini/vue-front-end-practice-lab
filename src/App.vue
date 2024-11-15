@@ -1,25 +1,17 @@
 <script lang="ts">
+import { store } from '../store.js'
 import Header from './components/Header.vue'
+import HeroImage from './components/HeroImage.vue'
 
 export default {
   components:{
-    Header
+    Header,
+    HeroImage
   },
 
   data(){
     return{
-
-      headerLinks:[
-          { text: 'Home', href: '/home' },
-          { text: 'Progetti', href: '/about' },
-          { text: 'Contatti', href: '/contact' },
-          { text: 'Linkedin', href: '/contact' },
-      ],
-      socialIcons:[
-          { logo: 'fa-brands fa-linkedin', href: 'https://www.linkedin.com/in/mattia-angelini-b00427311/' },
-          { logo: 'fa-brands fa-github', href: 'https://github.com/MattiaAngelini' },
-          
-      ],
+      store,
     }
   }
 }
@@ -29,12 +21,14 @@ export default {
 <template>
 
   <div class="ms-container">  
-    <Header :icons="socialIcons" :links="headerLinks"></Header>    
+    <Header :icons="store.socialIcons" :links="store.headerLinks"></Header> 
+    <HeroImage image="../../public/images/bg.jpeg" :title="store.MyName" :description="store.MyInfo"></HeroImage>  
   </div>
 
 </template>
 
 <style scoped lang="scss">
 @use './assets/styles/generic.scss' as *;
+
 
 </style>
