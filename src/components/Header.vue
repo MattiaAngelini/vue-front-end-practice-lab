@@ -29,7 +29,7 @@ export default{
       <!--Header Links-->
       <div class="links">
         <img src="" alt="Logo">
-          <a v-for="link in links" :key="index" :href="link.href"> {{link.text}}</a>     
+          <a v-for="(link,index) in links" :key="index" :href="link.href"> {{link.text}}</a>     
       </div>  
 
     
