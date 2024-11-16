@@ -40,7 +40,7 @@ export default{
 </template>
 
 <style scoped lang="scss">
-@use '../assets/styles/generic.scss' as *;
+@use '../../assets/styles/generic.scss' as *;
 
     button{
         padding: 20px;

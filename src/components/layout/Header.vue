@@ -28,8 +28,8 @@ export default{
 
       <!--Header Links-->
       <div class="links">
-        <img src="" alt="Logo">
-          <a v-for="(link,index) in links" :key="index" :href="link.href"> {{link.text}}</a>     
+        <div>MATTIA ANGELINI</div>
+        <a v-for="(link,index) in links" :key="index" :href="link.href"> {{link.text}}</a>     
       </div>  
 
     
@@ -38,9 +38,10 @@ export default{
 </template>
 
 <style scoped lang="scss">
-@use '../assets/styles/generic.scss' as *;
+@use '../../assets/styles/generic.scss' as *;
 
   section{
+    color: white;
     position: fixed;
     z-index: 999;
     width: 100%;
@@ -50,11 +51,13 @@ export default{
     a{
       text-decoration: none;
       color: white;
+      font-weight: 800;
     }  
 
     .links{
       display: grid;
-      grid-template-columns: 2fr repeat(4,1fr);
+      grid-template-columns: 8fr repeat(4,1fr);
+      gap: 10px;
     }
     
     .icons-container > a{

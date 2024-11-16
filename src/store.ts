@@ -7,9 +7,9 @@ export const store = reactive({
     
     headerLinks:[
         { text: 'Home', href: '/home' },
-        { text: 'Progetti', href: '/about' },
         { text: 'Contatti', href: '/contact' },
-        { text: 'Linkedin', href: 'https://www.linkedin.com/in/mattia-angelini-b00427311/' },
+        { text: 'CV', href: 'https://www.linkedin.com/in/mattia-angelini-b00427311/' },
+        
     ],
     socialIcons:[
         { logo: 'fa-brands fa-linkedin', href: 'https://www.linkedin.com/in/mattia-angelini-b00427311/' },

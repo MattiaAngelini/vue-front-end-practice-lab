@@ -1,11 +1,7 @@
 <script lang="ts">
-import MainButton from '../components/MainButton.vue'
-export default{
-    name: 'HeroImage',
 
-    components:{
-        MainButton
-    },
+export default{
+    name: 'Hero',
 
     props: {
     image: {
@@ -23,12 +19,7 @@ export default{
         required: false,
     },
 
-    buttonActivated: {
-        type: Boolean,
-        required:false,
-        default: false
-    }
-   
+
     },
 }
 </script>
@@ -40,14 +31,13 @@ export default{
         <div class="info">
             <h1 class="name">{{title}}</h1>
             <p class="description">{{ description }}</p>
-            <MainButton v-show="buttonActivated" bgColor="lightgreen" colorText="black" url="http://localhost:5173/progetti" label="Scopri"></MainButton>
         </div>   
     </div>
 
 </template>
 
 <style scoped lang="scss">
-@use '../assets/styles/generic.scss' as *;
+@use '../../assets/styles/generic.scss' as *;
 
 .hero-image{
     position: relative; 
