@@ -17,4 +17,11 @@ export const store = reactive({
         
     ],
 
+    cardsCarousel:[
+        {title: 'Work',description:'le mie esperienze lavorative' ,image: '', },
+        {title: 'Work',description:'le mie esperienze lavorative' ,image: '', },
+        {title: 'Work',description:'le mie esperienze lavorative' ,image: '', },
+        {title: 'Work',description:'le mie esperienze lavorative' ,image: '', },
+        {title: 'Work',description:'le mie esperienze lavorative' ,image: '', },
+    ]
 });

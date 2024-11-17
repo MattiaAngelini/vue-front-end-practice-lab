@@ -1,17 +1,67 @@
 <script lang="ts">
+export default{
 
+    props:{
+        cards:{
+            type: Array,
+            required:true
+        }
+    }
+}
 </script>
 
 <template>
 
-
-<div>CAROSELLO</div>
- 
- 
+    <section>
+        <div class="carousel">
+            <div v-for="(card,index) in cards" :key="index" class="ms-card">
+                <div class="info">
+                    <h5>{{ card.title }}</h5>
+                    <div>{{ card.description }}  </div> 
+                </div>       
+            </div> 
+        </div>   
+    </section>
+   
 </template>
 
 <style scoped lang="scss">
 @use '../../assets/styles/generic.scss' as *;
 
+section{
+    min-height: 100vh;
+    background-color: lightseagreen; //dinamic
+    display: flex;
+
+    .carousel{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        gap:30px;
+        min-height: 80vh;
+        width: 90%;
+        margin: auto;
+       
+            .ms-card{
+                background-image: url('../../../public/images/me.jpg'); //dinamic
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 6px;
+                transition: all 0.2s ease-in-out; 
+                color: black;
+                position: relative;
+
+                    .info{
+                        position: absolute;
+                        bottom: 10%;
+                        right: 10%;
+                    }
+            }  
+
+            .ms-card:hover{             
+                transform: scale(1.1); 
+            }          
+    }
+}
 
 </style>

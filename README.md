@@ -4,7 +4,7 @@ This project was developed to strengthen my frontend development skills using Vu
 
 The project includes:
 
-Components like Header, Footer, Hero, CTA, Banner, and more.
+Components like Header, Footer, Hero, CTA, Carousel, and more.
 Advanced type safety with TypeScript for robust and maintainable code.
 Responsive design achieved with Bootstrap and custom CSS.
 Logic management through loops, data structures, and modern patterns.
@@ -15,5 +15,5 @@ This repository represents part of my learning journey in frontend development. 
 Feedback and suggestions are highly appreciated!
 Author Information:
 Name: Mattia Angelini
-Role: Aspiring Frontend Developer
+Role: Aspiring Jr Frontend Developer
 Contact: [LinkedIn](https://www.linkedin.com/in/mattia-angelini-b00427311/)

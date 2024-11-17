@@ -33,7 +33,7 @@ export default {
   <div class="ms-container">  
     <Header :icons="store.socialIcons" :links="store.headerLinks"></Header> 
     <Hero image="../../public/images/bg.jpeg"  :title="store.MyName" :description="store.MyInfo"></Hero>  
-    <Carousel></Carousel>
+    <Carousel :cards="store.cardsCarousel"></Carousel>
     <AboutPage></AboutPage>
     <Footer></Footer>
   </div>

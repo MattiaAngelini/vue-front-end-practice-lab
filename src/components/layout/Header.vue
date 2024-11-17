@@ -23,7 +23,7 @@ export default{
     <section class="p-3">
        <!--Social Logo-->
       <div class="icons-container d-flex justify-content-end"> 
-         <a :href="icon.href" v-for="icon in icons"> <i :class="icon.logo"></i></a> 
+         <a :href="icon.href" v-for="(icon,index) in icons" :key="index"> <i :class="icon.logo"></i></a> 
       </div>
 
       <!--Header Links-->
