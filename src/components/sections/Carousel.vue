@@ -5,6 +5,11 @@ export default{
         cards:{
             type: Array,
             required:true
+        },
+        bgColor:{
+            type:String,
+            required:false,
+            default: 'white'
         }
     }
 }
@@ -12,7 +17,7 @@ export default{
 
 <template>
 
-    <section>
+    <section :style="{backgroundColor: bgColor}">
         <div :style="{gridTemplateColumns: `repeat(${cards.length}, 1fr)` }" class="carousel">
             <div v-for="(card,index) in cards" :key="index" class="ms-card">
                 <div class="info">
@@ -30,15 +35,13 @@ export default{
 
 section{
     min-height: 100vh;
-    background-color: lightseagreen; //dinamic
     display: grid;
 
     .carousel{
         display: grid;
-        // grid-template-columns: repeat(5,1fr);
         gap:30px;
         min-height: 80vh;
-        width: 90%;
+        width: 94%;
         margin: auto;
        
             .ms-card{

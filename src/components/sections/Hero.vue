@@ -2,9 +2,9 @@
 
 export default{
     name: 'Hero',
-
     props: {
-    image: {
+
+    media: {
         type: String,
         required: true,
     },
@@ -19,40 +19,45 @@ export default{
         required: false,
     },
 
-
     },
 }
 </script>
 
 <template>
 
-    <div class="hero-image">
-        <img :src="image" alt="">
-        <div class="info">
-            <h1 class="name">{{title}}</h1>
-            <p class="description">{{ description }}</p>
-        </div>   
-    </div>
+    <section>
+        <div class="hero-media">
+            <video class="hero-video" autoplay muted loop>
+                <source :src="media" type="video/mp4">
+            </video>
+            <div class="info">
+                <h1 class="name">{{title}}</h1>
+                <p class="description">{{ description }}</p>
+            </div>   
+        </div>
+    </section>
 
 </template>
 
 <style scoped lang="scss">
 @use '../../assets/styles/generic.scss' as *;
 
-.hero-image{
-    position: relative; 
+section{
+ 
+    .hero-media{
+        position: relative; 
 
-    .info{
-    color: white;
-    position: absolute;
-    bottom: 20%;
-    right: 20%;
+        .hero-video {
+            display: block;
+            width: 100%;
+            
     }
-
-    img{
-    width: 100%;
-    height: 100vh;
+        .info{
+            color: white;
+            position: absolute;
+            bottom: 30%;
+            right:  20%;
+            }
+    }
 }
-}
-
 </style>

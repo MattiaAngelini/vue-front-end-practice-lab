@@ -6,7 +6,6 @@ import Hero from '../components/sections/Hero.vue'
 import Carousel from '../components/sections/Carousel.vue'
 import AboutPage from '../pages/AboutPage.vue'
 
-
 export default {
   name:'AppHome',
 
@@ -23,7 +22,6 @@ export default {
       store,
     }
   },
-
 }
 
 </script>
@@ -32,8 +30,8 @@ export default {
 
   <div class="ms-container">  
     <Header :icons="store.socialIcons" :links="store.headerLinks"></Header> 
-    <Hero image="../../public/images/bg.jpeg"  :title="store.MyName" :description="store.MyInfo"></Hero>  
-    <Carousel :cards="store.cardsCarousel"></Carousel>
+    <Hero :media="store.heroVideo"  :title="store.MyName" :description="store.MyInfo"></Hero>  
+    <Carousel bgColor="black" :cards="store.cardsCarousel"></Carousel>
     <AboutPage></AboutPage>
     <Footer></Footer>
   </div>
