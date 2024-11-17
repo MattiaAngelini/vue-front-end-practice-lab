@@ -13,7 +13,7 @@ export default{
 <template>
 
     <section>
-        <div class="carousel">
+        <div :style="{gridTemplateColumns: `repeat(${cards.length}, 1fr)` }" class="carousel">
             <div v-for="(card,index) in cards" :key="index" class="ms-card">
                 <div class="info">
                     <h5>{{ card.title }}</h5>
@@ -31,11 +31,11 @@ export default{
 section{
     min-height: 100vh;
     background-color: lightseagreen; //dinamic
-    display: flex;
+    display: grid;
 
     .carousel{
         display: grid;
-        grid-template-columns: repeat(5,1fr);
+        // grid-template-columns: repeat(5,1fr);
         gap:30px;
         min-height: 80vh;
         width: 90%;
@@ -62,6 +62,7 @@ section{
                 transform: scale(1.1); 
             }          
     }
+
 }
 
 </style>

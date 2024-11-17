@@ -27,12 +27,11 @@ export default{
       </div>
 
       <!--Header Links-->
-      <div class="links">
+      <div  :style="{gridTemplateColumns: `8fr repeat(${links.length},1fr)`}" class="links">
         <div>MATTIA ANGELINI</div>
         <a v-for="(link,index) in links" :key="index" :href="link.href"> {{link.text}}</a>     
       </div>  
-
-    
+   
     </section>
 
 </template>
@@ -56,7 +55,6 @@ export default{
 
     .links{
       display: grid;
-      grid-template-columns: 8fr repeat(4,1fr);
       gap: 10px;
     }
     

@@ -8,13 +8,11 @@ export const store = reactive({
     headerLinks:[
         { text: 'Home', href: '/home' },
         { text: 'Contatti', href: '/contact' },
-        { text: 'CV', href: 'https://www.linkedin.com/in/mattia-angelini-b00427311/' },
-        
+        { text: 'CV', href: 'https://www.linkedin.com/in/mattia-angelini-b00427311/' },    
     ],
     socialIcons:[
         { logo: 'fa-brands fa-linkedin', href: 'https://www.linkedin.com/in/mattia-angelini-b00427311/' },
-        { logo: 'fa-brands fa-github', href: 'https://github.com/MattiaAngelini' },
-        
+        { logo: 'fa-brands fa-github', href: 'https://github.com/MattiaAngelini' }
     ],
 
     cardsCarousel:[
@@ -23,5 +21,6 @@ export const store = reactive({
         {title: 'Work',description:'le mie esperienze lavorative' ,image: '', },
         {title: 'Work',description:'le mie esperienze lavorative' ,image: '', },
         {title: 'Work',description:'le mie esperienze lavorative' ,image: '', },
+        
     ]
 });
