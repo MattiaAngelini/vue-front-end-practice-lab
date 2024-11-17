@@ -5,7 +5,8 @@ export default{
 
     label: {
         type: String,
-        required: true,
+        required: false,
+        default: 'Scopri di più'
     },
     url: {
         type: String,

@@ -40,7 +40,7 @@ section{
     .carousel{
         display: grid;
         gap:30px;
-        min-height: 80vh;
+        min-height: 60vh;
         width: 94%;
         margin: auto;
        

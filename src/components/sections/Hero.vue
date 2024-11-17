@@ -27,9 +27,12 @@ export default{
 
     <section>
         <div class="hero-media">
+
             <video class="hero-video" autoplay muted loop>
                 <source :src="media" type="video/mp4">
             </video>
+
+
             <div class="info">
                 <h1 class="name">{{title}}</h1>
                 <p class="description">{{ description }}</p>
@@ -49,8 +52,7 @@ section{
 
         .hero-video {
             display: block;
-            width: 100%;
-            
+            width: 100%;   
     }
         .info{
             color: white;

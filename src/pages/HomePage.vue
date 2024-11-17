@@ -4,7 +4,7 @@ import Header from '../components/layout/Header.vue'
 import Footer from '../components/layout/Footer.vue'
 import Hero from '../components/sections/Hero.vue'
 import Carousel from '../components/sections/Carousel.vue'
-import AboutPage from '../pages/AboutPage.vue'
+import SideBySide from '../components/sections/SideBySide.vue'
 
 export default {
   name:'AppHome',
@@ -14,7 +14,7 @@ export default {
     Footer,
     Hero,
     Carousel,
-    AboutPage
+    SideBySide
   },
 
   data(){
@@ -29,10 +29,21 @@ export default {
 <template>
 
   <div class="ms-container">  
-    <Header :icons="store.socialIcons" :links="store.headerLinks"></Header> 
-    <Hero :media="store.heroVideo"  :title="store.MyName" :description="store.MyInfo"></Hero>  
-    <Carousel bgColor="black" :cards="store.cardsCarousel"></Carousel>
-    <AboutPage></AboutPage>
+    <Header :icons="store.socialIcons" 
+            :links="store.headerLinks">
+    </Header> 
+    <Hero :media="store.heroVideo"  
+          :title="store.MyName" 
+          :description="store.MyInfo">
+    </Hero>  
+    <SideBySide :image="store.AboutMeSideBySide.image"
+                :title="store.AboutMeSideBySide.title"
+                :description="store.AboutMeSideBySide.description"
+                :urlButton="store.AboutMeSideBySide.url">
+              </SideBySide>
+    <Carousel bgColor="black" 
+              :cards="store.cardsCarousel">
+            </Carousel>
     <Footer></Footer>
   </div>
 
