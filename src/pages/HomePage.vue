@@ -6,6 +6,7 @@ import Hero from '../components/sections/Hero.vue'
 import Carousel from '../components/sections/Carousel.vue'
 import SideBySide from '../components/sections/SideBySide.vue'
 
+
 export default {
   name:'AppHome',
 
@@ -41,10 +42,10 @@ export default {
                 :description="store.AboutMeSideBySide.description"
                 :urlButton="store.AboutMeSideBySide.url">
               </SideBySide>
-    <Carousel bgColor="black" 
+    <Carousel bgColor="grey" 
               :cards="store.cardsCarousel">
-            </Carousel>
-    <Footer></Footer>
+    </Carousel>
+    <Footer :icons="store.logoFooter"></Footer>
   </div>
 
 </template>

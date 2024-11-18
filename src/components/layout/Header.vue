@@ -20,7 +20,7 @@ export default{
 
 <template>
   
-    <section class="p-3">
+    <header class="p-3">
        <!--Social Logo-->
       <div class="icons-container d-flex justify-content-end"> 
          <a :href="icon.href" v-for="(icon,index) in icons" :key="index"> <i :class="icon.logo"></i></a> 
@@ -32,14 +32,14 @@ export default{
         <a v-for="(link,index) in links" :key="index" :href="link.href"> {{link.text}}</a>     
       </div>  
    
-    </section>
+    </header>
 
 </template>
 
 <style scoped lang="scss">
 @use '../../assets/styles/generic.scss' as *;
 
-  section{
+  header{
     color: white;
     position: fixed;
     z-index: 999;

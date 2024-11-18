@@ -32,5 +32,24 @@ export const store = reactive({
         {title: 'Coding',description:'le mie esperienze lavorative' ,image: '', },
         {title: 'Trips',description:'le mie esperienze lavorative' ,image: '', },
         
+    ],
+
+    logoFooter:[
+        {image: '../public/images/logos/bootstrap.png' },
+        {image: '../public/images/logos/css.png'},
+        {image: '../public/images/logos/html.png'},
+        {image: '../public/images/logos/js.png'},
+        {image: '../public/images/logos/laravel.png'},
+        {image: '../public/images/logos/mysql.png'},
+        {image: '../public/images/logos/php.png'},
+        {image: '../public/images/logos/sass.png'},
+        {image: '../public/images/logos/ts.png'},
+        {image: '../public/images/logos/vue.png'},
+        {image: ''},
+        {image: ''},
+        {image: ''},
+        {image: ''},
+        {image: ''},
+        
     ]
 });
