@@ -1,32 +1,18 @@
 <script lang="ts">
 import MainButton from '../common/MainButton.vue';
+import { SideBySide } from '../../models/SideBySide';
 
 export default{
+    name:'SideBySide',
     components: {
         MainButton
     },
 
     props:{
-
-        image:{
-            type:String,
-            required:true
-        },
-
-        title:{
-            type:String,
-            required:true
-        },
-
-        description:{
-            type:String,
-            required:true
-        },
-
-        urlButton:{
-            type:String,
-            required:true
-        }
+      layout: {
+        type: Object as()=> SideBySide,
+        required: true
+      }
     }
 }
 
@@ -35,12 +21,12 @@ export default{
 <template>
     <section>
         <div class="container-img">
-            <img :src="image" alt="">
+            <img :src="layout.image" alt="">
         </div>
         <div class="container-info">
-            <h1>{{ title }}</h1>
-            <div>{{ description }}</div>
-            <MainButton :url="urlButton"></MainButton>
+            <h1>{{ layout.title }}</h1>
+            <div>{{ layout.description }}</div>
+            <MainButton :url="layout.urlButton"></MainButton>
         </div>
     </section>
 </template>

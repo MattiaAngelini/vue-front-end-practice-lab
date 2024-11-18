@@ -26,8 +26,9 @@ export default{
     },
 
     methods:{
-        redirectPage(){
-            window.location.href = this.url
+        redirectPage() :void{
+           const url : string = this.url
+           window.location.href = url
         }
     }
 }

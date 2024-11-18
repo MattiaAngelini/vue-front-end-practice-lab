@@ -1,16 +1,18 @@
 <script lang="ts">
-export default{
+import {Card} from '../../../src/models/Card.ts'
 
+export default{
     props:{
         cards:{
-            type: Array,
+            type: Array as () => Card[],
             required:true
         },
+        
         bgColor:{
             type:String,
             required:false,
             default: 'white'
-        }
+        },     
     }
 }
 </script>

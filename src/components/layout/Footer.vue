@@ -1,6 +1,7 @@
 <script lang="ts">
 
 export default{
+    name:'Footer',
     props:{
         icons: {
         type: Array as () => {image: string; }[],

@@ -1,5 +1,8 @@
 // store.js
 import { reactive } from 'vue'
+import { Card } from '../src/models/Card.ts'
+import { SideBySide } from './models/SideBySide.ts';
+
 export const store = reactive({
 
     //props:
@@ -19,19 +22,18 @@ export const store = reactive({
 
     heroVideo: '../public/video/heroVideo.mp4',
 
-    AboutMeSideBySide:{
-        title: 'Mattia',
-        description: 'Benvenuti sul mio profilo, mi chiamo Mattia Angelini ecc.ecc.',
-        image: '../public/images/bg.jpeg',
-        urlAboutMe: 'https://github.com/MattiaAngelini/front-end-practice-lab'
-    },
+    AboutMeSideBySide: new SideBySide(
+        'Mattia',
+        'Benvenuti sul mio profilo, mi chiamo Mattia Angelini ecc.ecc.',
+        '../public/images/laptop.avif',
+        'https://github.com/MattiaAngelini/front-end-practice-lab' // Questo è urlButton
+      ),
 
     cardsCarousel:[
-        {title: 'Work',description:'le mie esperienze lavorative' ,image: '', },
-        {title: 'BJJ',description:'le mie esperienze lavorative' ,image: '', },
-        {title: 'Coding',description:'le mie esperienze lavorative' ,image: '', },
-        {title: 'Trips',description:'le mie esperienze lavorative' ,image: '', },
-        
+        new Card('Work', 'Le mie esperienze lavorative', '../public/images/work.jpg'),
+        new Card('BJJ', 'Le mie esperienze di jiu-jitsu', '../public/images/bjj.jpg'),
+        new Card('Coding', 'Le mie esperienze di coding', '../public/images/coding.jpg'),
+        new Card('Trips', 'i miei viaggi','../public/images/trips.jpg'),
     ],
 
     logoFooter:[

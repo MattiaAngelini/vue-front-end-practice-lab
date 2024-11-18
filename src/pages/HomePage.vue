@@ -6,7 +6,6 @@ import Hero from '../components/sections/Hero.vue'
 import Carousel from '../components/sections/Carousel.vue'
 import SideBySide from '../components/sections/SideBySide.vue'
 
-
 export default {
   name:'AppHome',
 
@@ -15,7 +14,7 @@ export default {
     Footer,
     Hero,
     Carousel,
-    SideBySide
+    SideBySide,
   },
 
   data(){
@@ -37,12 +36,9 @@ export default {
           :title="store.MyName" 
           :description="store.MyInfo">
     </Hero>  
-    <SideBySide :image="store.AboutMeSideBySide.image"
-                :title="store.AboutMeSideBySide.title"
-                :description="store.AboutMeSideBySide.description"
-                :urlButton="store.AboutMeSideBySide.url">
+    <SideBySide :layout="store.AboutMeSideBySide">
               </SideBySide>
-    <Carousel bgColor="grey" 
+    <Carousel bgColor="black" 
               :cards="store.cardsCarousel">
     </Carousel>
     <Footer :icons="store.logoFooter"></Footer>
@@ -52,6 +48,5 @@ export default {
 
 <style scoped lang="scss">
 @use '../assets/styles/generic.scss' as *;
-
 
 </style>
