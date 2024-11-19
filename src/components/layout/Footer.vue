@@ -1,10 +1,12 @@
 <script lang="ts">
 
+import {Footer} from '../../models/Footer.ts'
+
 export default{
     name:'Footer',
     props:{
         icons: {
-        type: Array as () => {image: string; }[],
+        type: Array as () => Footer[],
         required: true,
     },
     }
@@ -12,13 +14,15 @@ export default{
 </script>
 
 <template>
+
     <footer>
         <h1 class="text-center">LINGUAGGI E STRUMENTI CON CUI LAVORO</h1>
 
         <section class="layout-footer">
+
             <div class="container container-logo">
                 <div v-for="(icon,index) in icons" :key="index" class="logo">
-                    <img v-show="icon.image !==''" :src="icon.image" alt="">
+                    <img v-show="icon.image !==''" :src="icon.image" :alt="icon.altText">
                 </div>
             </div>
 
@@ -44,25 +48,34 @@ footer{
     h1{color: white;
         padding: 6%}
 
+        .layout-footer{
+            width: 55%;
+            margin: auto;
+        }
         .container-logo{      
+
             display: grid;
             justify-items: center;
-            grid-template-columns: repeat(5,1fr);
+            grid-template-columns: repeat(4,1fr);
             grid-template-rows: repeat(3,1fr);
             gap: 4px;
-            background: radial-gradient(circle, rgba(255, 103, 31, 0.6) 0%, rgba(0, 0, 0, 0) 75%);
+            background: radial-gradient(circle, rgba(255, 103, 31, 0.6) 0%, rgba(0, 0, 0, 0) 60%);
             
                 .logo{
-                    height: 220px;
+                    height: 200px;
                     width: 100%;
                     padding: 8%;
-                    background-color:  rgb(41, 36, 36);
-                    
-                    img{
-                        height: 100%;
-                        width: 100%;
-                    }
+                    background-color:  rgb(41, 36, 36);                
+                        img{
+                            height: 100%;
+                            width: 100%;
+                        }
                 }
+
+                .logo:hover{
+                        background:radial-gradient(circle, rgb(227, 217, 212) 0%, rgba(0, 0, 0, 0) 60%);
+                        transition: all 0.3s ease-in-out; 
+                    }
         }
         .policy{
             display: flex;

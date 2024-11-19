@@ -1,20 +1,24 @@
 <script lang="ts">
-
+import {Header} from '../../models/Header.ts'
 export default{
     name: 'Header',
    
     props: {
-
-    links: {
-        type: Array as () => {text: string; href: string }[],
-        required: true,
+      links: {
+          type: Array as () => Header[],
+          required: true,
+      },
+      icons: {
+          type: Array as () => Header[],
+          required: true,
+      },
     },
-    icons: {
-        type: Array as () => {logo: string; href: string }[],
-        required: true,
-    },
-
-    },
+    
+    computed:{
+      Columns():Record<string,string> {
+        return {gridTemplateColumns: `8fr repeat(${this.links.length},1fr)`}
+      }
+    }
 }
 </script>
 
@@ -27,7 +31,7 @@ export default{
       </div>
 
       <!--Header Links-->
-      <div  :style="{gridTemplateColumns: `8fr repeat(${links.length},1fr)`}" class="links">
+      <div :style="Columns" class="links">
         <div>MATTIA ANGELINI</div>
         <a v-for="(link,index) in links" :key="index" :href="link.href"> {{link.text}}</a>     
       </div>  
