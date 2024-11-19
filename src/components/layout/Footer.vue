@@ -1,7 +1,5 @@
 <script lang="ts">
-
 import {Footer} from '../../models/Footer.ts'
-
 export default{
     name:'Footer',
     props:{
@@ -9,18 +7,15 @@ export default{
         type: Array as () => Footer[],
         required: true,
     },
-    }
+    },
 }
 </script>
 
 <template>
-
     <footer>
         <h1 class="text-center">LINGUAGGI E STRUMENTI CON CUI LAVORO</h1>
-
-        <section class="layout-footer">
-
-            <div class="container container-logo">
+        <section>
+            <div class="layout-footer container-logo">
                 <div v-for="(icon,index) in icons" :key="index" class="logo">
                     <img v-show="icon.image !==''" :src="icon.image" :alt="icon.altText">
                 </div>
@@ -31,10 +26,8 @@ export default{
                 <div>All Rights Reserved</div>
                 <div>POWERED By Me and Myself</div>
             </div>
-
         </section>
     </footer>
-
 </template>
 
 <style scoped lang="scss">
@@ -53,7 +46,6 @@ footer{
             margin: auto;
         }
         .container-logo{      
-
             display: grid;
             justify-items: center;
             grid-template-columns: repeat(4,1fr);
@@ -71,9 +63,8 @@ footer{
                             width: 100%;
                         }
                 }
-
                 .logo:hover{
-                        background:radial-gradient(circle, rgb(227, 217, 212) 0%, rgba(0, 0, 0, 0) 60%);
+                        background: radial-gradient(rgb(211, 65, 17) 0%, rgb(41, 36, 36) 70%);
                         transition: all 0.3s ease-in-out; 
                     }
         }

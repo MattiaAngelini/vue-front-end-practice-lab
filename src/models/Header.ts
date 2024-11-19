@@ -1,4 +1,4 @@
 export interface Header {
-    html: string;
+    label: string;
     href: string;
   }

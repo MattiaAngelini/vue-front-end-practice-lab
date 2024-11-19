@@ -53,7 +53,7 @@ section{
         margin: auto;
        
             .ms-card{
-                background-image: url('../../../public/images/me.jpg'); //dinamic
+                background-image: url('../../../public/images/me.jpg'); //dinamic RICORDA
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -73,7 +73,5 @@ section{
                 transform: scale(1.1); 
             }          
     }
-
 }
-
 </style>

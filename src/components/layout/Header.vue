@@ -16,7 +16,7 @@ export default{
     
     computed:{
       Columns():Record<string,string> {
-        return {gridTemplateColumns: `8fr repeat(${this.links.length},1fr)`}
+        return {gridTemplateColumns: `6fr repeat(${this.links.length},2fr)`}
       }
     }
 }
@@ -27,13 +27,13 @@ export default{
     <header class="p-3">
        <!--Social Logo-->
       <div class="icons-container d-flex justify-content-end"> 
-         <a :href="icon.href" v-for="(icon,index) in icons" :key="index"> <i :class="icon.logo"></i></a> 
+         <a :href="icon.href" v-for="(icon,index) in icons" :key="index"> <i :class="icon.label"></i></a> 
       </div>
 
       <!--Header Links-->
       <div :style="Columns" class="links">
-        <div>MATTIA ANGELINI</div>
-        <a v-for="(link,index) in links" :key="index" :href="link.href"> {{link.text}}</a>     
+        <div class="myname">MATTIA ANGELINI</div>
+        <a v-for="(link,index) in links" :key="index" :href="link.href"> {{link.label}}</a>     
       </div>  
    
     </header>
@@ -49,19 +49,21 @@ export default{
     z-index: 999;
     width: 100%;
     min-height: 10vh;
-    background-color: rgba(0, 0, 0, 0.3);
-
+    background-color: rgba(0, 0, 0, 0.8);
     a{
       text-decoration: none;
       color: white;
-      font-weight: 800;
+      font-weight: 500;
     }  
-
     .links{
       display: grid;
       gap: 10px;
+
+        .myname{
+          font-size: 20px;
+          font-weight: 900;
+        }
     }
-    
     .icons-container > a{
       display: flex;
       align-items: center;
@@ -73,7 +75,5 @@ export default{
       padding: 4px;
       border-radius: 100%;
     }
-
   }
-
 </style>

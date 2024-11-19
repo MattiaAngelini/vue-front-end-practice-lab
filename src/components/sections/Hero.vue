@@ -1,5 +1,4 @@
 <script lang="ts">
-
 export default{
     name: 'Hero',
     props: {
@@ -24,7 +23,6 @@ export default{
 </script>
 
 <template>
-
     <section>
         <div class="hero-media">
 
@@ -39,7 +37,6 @@ export default{
             </div>   
         </div>
     </section>
-
 </template>
 
 <style scoped lang="scss">

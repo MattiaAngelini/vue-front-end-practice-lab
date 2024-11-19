@@ -1,13 +1,18 @@
 <script lang="ts">
-import MainButton from '../common/MainButton.vue';
+import ButtonHref from '../common/ButtonHref.vue';
 import { SideBySide } from '../../models/SideBySide';
-
+import {store} from '../../store.ts'
 export default{
     name:'SideBySide',
     components: {
-        MainButton
+        ButtonHref,
     },
 
+    data() {
+        return{
+            store
+        }
+    },
     props:{
       layout: {
         type: Object as()=> SideBySide,
@@ -26,7 +31,7 @@ export default{
         <div class="container-info">
             <h1>{{ layout.title }}</h1>
             <div>{{ layout.description }}</div>
-            <MainButton :url="layout.urlButton"></MainButton>
+            <ButtonHref :button="store.btnSideBySide"></ButtonHref>
         </div>
     </section>
 </template>
@@ -46,7 +51,6 @@ section{
                 height: 100%;
              }
         }
-
         .container-info{
             margin: auto;
             padding: 10%;

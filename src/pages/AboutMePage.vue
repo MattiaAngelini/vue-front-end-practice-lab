@@ -1,5 +1,4 @@
 <script lang="ts">
-
 </script>
 
 <template>
@@ -16,8 +15,5 @@
 section{
     min-height: 100vh;
     background-color: lightgray;
-  
 }
-
-
 </style>

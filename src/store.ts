@@ -1,21 +1,21 @@
 // store.js
 import { reactive } from 'vue'
+import { ButtonHref } from './models/ButtonHref.ts';
 
 export const store = reactive({
-
     //props:
     MyName: 'Mattia Angelini',
     MyInfo: 'Front-end Web Developer',
     
     headerLinks:[
-        { html: 'Home', href: '/home' },
-        { html: 'Contatti', href: '/contact' },
-        { html: 'CV', href: 'https://www.linkedin.com/in/mattia-angelini-b00427311/' },
+        { label: 'Home', href: '/home' },
+        { label: 'Contatti', href: '/contact' },
+        { label: 'CV', href: 'https://www.linkedin.com/in/mattia-angelini-b00427311/' },
     ],
 
     socialIcons:[
-        { html: 'fa-brands fa-linkedin', href: 'https://www.linkedin.com/in/mattia-angelini-b00427311/' },
-        { html: 'fa-brands fa-github', href: 'https://github.com/MattiaAngelini' }
+        { label: 'fa-brands fa-linkedin', href: 'https://www.linkedin.com/in/mattia-angelini-b00427311/' },
+        { label: 'fa-brands fa-github', href: 'https://github.com/MattiaAngelini' }
     ],
 
     heroVideo: '../public/video/heroVideo.mp4',
@@ -61,7 +61,14 @@ export const store = reactive({
       { image: '../public/images/logos/sass.png', altText: 'sass' },
       { image: '../public/images/logos/ts.png', altText: 'ts' },
       { image: '../public/images/logos/vue.png', altText: 'vue' },
-      { image: '', altText: '' },
-      { image: '', altText: '' },
-    ]
+      { image: '../public/images/logos/node.png', altText: 'node' },
+      { image: '../public/images/logos/github.png', altText: 'github' },
+    ],
+  
+    btnSideBySide: new ButtonHref(
+        'Leggi di più', // Titolo
+        'https://www.cristianoronaldo.com/#cr7', // URL
+        'orange', // Colore di sfondo
+        'black' // Colore del testo
+      ),
 });
