@@ -1,5 +1,6 @@
 <script lang="ts">
 import {Footer} from '../../models/Footer.ts'
+
 export default{
     name:'Footer',
     props:{

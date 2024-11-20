@@ -61,7 +61,7 @@ section{
                 transition: all 0.2s ease-in-out; 
                 color: black;
                 position: relative;
-
+                
                     .info{
                         position: absolute;
                         bottom: 10%;
@@ -73,5 +73,7 @@ section{
                 transform: scale(1.1); 
             }          
     }
+
 }
+
 </style>

@@ -19,12 +19,14 @@ export default{
 
 <template>
     <Header :icons="mainStore.socialIcons" 
-            :links="mainStore.headerLinks"/>
+            :links="mainStore.headerLinks"     
+            :headerHamburger="mainStore.headerHamburger"/>
     <router-view></router-view>
     <Footer :icons="mainStore.logoFooter" />
 </template>
 
 <style scoped lang="scss">
 @use './assets/styles/generic.scss' as *;
+@use './assets//styles/partials/mediaqueries.scss' as *;
 
 </style>

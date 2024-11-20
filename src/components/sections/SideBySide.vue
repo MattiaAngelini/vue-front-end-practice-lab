@@ -2,6 +2,7 @@
 import ButtonHref from '../common/ButtonHref.vue';
 import { SideBySide } from '../../models/SideBySide';
 import { useMainStore } from '../../store'
+
 export default{
     name:'SideBySide',
     components: {
@@ -10,7 +11,7 @@ export default{
  
     props:{
       layout: {
-        type: Object as()=> SideBySide,
+        type: Object as()=>SideBySide,
         required: true
       }
     },

@@ -4,11 +4,12 @@ import {ButtonHref} from '../../models/ButtonHref.ts'
 export default{
     name: 'MainButton',
     props: {
-    button: {
-        type: Object as()=>ButtonHref,
-        required: true,
+
+        button: {
+            type: Object as()=>ButtonHref,
+            required: true,
+            },
         },
-    },
 }
 
 </script>

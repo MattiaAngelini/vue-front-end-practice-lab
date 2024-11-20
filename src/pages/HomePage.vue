@@ -41,5 +41,6 @@ export default {
 
 <style scoped lang="scss">
 @use '../assets/styles/generic.scss' as *;
+@use '../assets//styles/partials/mediaqueries.scss' as *;
 
 </style>

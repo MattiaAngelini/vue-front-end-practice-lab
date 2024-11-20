@@ -1,33 +1,54 @@
 import { defineStore } from 'pinia';
 import { ButtonHref } from './models/ButtonHref.ts';
+import { Hamburger } from './models/Hamburger.ts';
 
 export const useMainStore = defineStore('main', {
   state: () => ({ //data
    
       //props:
-      MyName: 'Mattia Angelini',
-      MyInfo: 'Front-end Web Developer',
-      
+    
+      //************HEADER ************//
       headerLinks: [
           { label: 'Home', href: '/home' },
           { label: 'Contatti', href: '/contact' },
           { label: 'CV', href: 'https://www.linkedin.com/in/mattia-angelini-b00427311/' },
       ],
-  
+
+      headerHamburger: new Hamburger(
+        'Mattia Angelini',
+        'fa-solid fa-bars', 
+        'grey', 
+        'black', 
+        'medium',
+        ['Home','Contatti','CV']
+      ),
+
       socialIcons: [
           { label: 'fa-brands fa-linkedin', href: 'https://www.linkedin.com/in/mattia-angelini-b00427311/' },
           { label: 'fa-brands fa-github', href: 'https://github.com/MattiaAngelini' }
       ],
+      //************HERO************//
   
       heroVideo: '../public/video/heroVideo.mp4',
+      MyName: 'Mattia Angelini',
+      MyInfo: 'Front-end Web Developer',
   
+      //************SIDEBYSIDE************//
+
       AboutMeSideBySide: {
           title: 'Mattia',
           description: 'Benvenuti sul mio profilo, mi chiamo Mattia Angelini ecc.ecc.',
           image: '../public/images/laptop.avif',
-          urlButton: 'https://github.com/MattiaAngelini/front-end-practice-lab' 
       },
+
+      btnSideBySide: new ButtonHref(
+        'Leggi di più', // Titolo
+        'https://www.cristianoronaldo.com/#cr7', // URL
+        'orange', // Colore di sfondo
+        'black' // Colore del testo
+      ),
   
+      //************CAROUSEL***********//
       cardsCarousel: [
         {
           title: 'Work',
@@ -50,7 +71,7 @@ export const useMainStore = defineStore('main', {
           image: '../public/images/trips.jpg',
         },
       ],
-      
+       //************FOOTER************//
       logoFooter: [
         { image: '../public/images/logos/bootstrap.png', altText: 'bootstrap' },
         { image: '../public/images/logos/css.png', altText: 'css' },
@@ -66,12 +87,7 @@ export const useMainStore = defineStore('main', {
         { image: '../public/images/logos/github.png', altText: 'github' },
       ],
     
-      btnSideBySide: new ButtonHref(
-          'Leggi di più', // Titolo
-          'https://www.cristianoronaldo.com/#cr7', // URL
-          'orange', // Colore di sfondo
-          'black' // Colore del testo
-      ),
+    
   }),
   
   getters: {   //computed of store
