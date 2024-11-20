@@ -1,5 +1,5 @@
 <script lang="ts">
-import { store } from '../store.ts'
+import { useMainStore } from '../store.ts'
 import Header from '../components/layout/Header.vue'
 import Footer from '../components/layout/Footer.vue'
 import Hero from '../components/sections/Hero.vue'
@@ -17,10 +17,9 @@ export default {
     SideBySide,
   },
 
-  data(){
-    return{
-      store,
-    }
+  setup() {
+    const mainStore = useMainStore(); // Usa lo store
+    return { mainStore };
   },
 }
 
@@ -29,19 +28,19 @@ export default {
 <template>
 
   <div class="ms-container">  
-    <Header :icons="store.socialIcons" 
-            :links="store.headerLinks">
+    <Header :icons="mainStore.socialIcons" 
+            :links="mainStore.headerLinks">
     </Header> 
-    <Hero :media="store.heroVideo"  
-          :title="store.MyName" 
-          :description="store.MyInfo">
+    <Hero :media="mainStore.heroVideo"  
+          :title="mainStore.MyName" 
+          :description="mainStore.MyInfo">
     </Hero>  
-    <SideBySide :layout="store.AboutMeSideBySide">
+    <SideBySide :layout="mainStore.AboutMeSideBySide">
               </SideBySide>
     <Carousel bgColor="black" 
-              :cards="store.cardsCarousel">
+              :cards="mainStore.cardsCarousel">
     </Carousel>
-    <Footer :icons="store.logoFooter"></Footer>
+    <Footer :icons="mainStore.logoFooter"></Footer>
   </div>
 
 </template>
