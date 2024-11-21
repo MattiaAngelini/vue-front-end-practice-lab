@@ -1,34 +1,34 @@
 <script lang="ts">
-import {ButtonHref} from '../../models/ButtonHref.ts'
+import { ButtonHref } from '../../models/ButtonHref.ts';
 
-export default{
+export default {
     name: 'MainButton',
     props: {
-
         button: {
-            type: Object as()=>ButtonHref,
+            type: Object as () => ButtonHref,
             required: true,
-            },
         },
-}
-
+    },
+};
 </script>
 
 <template>
-    <button :style="{backgroundColor: button.bgColor, 
-                     color: button.color }" 
-            @click="button.locationHref">{{button.label}}
+    <button 
+        :style="{ backgroundColor: button.bgColor, color: button.color }" 
+        @click="button.locationHref"
+    >
+        {{ button.label }}
     </button>
 </template>
 
 <style scoped lang="scss">
 @use '../../assets/styles/generic.scss' as *;
 
-    button{
-        padding: 20px;
-        border-radius: 10px;
-        font-weight: 800;
-        max-width: 300px;
-    }
-
+button {
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: 800;
+    max-width: 300px;
+}
 </style>
+
