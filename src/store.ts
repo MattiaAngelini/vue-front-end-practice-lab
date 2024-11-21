@@ -6,7 +6,6 @@ export const useMainStore = defineStore('main', {
   state: () => ({ //data
    
       //props:
-    
       //************HEADER ************//
       headerLinks: [
           { label: 'Home', href: '/home' },
@@ -15,12 +14,15 @@ export const useMainStore = defineStore('main', {
       ],
 
       headerHamburger: new Hamburger(
-        'Mattia Angelini',
-        'fa-solid fa-bars', 
-        'grey', 
-        'black', 
-        'medium',
-        ['Home','Contatti','CV']
+        'Mattia Angelini', //title
+        'fa-solid fa-bars', //icon
+        'grey', //bbgColor
+        'black', //color
+        'medium', //size
+        //links
+        [ { link: 'Home', url: 'http://localhost:5174/Home' },
+          { link: 'Contatti', url: 'http://localhost:5174/Contatti' },
+          { link: 'CV', url: 'http://localhost:5174/Cv' },]
       ),
 
       socialIcons: [
@@ -36,16 +38,16 @@ export const useMainStore = defineStore('main', {
       //************SIDEBYSIDE************//
 
       AboutMeSideBySide: {
-          title: 'Mattia',
-          description: 'Benvenuti sul mio profilo, mi chiamo Mattia Angelini ecc.ecc.',
+          title: 'Il mio sito vetrina',
+          description: 'Benvenuti sul mio sito portfolio, se sei qui perchè cerchi informazioni sul mio background e vuoi scoprire chi sono ho preparato una lettera di presentazione al link qui sotto.',
           image: '../public/images/laptop.avif',
       },
 
       btnSideBySide: new ButtonHref(
-        'Leggi di più', // Titolo
+        'Presentazione!', // Titolo
         'https://www.cristianoronaldo.com/#cr7', // URL
-        'orange', // Colore di sfondo
-        'black' // Colore del testo
+        'darkgrey', // Colore di sfondo
+        'orange' // Colore del testo
       ),
   
       //************CAROUSEL***********//
@@ -70,6 +72,7 @@ export const useMainStore = defineStore('main', {
           description: 'I miei viaggi',
           image: '../public/images/trips.jpg',
         },
+        
       ],
        //************FOOTER************//
       logoFooter: [

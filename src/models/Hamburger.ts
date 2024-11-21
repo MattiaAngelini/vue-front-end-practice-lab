@@ -4,11 +4,11 @@ export class Hamburger {
     bgColor: string
     color: string
     size: string
-    links: string[]
+    links: { link: string; url: string }[]
     
     constructor(title: string,icon:string,
                 bgColor:string,  color: string,
-                size:string, links: string[]
+                size:string, links: { link: string; url: string }[]
                ){
         this.title = title
         this.icon = icon

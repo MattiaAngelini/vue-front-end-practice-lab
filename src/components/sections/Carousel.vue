@@ -1,7 +1,9 @@
 <script lang="ts">
 import {Card} from '../../../src/models/Card.ts'
+import {currentWindow} from '../../assets/styles/breakpoint.ts'
 
 export default{
+    name:'Carousel',
     props:{
         cards:{
             type: Array as () => Card[],
@@ -15,10 +17,28 @@ export default{
         },     
     },
 
-    computed:{
-        Columns(): Record<string,string>{
-            return {gridTemplateColumns: `repeat(${this.cards.length}, 1fr)` }
+    data(){
+        return{
+            gridColumns: this.cards.length,
+            sizeWindow: currentWindow(window.innerWidth)
         }
+    },
+
+    computed: {
+    columns() {
+        if (this.sizeWindow === 'xl' || this.sizeWindow === 'xxl') {
+            return { gridTemplateColumns: `repeat(${this.gridColumns}, 1fr)` };
+        } else if(this.sizeWindow === 'lg' || this.sizeWindow === 'md' || this.sizeWindow === 'sm' ) {
+            return { gridTemplateColumns: `repeat(2, 1fr)` };
+        } else if( this.sizeWindow === 'xs' || this.sizeWindow === 'xxs') {
+            return { gridTemplateColumns: `1fr`, height: '100vh',padding: '20px' };
+    }
+}
+},
+    mounted(){
+        window.addEventListener('resize', () => {
+             this.sizeWindow = currentWindow(window.innerWidth);
+        });
     }
 }
 </script>
@@ -26,7 +46,7 @@ export default{
 <template>
 
     <section :style="{backgroundColor: bgColor}">
-        <div :style="Columns" class="carousel">
+        <div :style="columns" class="carousel">
             <div v-for="(card,index) in cards" :key="index" class="ms-card">
                 <div class="info">
                     <h5>{{ card.title }}</h5>
@@ -35,11 +55,11 @@ export default{
             </div> 
         </div>   
     </section>
-   
 </template>
 
 <style scoped lang="scss">
 @use '../../assets/styles/generic.scss' as *;
+
 
 section{
     min-height: 100vh;
@@ -49,7 +69,7 @@ section{
         display: grid;
         gap:30px;
         min-height: 60vh;
-        width: 94%;
+        width: 90%;
         margin: auto;
        
             .ms-card{
@@ -61,19 +81,16 @@ section{
                 transition: all 0.2s ease-in-out; 
                 color: black;
                 position: relative;
-                
                     .info{
                         position: absolute;
                         bottom: 10%;
                         right: 10%;
                     }
             }  
-
             .ms-card:hover{             
                 transform: scale(1.1); 
             }          
     }
-
 }
 
 </style>

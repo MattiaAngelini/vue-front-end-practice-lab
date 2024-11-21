@@ -15,12 +15,10 @@ export default{
 </script>
 
 <template>
-
     <button :style="{backgroundColor: button.bgColor, 
                      color: button.color }" 
             @click="button.locationHref">{{button.label}}
     </button>
-
 </template>
 
 <style scoped lang="scss">
@@ -28,8 +26,9 @@ export default{
 
     button{
         padding: 20px;
-        border-radius: 20px;
-        font-weight: 900;
+        border-radius: 10px;
+        font-weight: 800;
+        max-width: 300px;
     }
 
 </style>

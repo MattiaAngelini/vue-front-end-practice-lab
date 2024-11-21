@@ -29,16 +29,22 @@ export default{
         <div class="container-img">
             <img :src="layout.image" alt="">
         </div>
-        <div class="container-info">
+
+        <div class="container-info p-4">
             <h1>{{ layout.title }}</h1>
             <div>{{ layout.description }}</div>
-            <ButtonHref :button="mainStore.btnSideBySide"></ButtonHref>
+
+            <div class="d-flex justify-content-center">
+                <ButtonHref :button="mainStore.btnSideBySide"></ButtonHref>
+            </div>
+           
         </div>
     </section>
 </template>
 
 <style scoped lang="scss">
 @use '../../assets/styles/generic.scss' as *;
+@use '../../assets/styles/partials/mediaqueries.scss' as *;
 
 section{
     min-height: 100vh;
@@ -46,17 +52,25 @@ section{
     display: grid;
     grid-template-columns: 2fr 1fr;
 
-        .container-img{      
+        .container-img{   
+            min-width: 60%;  
+           
             img{
-                width: 100%;
+             
+                max-width: 100%;
                 height: 100%;
+                object-fit: cover;
              }
         }
         .container-info{
+          
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
             margin: auto;
-            padding: 10%;
             position: relative;
             bottom: 0;
+            font-size: 12px;
         }
 }
 
