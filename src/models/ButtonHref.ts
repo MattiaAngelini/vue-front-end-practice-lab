@@ -11,7 +11,4 @@ export class ButtonHref {
         this.color = color
     }
 
-    locationHref(){
-        window.location.href = this.url
-    }
   }

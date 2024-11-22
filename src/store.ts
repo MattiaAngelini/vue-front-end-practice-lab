@@ -44,34 +44,39 @@ export const useMainStore = defineStore('main', {
 
         btnSideBySide: new ButtonHref(
             'Presentazione!', // Titolo
-            'https://www.cristianoronaldo.com/#cr7', // URL
+            'AboutMePage', // URL
             'darkgrey', // Colore di sfondo
             'orange' // Colore del testo
         ),
 
         //************CAROUSEL***********//
-        cardsCarousel: [
+        cardsCarousel : [
             {
-                title: 'Work',
-                description: 'Le mie esperienze lavorative',
-                image: '../public/images/me.jpg',
+              title: 'Work',
+              description: 'Le mie esperienze lavorative',
+              image: '../public/images/me.jpg',
+              url: 'WorkExpPage',
             },
             {
-                title: 'BJJ',
-                description: 'Il Brazilian jiu-jitsu',
-                image: '../public/images/me.jpg',
+              title: 'BJJ',
+              description: 'Il Brazilian jiu-jitsu',
+              image: '../public/images/me.jpg',
+              url: 'BjjPage',
             },
             {
-                title: 'Coding',
-                description: 'Le mie esperienze di coding',
-                image: '../public/images/me.jpg',
+              title: 'Coding',
+              description: 'Le mie esperienze di coding',
+              image: '../public/images/me.jpg',
+              url: 'CodeExpPage',
             },
             {
-                title: 'Trips',
-                description: 'I miei viaggi',
-                image: '../public/images/me.jpg',
+              title: 'Trips',
+              description: 'I miei viaggi',
+              image: '../public/images/me.jpg',
+              url: 'TripsPage',
             },
-        ],
+          ],
+          
 
         //************FOOTER************//
         logoFooter: [

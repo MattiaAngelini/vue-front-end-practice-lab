@@ -14,12 +14,17 @@ export default {
             type: String,
             required: true,
         },
+        url: {
+            type: String,
+            required: true,
+        },
     },
 };
 </script>
 
 <template>
 
+<router-link :to="{name: url}">
 <div class="ms-card">
   <img  :src="image" alt="...">
   <div class="card-img-overlay">
@@ -30,6 +35,7 @@ export default {
 
   </div>
 </div>
+</router-link>
 
     
 </template>

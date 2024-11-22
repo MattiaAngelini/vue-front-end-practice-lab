@@ -8,7 +8,6 @@ import Footer from '../components/layout/Footer.vue';
 
 export default {
     name: 'HomePage',
-
     components: {
         Hero,
         Carousel,
@@ -33,7 +32,7 @@ export default {
         />
         <Hero 
             :media="mainStore.heroVideo"  
-            :title="mainStore.MyName" 
+            :title="mainStore.MyName"
             :description="mainStore.MyInfo"
         />
         

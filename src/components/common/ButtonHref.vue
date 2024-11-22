@@ -13,12 +13,13 @@ export default {
 </script>
 
 <template>
+    <router-link :to="{name: button.url}">
     <button 
         :style="{ backgroundColor: button.bgColor, color: button.color }" 
-        @click="button.locationHref"
     >
         {{ button.label }}
     </button>
+</router-link>
 </template>
 
 <style scoped lang="scss">

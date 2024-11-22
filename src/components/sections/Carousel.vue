@@ -57,12 +57,13 @@ export default {
                 v-for="(card, index) in cards" 
                 :key="index" 
             >
-            <Card   :title="card.title"    
+                <Card  
+                    :title="card.title"    
                     :description="card.description"
                     :image="card.image"
-            />
+                    :url="card.url"
+                />
             </div>
-    
         </div>   
     </section>
 </template>
