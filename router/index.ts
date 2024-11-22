@@ -4,7 +4,7 @@ import CvPage from '../src/pages/CvPage.vue';
 import ContactsPage from '../src/pages/ContactsPage.vue';
 
 const routes = [
-    { path: '/HomePage', name: 'HomePage', component: HomePage },
+    { path: '/', name: 'HomePage', component: HomePage },
     { path: '/Contatti', name: 'ContactsPage', component: ContactsPage },
     { path: '/CurriculumVitae', name: 'CvPage', component: CvPage },
 

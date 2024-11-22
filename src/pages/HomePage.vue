@@ -3,6 +3,8 @@ import { useMainStore } from '../store.ts';
 import Hero from '../components/sections/Hero.vue';
 import Carousel from '../components/sections/Carousel.vue';
 import SideBySide from '../components/sections/SideBySide.vue';
+import Header from '../components/layout/Header.vue';
+import Footer from '../components/layout/Footer.vue';
 
 export default {
     name: 'HomePage',
@@ -11,6 +13,8 @@ export default {
         Hero,
         Carousel,
         SideBySide,
+        Header,
+        Footer
     },
 
     setup() {
@@ -22,6 +26,11 @@ export default {
 
 <template>
     <div class="ms-container">  
+        <Header 
+        :icons="mainStore.socialIcons" 
+        :links="mainStore.headerLinks"     
+        :headerHamburger="mainStore.headerHamburger"
+        />
         <Hero 
             :media="mainStore.heroVideo"  
             :title="mainStore.MyName" 
@@ -34,6 +43,7 @@ export default {
             bgColor="black" 
             :cards="mainStore.cardsCarousel"
         />
+        <Footer :icons="mainStore.logoFooter" />
     </div>
 </template>
 

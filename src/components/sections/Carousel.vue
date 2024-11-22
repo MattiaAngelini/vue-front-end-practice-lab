@@ -1,9 +1,12 @@
 <script lang="ts">
 import { Card } from '../../../src/models/Card.ts';
+import Card from '../common/Card.vue';
 import { currentWindow } from '../../assets/styles/breakpoint.ts';
-
 export default {
     name: 'Carousel',
+    components:{
+                Card
+            },
     props: {
         cards: {
             type: Array as () => Card[],
@@ -48,19 +51,18 @@ export default {
 </script>
 
 <template>
-    <section :style="{ backgroundColor: bgColor }">
+    <section :style="{ backgroundColor: bgColor }"> 
         <div :style="columns" class="carousel">
             <div 
                 v-for="(card, index) in cards" 
                 :key="index" 
-                class="ms-card"
-                :style="{ backgroundImage: `url('${card.image}')` }"
             >
-                <div class="info">
-                    <h5>{{ card.title }}</h5>
-                    <div>{{ card.description }}</div> 
-                </div>       
-            </div> 
+            <Card   :title="card.title"    
+                    :description="card.description"
+                    :image="card.image"
+            />
+            </div>
+    
         </div>   
     </section>
 </template>
@@ -77,27 +79,7 @@ section {
         gap: 30px;
         min-height: 60vh;
         width: 90%;
-        margin: auto;
-
-        .ms-card {
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 6px;
-            transition: all 0.2s ease-in-out;
-            color: black;
-            position: relative;
-
-            .info {
-                position: absolute;
-                bottom: 10%;
-                right: 10%;
-            }
-        }
-
-        .ms-card:hover {
-            transform: scale(1.1); 
-        }          
+        margin: auto; 
     }
 }
 </style>

@@ -1,6 +1,6 @@
 <script lang="ts">
 export default{
-    name: 'AboutMePage'
+    name: 'TripsPage'
     
 }
 </script>
@@ -9,7 +9,7 @@ export default{
 <template>
 
 <section>
-    <div>ABOUTPAGE</div>
+    <div>triiiips</div>
 </section>
 
 </template>
