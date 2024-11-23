@@ -26,9 +26,7 @@ export default {
 <template>
     <div class="ms-container">  
         <Header 
-        :icons="mainStore.socialIcons" 
-        :links="mainStore.headerLinks"     
-        :headerHamburger="mainStore.headerHamburger"
+        :header="mainStore.mainHeader"
         />
         <Hero 
             :media="mainStore.heroVideo"  

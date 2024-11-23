@@ -1,4 +1,4 @@
-export class Hamburger {
+export class Offcanvas {
     title: string
     icon:string
     bgColor: string

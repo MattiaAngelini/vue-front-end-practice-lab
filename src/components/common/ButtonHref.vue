@@ -17,7 +17,7 @@ export default {
     <button 
         :style="{ backgroundColor: button.bgColor, color: button.color }" 
     >
-        {{ button.label }}
+        <slot>{{ button.label }}</slot>
     </button>
 </router-link>
 </template>
@@ -25,11 +25,11 @@ export default {
 <style scoped lang="scss">
 @use '../../assets/styles/generic.scss' as *;
 
-button {
-    padding: 20px;
-    border-radius: 10px;
-    font-weight: 800;
-    max-width: 300px;
-}
+    button {
+        padding: 20px;
+        border-radius: 10px;
+        font-weight: 800;
+        max-width: 300px;
+    }
 </style>
 

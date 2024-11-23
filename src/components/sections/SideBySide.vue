@@ -2,6 +2,7 @@
 import ButtonHref from '../common/ButtonHref.vue';
 import { SideBySide } from '../../models/SideBySide';
 import { useMainStore } from '../../store';
+import { PropType } from 'vue';
 
 export default {
     name: 'SideBySide',
@@ -10,7 +11,7 @@ export default {
     },
     props: {
         layout: {
-            type: Object as () => SideBySide,
+            type: Object as PropType<SideBySide>,
             required: true,
         },
     },

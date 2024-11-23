@@ -1,19 +1,23 @@
 import { defineStore } from 'pinia';
 import { ButtonHref } from './models/ButtonHref.ts';
-import { Hamburger } from './models/Hamburger.ts';
+import { Offcanvas } from './models/Offcanvas.ts';
+import { Header } from './models/Header.ts';
 
 export const useMainStore = defineStore('main', {
     state: () => ({
         //************HEADER ************//
-        headerLinks: [
-            { label: 'Home', href: 'HomePage' },
-            { label: 'Contatti', href: 'ContactsPage' },
-            { label: 'CV', href: 'CvPage' },
-        ],
 
-        headerHamburger: new Hamburger(
-            'Mattia Angelini', // title
-            'fa-solid fa-bars', // icon
+        mainHeader: new Header(
+          [{label:'Home',href:'HomePage'},
+           {label:'Contatti',href:'ContactsPage'},
+           {label:'CV',href:'CvPage'},
+          ],
+          [{label:'fa-brands fa-linkedin', href: 'https://www.linkedin.com/in/mattia-angelini-b00427311/'},
+           {label:'fa-brands fa-github',  href: 'https://github.com/MattiaAngelini'}
+          ],
+          new Offcanvas(
+            'Mattia Angelini', // title offcanvas
+            'fa-solid fa-bars', // icon 
             'grey', // bgColor
             'black', // color
             'medium', // size
@@ -23,15 +27,12 @@ export const useMainStore = defineStore('main', {
               { link: 'Contatti', url: 'ContactsPage' },
               { link: 'CV', url: 'CvPage' },
             ]
+          ),
         ),
 
-        socialIcons: [
-            { label: 'fa-brands fa-linkedin', href: 'https://www.linkedin.com/in/mattia-angelini-b00427311/' },
-            { label: 'fa-brands fa-github', href: 'https://github.com/MattiaAngelini' },
-        ],
-
+    
         //************HERO************//
-        heroVideo: '../public/video/heroVideo.mp4',
+        heroVideo: '/src/assets/video/heroVideo.mp4',
         MyName: 'Mattia Angelini',
         MyInfo: 'Front-end Web Developer',
 
@@ -39,14 +40,14 @@ export const useMainStore = defineStore('main', {
         AboutMeSideBySide: {
             title: 'Il mio sito vetrina',
             description: 'Benvenuti sul mio sito portfolio, se sei qui perchè cerchi informazioni sul mio background e vuoi scoprire chi sono ho preparato una lettera di presentazione al link qui sotto.',
-            image: '../public/images/laptop.avif',
+            image: '/src/assets/images/laptop.avif',
         },
 
         btnSideBySide: new ButtonHref(
             'Presentazione!', // Titolo
             'AboutMePage', // URL
             'darkgrey', // Colore di sfondo
-            'orange' // Colore del testo
+            'red' // Colore del testo
         ),
 
         //************CAROUSEL***********//
@@ -54,44 +55,42 @@ export const useMainStore = defineStore('main', {
             {
               title: 'Work',
               description: 'Le mie esperienze lavorative',
-              image: '../public/images/me.jpg',
+              image: '/src/assets/images/me.jpg',
               url: 'WorkExpPage',
             },
             {
               title: 'BJJ',
               description: 'Il Brazilian jiu-jitsu',
-              image: '../public/images/me.jpg',
+              image: '/src/assets/images/me.jpg',
               url: 'BjjPage',
             },
             {
               title: 'Coding',
               description: 'Le mie esperienze di coding',
-              image: '../public/images/me.jpg',
+              image: '/src/assets/images/me.jpg',
               url: 'CodeExpPage',
             },
             {
               title: 'Trips',
               description: 'I miei viaggi',
-              image: '../public/images/me.jpg',
+              image: '/src/assets/images/me.jpg',
               url: 'TripsPage',
             },
           ],
-          
-
         //************FOOTER************//
         logoFooter: [
-            { image: '../public/images/logos/bootstrap.png', altText: 'bootstrap' },
-            { image: '../public/images/logos/css.png', altText: 'css' },
-            { image: '../public/images/logos/html.png', altText: 'html' },
-            { image: '../public/images/logos/js.png', altText: 'js' },
-            { image: '../public/images/logos/laravel.png', altText: 'laravel' },
-            { image: '../public/images/logos/mysql.png', altText: 'mysql' },
-            { image: '../public/images/logos/php.png', altText: 'php' },
-            { image: '../public/images/logos/sass.png', altText: 'sass' },
-            { image: '../public/images/logos/ts.png', altText: 'ts' },
-            { image: '../public/images/logos/vue.png', altText: 'vue' },
-            { image: '../public/images/logos/node.png', altText: 'node' },
-            { image: '../public/images/logos/github.png', altText: 'github' },
+            { image: 'src/assets/images/logos/bootstrap.png', altText: 'bootstrap' },
+            { image: 'src/assets/images/logos/css.png', altText: 'css' },
+            { image: 'src/assets/images/logos/html.png', altText: 'html' },
+            { image: 'src/assets/images/logos/js.png', altText: 'js' },
+            { image: 'src/assets/images/logos/laravel.png', altText: 'laravel' },
+            { image: 'src/assets/images/logos/mysql.png', altText: 'mysql' },
+            { image: 'src/assets/images/logos/php.png', altText: 'php' },
+            { image: 'src/assets/images/logos/sass.png', altText: 'sass' },
+            { image: 'src/assets/images/logos/ts.png', altText: 'ts' },
+            { image: 'src/assets/images/logos/vue.png', altText: 'vue' },
+            { image: 'src/assets/images/logos/node.png', altText: 'node' },
+            { image: 'src/assets/images/logos/github.png', altText: 'github' },
         ],
     }),
 
@@ -104,6 +103,6 @@ export const useMainStore = defineStore('main', {
         // methods
         increment() {
             this.count++;
-        },
+        },    
     },
 });

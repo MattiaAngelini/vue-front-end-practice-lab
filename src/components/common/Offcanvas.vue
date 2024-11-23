@@ -1,12 +1,12 @@
 <script lang="ts">
-import { Hamburger } from '../../models/Hamburger';
+import { Offcanvas } from '../../models/Offcanvas';
 import { PropType } from 'vue';
 
 export default {
-    name: 'Hamburger',
+    name: 'offcanvas',
     props: {
-        hamburger: {
-            type: Object as PropType<Hamburger>,
+        offcanvas: {
+            type: Object as PropType<Offcanvas>,
             required: true,
         },
     },
@@ -20,7 +20,7 @@ export default {
         data-bs-toggle="offcanvas" 
         data-bs-target="#offcanvasScrolling" 
         aria-controls="offcanvasScrolling"
-        :style="{ backgroundColor: hamburger.bgColor, color: hamburger.color }"
+        :style="{ backgroundColor: offcanvas.bgColor, color: offcanvas.color }"
     ></i>
        
     <div 
@@ -32,7 +32,7 @@ export default {
         aria-labelledby="offcanvasScrollingLabel"
     >
         <div class="offcanvas-header">
-            <h2 class="offcanvas-title" id="offcanvasScrollingLabel">{{ hamburger.title }}</h2>
+            <h2 class="offcanvas-title" id="offcanvasScrollingLabel">{{ offcanvas.title }}</h2>
             <button 
                 type="button" 
                 class="btn-close" 
@@ -44,7 +44,7 @@ export default {
             <ul>
                 <li 
                     class="list-unstyled mt-5" 
-                    v-for="(link, index) in hamburger.links" 
+                    v-for="(link, index) in offcanvas.links" 
                     :key="index"
                 >
                     <router-link :to="{ name: link.url }">

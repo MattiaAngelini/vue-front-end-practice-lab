@@ -1,12 +1,13 @@
 <script lang="ts">
 import { Footer } from '../../models/Footer.ts';
 import { currentWindow } from '../../assets/styles/breakpoint.ts';
+import { PropType } from 'vue';
 
 export default {
     name: 'Footer',
     props: {
         icons: {
-            type: Array as () => Footer[],
+            type: Array as PropType<Footer[]>,
             required: true,
         },
     },
@@ -19,21 +20,16 @@ export default {
     },
 
     computed: {
-        columns() {
-            if (
-                this.sizeWindow === 'xl' || 
-                this.sizeWindow === 'xxl' || 
-                this.sizeWindow === 'lg' || 
-                this.sizeWindow === 'md'
-            ) {
-                return { gridTemplateColumns: `repeat(${this.gridColumns}, 1fr)` };
-            } else if (this.sizeWindow === 'sm') {
-                return { gridTemplateColumns: `repeat(3, 1fr)` };
-            } else if (this.sizeWindow === 'xs' || this.sizeWindow === 'xxs') {
-                return { gridTemplateColumns: `repeat(2, 1fr)` };
-            }
+    columns(): Record<string,string> {
+        if (this.sizeWindow === 'sm') {
+            return { gridTemplateColumns: `repeat(3, 1fr)` };
+        } else if (this.sizeWindow === 'xs' || this.sizeWindow === 'xxs') {
+            return { gridTemplateColumns: `repeat(2, 1fr)` };
+        }
+        return { gridTemplateColumns: `repeat(${this.gridColumns}, 1fr)` };
         },
     },
+
 
     mounted() {
         window.addEventListener('resize', () => {
@@ -55,9 +51,9 @@ export default {
                 >
                     <img 
                         v-show="icon.image !== ''" 
-                        :src="icon.image" 
-                        :alt="icon.altText"
-                    >
+                            :src="icon.image" 
+                            :alt="icon.altText"
+                        >
                 </div>
             </div>
 

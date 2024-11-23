@@ -1,31 +1,22 @@
 <script lang="ts">
 import { Header } from '../../models/Header.ts';
-import { Hamburger } from '../../models/Hamburger.ts';
-import Hamburger from '../common/Hamburger.vue';
-import { PropType } from 'vue';
+import {  PropType } from 'vue';
+import Offcanvas from '../common/Offcanvas.vue';
 
 export default {
     name: 'Header',
-    components: {
-        Hamburger,
+    components:{
+        Offcanvas
     },
     props: {
-        links: {
-            type: Array as () => Header[],
-            required: true,
-        },
-        icons: {
-            type: Array as () => Header[],
-            required: true,
-        },
-        headerHamburger: {
-            type: Object as PropType<Hamburger>,
+        header: {
+            type: Object as PropType<Header>,
             required: true,
         },
     },
     computed: {
         Columns(): Record<string, string> {
-            return { gridTemplateColumns: `6fr repeat(${this.links.length}, 1fr)` };
+            return { gridTemplateColumns: `6fr repeat(${this.header.links.length}, 1fr)` };
         },
     },
 };
@@ -39,21 +30,21 @@ export default {
                 <div class="myname">MATTIA ANGELINI</div>
                 <a 
                     class="d-none d-lg-block" 
-                    v-for="(icon, index) in icons" 
+                    v-for="(icon, index) in header.icons" 
                     :key="index"
                 >
-                    <i :class="icon.label"></i>
+                    <i :class="icon"></i>
                 </a>
             </div>
             <a 
                 class="d-none d-lg-block" 
-                v-for="(link, index) in links" 
+                v-for="(link, index) in header.links" 
                 :key="index"
             >
                 <router-link :to="{ name: link.href }"> {{ link.label }} </router-link>
             </a>
             <!--componente hamburger-->
-            <Hamburger :hamburger="headerHamburger" />
+            <Offcanvas :offcanvas="header.hamburger" />
         </div>
     </header>
 </template>
