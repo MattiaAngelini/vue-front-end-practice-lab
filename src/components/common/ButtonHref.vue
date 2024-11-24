@@ -1,11 +1,12 @@
 <script lang="ts">
 import { ButtonHref } from '../../models/ButtonHref.ts';
+import { PropType } from 'vue';
 
 export default {
     name: 'MainButton',
     props: {
         button: {
-            type: Object as () => ButtonHref,
+            type: Object as PropType<ButtonHref>,
             required: true,
         },
     },

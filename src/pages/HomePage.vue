@@ -33,12 +33,12 @@ export default {
             :title="mainStore.MyName"
             :description="mainStore.MyInfo"
         />
-        
-        <SideBySide :layout="mainStore.AboutMeSideBySide" />
-        
+        <SideBySide :layout="mainStore.AboutMeSideBySide"
+         />
         <Carousel 
             bgColor="black" 
-            :cards="mainStore.cardsCarousel"
+            :cardsRoute="mainStore.cardsCarouselRoute"
+            :cardsHref="mainStore.cardsCarouselHref"
         />
         <Footer :icons="mainStore.logoFooter" />
     </div>

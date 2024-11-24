@@ -1,6 +1,6 @@
 <script lang="ts">
 export default {
-    name: 'Card',
+    name: 'CardHref',
     props: {
        title: {
             type: String,
@@ -16,33 +16,29 @@ export default {
         },
         url: {
             type: String,
-            required: true,
+            required: false,
         },
     },
 };
 </script>
 
 <template>
-
-<router-link :to="{name: url}">
-<div class="ms-card">
-  <img  :src="image" alt="...">
-  <div class="card-img-overlay">
-    <div class="info">
-        <h5>{{title}}</h5>
-        <p >{{description}}</p>
-    </div>
-
-  </div>
-</div>
-</router-link>
-
-    
+    <a :href="url">   
+        <div  class="ms-card">
+            <img  :src="image" alt="...">
+            <div class="card-img-overlay">
+                <div class="info">
+                    <h5>{{title}}</h5>
+                    <p >{{description}}</p>
+                </div>
+        </div>
+      </div>
+    </a>
+ 
 </template>
 
 <style scoped lang="scss">
 @use '../../assets/styles/generic.scss' as *;
-
 
 .ms-card{
     position: relative;
@@ -71,7 +67,5 @@ export default {
             color: black;
             position: relative;
         }   
-
-
 
 </style>

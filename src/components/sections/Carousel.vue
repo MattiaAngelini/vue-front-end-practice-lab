@@ -1,18 +1,25 @@
 <script lang="ts">
 import { Card } from '../../../src/models/Card.ts';
-import Card from '../common/Card.vue';
+import CardRoute from '../common/CardRoute.vue';
+import CardHref from '../common/CardHref.vue';
 import { currentWindow } from '../../assets/styles/breakpoint.ts';
 import { PropType } from 'vue';
 
 export default {
     name: 'Carousel',
     components:{
-                Card
+                CardRoute,
+                CardHref
             },
+
     props: {
-        cards: {
+        cardsRoute: {
             type: Array as PropType<Card[]>,
-            required: true,
+            required: false,
+        },
+        cardsHref: {
+            type: Array as PropType<Card[]>,
+            required: false,
         },
         bgColor: {
             type: String,
@@ -23,7 +30,7 @@ export default {
 
     data() {
         return {
-            gridColumns: this.cards.length,
+            gridColumns: (this.cardsRoute.length + this.cardsHref.length),
             sizeWindow: currentWindow(window.innerWidth),
         };
     },
@@ -53,13 +60,22 @@ export default {
 <template>
     <section :style="{ backgroundColor: bgColor }"> 
         <div :style="columns" class="carousel">
-            <div v-for="(card, index) in cards" :key="index">
-                <Card  
+            <div v-for="(card, index) in cardsRoute" :key="index">
+                <CardRoute  
                     :title="card.title"    
                     :description="card.description"
                     :image="card.image"
                     :url="card.url"
                 />    
+            </div>
+
+            <div v-for="(card, index) in cardsHref" :key="index">         
+                <CardHref 
+                    :title="card.title"    
+                    :description="card.description"
+                    :image="card.image"
+                    :url="card.url"
+                    />
             </div>
         </div>   
     </section>

@@ -33,7 +33,7 @@ export default {
             <div>{{ layout.description }}</div>
 
             <div class="d-flex justify-content-center">
-                <ButtonHref :button="mainStore.btnSideBySide" />
+                <ButtonHref :button="mainStore.btnSideBySide" />     
             </div>
         </div>
     </section>

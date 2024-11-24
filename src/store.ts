@@ -17,7 +17,7 @@ export const useMainStore = defineStore('main', {
           ],
           new Offcanvas(
             'Mattia Angelini', // title offcanvas
-            'fa-solid fa-bars', // icon 
+            'fa-solid fa-bars', // icon hamburger
             'grey', // bgColor
             'black', // color
             'medium', // size
@@ -29,8 +29,7 @@ export const useMainStore = defineStore('main', {
             ]
           ),
         ),
-
-    
+ 
         //************HERO************//
         heroVideo: '/src/assets/video/heroVideo.mp4',
         MyName: 'Mattia Angelini',
@@ -51,7 +50,7 @@ export const useMainStore = defineStore('main', {
         ),
 
         //************CAROUSEL***********//
-        cardsCarousel : [
+        cardsCarouselRoute : [
             {
               title: 'Work',
               description: 'Le mie esperienze lavorative',
@@ -63,18 +62,21 @@ export const useMainStore = defineStore('main', {
               description: 'Il Brazilian jiu-jitsu',
               image: '/src/assets/images/me.jpg',
               url: 'BjjPage',
+            },         
+          ],
+          
+          cardsCarouselHref : [
+            {
+              title: 'Linkedin',
+              description: 'Il mio profilo Linkedin',
+              image: '/src/assets/images/me.jpg',
+              url: 'https://www.linkedin.com/in/mattia-angelini-b00427311/',
             },
             {
-              title: 'Coding',
-              description: 'Le mie esperienze di coding',
+              title: 'Github',
+              description: 'Il mio profilo Github',
               image: '/src/assets/images/me.jpg',
-              url: 'CodeExpPage',
-            },
-            {
-              title: 'Trips',
-              description: 'I miei viaggi',
-              image: '/src/assets/images/me.jpg',
-              url: 'TripsPage',
+              url: 'https://github.com/MattiaAngelini',
             },
           ],
         //************FOOTER************//

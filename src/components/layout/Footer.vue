@@ -1,13 +1,12 @@
 <script lang="ts">
 import { Footer } from '../../models/Footer.ts';
 import { currentWindow } from '../../assets/styles/breakpoint.ts';
-import { PropType } from 'vue';
 
 export default {
     name: 'Footer',
     props: {
         icons: {
-            type: Array as PropType<Footer[]>,
+            type: Array as() => Footer[],
             required: true,
         },
     },
@@ -96,10 +95,13 @@ footer {
             width: 100%;
             padding: 8%;
             background-color: rgb(41, 36, 36);
-
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
             img {
-                height: 100%;
-                width: 100%;
+                height: 80%;
+                width: 80%;
             }
         }
 
