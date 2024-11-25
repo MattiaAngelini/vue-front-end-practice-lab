@@ -1,5 +1,5 @@
 <script lang="ts">
-import ButtonHref from '../common/ButtonHref.vue';
+import ButtonRoute from '../common/buttons/ButtonRoute.vue';
 import { SideBySide } from '../../models/SideBySide';
 import { useMainStore } from '../../store';
 import { PropType } from 'vue';
@@ -7,7 +7,7 @@ import { PropType } from 'vue';
 export default {
     name: 'SideBySide',
     components: {
-        ButtonHref,
+        ButtonRoute,
     },
     props: {
         layout: {
@@ -33,7 +33,7 @@ export default {
             <div>{{ layout.description }}</div>
 
             <div class="d-flex justify-content-center">
-                <ButtonHref :button="mainStore.btnSideBySide" />     
+                <ButtonRoute :button="mainStore.btnSideBySide" />     
             </div>
         </div>
     </section>

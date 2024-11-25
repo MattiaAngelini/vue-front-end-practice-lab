@@ -28,12 +28,12 @@ export default {
         <div :style="Columns" class="links">
             <div class="d-flex gap-3 align-items-center">
                 <div class="myname">MATTIA ANGELINI</div>
-                <a 
+                <a :href="icon.href"
                     class="d-none d-lg-block" 
                     v-for="(icon, index) in header.icons" 
                     :key="index"
                 >
-                    <i :class="icon"></i>
+                    <i :class="icon.label"></i>
                 </a>
             </div>
             <a 

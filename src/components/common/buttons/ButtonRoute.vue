@@ -1,12 +1,12 @@
 <script lang="ts">
-import { ButtonHref } from '../../models/ButtonHref.ts';
+import { Button } from '../../models/Button.ts';
 import { PropType } from 'vue';
 
 export default {
-    name: 'MainButton',
+    name: 'ButtonRoute',
     props: {
         button: {
-            type: Object as PropType<ButtonHref>,
+            type: Object as PropType<Button>,
             required: true,
         },
     },
@@ -15,16 +15,16 @@ export default {
 
 <template>
     <router-link :to="{name: button.url}">
-    <button 
-        :style="{ backgroundColor: button.bgColor, color: button.color }" 
-    >
-        <slot>{{ button.label }}</slot>
-    </button>
-</router-link>
+        <button 
+            :style="{ backgroundColor: button.bgColor, color: button.color }" 
+        >
+            <slot>{{ button.label }}</slot>
+        </button>
+   </router-link>
 </template>
 
 <style scoped lang="scss">
-@use '../../assets/styles/generic.scss' as *;
+@use '../../../assets/styles/generic.scss' as *;
 
     button {
         padding: 20px;

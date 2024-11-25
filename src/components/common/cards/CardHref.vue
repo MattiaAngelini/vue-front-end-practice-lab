@@ -38,9 +38,10 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@use '../../assets/styles/generic.scss' as *;
+@use '../../../assets/styles/generic.scss' as *;
 
 .ms-card{
+    color: black;
     position: relative;
     min-height: 100%;
 

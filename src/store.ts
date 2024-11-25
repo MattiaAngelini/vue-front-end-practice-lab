@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { ButtonHref } from './models/ButtonHref.ts';
+import { Button } from './models/Button.ts';
 import { Offcanvas } from './models/Offcanvas.ts';
 import { Header } from './models/Header.ts';
 
@@ -42,11 +42,11 @@ export const useMainStore = defineStore('main', {
             image: '/src/assets/images/laptop.avif',
         },
 
-        btnSideBySide: new ButtonHref(
+        btnSideBySide: new Button(
             'Presentazione!', // Titolo
             'AboutMePage', // URL
-            'darkgrey', // Colore di sfondo
-            'red' // Colore del testo
+            'black', // Colore di sfondo
+            'rgb(255, 103, 31)' // Colore del testo
         ),
 
         //************CAROUSEL***********//
@@ -79,6 +79,15 @@ export const useMainStore = defineStore('main', {
               url: 'https://github.com/MattiaAngelini',
             },
           ],
+        //************CV-PAGE************//
+              
+        btnCvPage: new Button(
+          'Download', // Titolo
+          '../public/test.jpg', // URL
+          'black', // Colore di sfondo
+          'rgb(255, 103, 31)' // Colore del testo
+      ),
+
         //************FOOTER************//
         logoFooter: [
             { image: 'src/assets/images/logos/bootstrap.png', altText: 'bootstrap' },

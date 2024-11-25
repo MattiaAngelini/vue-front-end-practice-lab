@@ -1,7 +1,7 @@
 <script lang="ts">
 import { Card } from '../../../src/models/Card.ts';
-import CardRoute from '../common/CardRoute.vue';
-import CardHref from '../common/CardHref.vue';
+import CardRoute from '../common/cards/CardRoute.vue';
+import CardHref from '../common/cards/CardHref.vue';
 import { currentWindow } from '../../assets/styles/breakpoint.ts';
 import { PropType } from 'vue';
 

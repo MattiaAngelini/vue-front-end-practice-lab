@@ -1,4 +1,4 @@
-export class ButtonHref {
+export class Button {
     label:string;
     url: string;
     bgColor: string;

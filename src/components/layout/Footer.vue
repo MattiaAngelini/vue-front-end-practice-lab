@@ -106,7 +106,7 @@ footer {
         }
 
         .logo:hover {
-            background: radial-gradient(rgb(211, 65, 17) 0%, rgb(41, 36, 36) 70%);
+            background: radial-gradient($secondary-color 0%, rgb(41, 36, 36) 70%);
             transition: all 0.3s ease-in-out;
         }
     }
