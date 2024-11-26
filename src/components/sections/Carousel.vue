@@ -60,7 +60,7 @@ export default {
 <template>
     <section :style="{ backgroundColor: bgColor }"> 
         <div :style="columns" class="carousel">
-            <div v-for="(card, index) in cardsRoute" :key="index">
+            <div class="ms-card" v-for="(card, index) in cardsRoute" :key="index">
                 <CardRoute  
                     :title="card.title"    
                     :description="card.description"
@@ -69,7 +69,7 @@ export default {
                 />    
             </div>
 
-            <div v-for="(card, index) in cardsHref" :key="index">         
+            <div class="ms-card" v-for="(card, index) in cardsHref" :key="index">         
                 <CardHref 
                     :title="card.title"    
                     :description="card.description"
@@ -85,15 +85,24 @@ export default {
 @use '../../assets/styles/generic.scss' as *;
 
 section {
-    min-height: 100vh;
+   
+    padding:6%;
     display: grid;
 
     .carousel {
         display: grid;
-        gap: 30px;
+        gap:30px;
         min-height: 60vh;
-        width: 90%;
-        margin: auto; 
+        width: 100%;
+        transition: grid-column 0.3s ease, transform 0.3s ease;
+
+        .ms-card:hover {
+            transform:scale(1.1);        
+            z-index: 999;
+            border: 10px solid $primary-color;
+            border-radius: 6px;
+            transition-duration: 0.3s;
+       }
     }
 }
 </style>

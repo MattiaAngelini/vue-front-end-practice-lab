@@ -1,5 +1,5 @@
 <script lang="ts">
-import { Button } from '../../models/Button.ts';
+import { Button } from '../../../models/Button.ts';
 import { PropType } from 'vue';
 
 export default {
@@ -25,12 +25,8 @@ export default {
 
 <style scoped lang="scss">
 @use '../../../assets/styles/generic.scss' as *;
+@use '../../../assets/styles/partials/buttonStyle.scss' as *;
 
-    button {
-        padding: 20px;
-        border-radius: 10px;
-        font-weight: 800;
-        max-width: 300px;
-    }
+ 
 </style>
 

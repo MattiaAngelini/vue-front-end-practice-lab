@@ -52,13 +52,13 @@ export const useMainStore = defineStore('main', {
         //************CAROUSEL***********//
         cardsCarouselRoute : [
             {
-              title: 'Work',
+              title: 'Nel mondo del lavoro',
               description: 'Le mie esperienze lavorative',
               image: '/src/assets/images/me.jpg',
               url: 'WorkExpPage',
             },
             {
-              title: 'BJJ',
+              title: 'Il BJJ',
               description: 'Il Brazilian jiu-jitsu',
               image: '/src/assets/images/me.jpg',
               url: 'BjjPage',
@@ -69,13 +69,13 @@ export const useMainStore = defineStore('main', {
             {
               title: 'Linkedin',
               description: 'Il mio profilo Linkedin',
-              image: '/src/assets/images/me.jpg',
+              image: '/src/assets/images/bg.jpeg',
               url: 'https://www.linkedin.com/in/mattia-angelini-b00427311/',
             },
             {
               title: 'Github',
               description: 'Il mio profilo Github',
-              image: '/src/assets/images/me.jpg',
+              image: '/src/assets/images/bg.jpeg',
               url: 'https://github.com/MattiaAngelini',
             },
           ],

@@ -54,7 +54,8 @@ export default {
 
 header {
     color: white;
-    position: fixed;
+    position: sticky;
+    top: 0;
     z-index: 999;
     width: 100%;
     min-height: 10vh;

@@ -1,10 +1,14 @@
 <script lang="ts">
 import ButtonDownload from '../components/common/buttons/ButtonDownload.vue';
 import { useMainStore } from '../store.ts';
+import Header from '../components/layout/Header.vue';
+import Footer from '../components/layout/Footer.vue';
 export default{
     name: 'CvPage',
     components:{
-        ButtonDownload
+        ButtonDownload,
+        Header,
+        Footer
     },
 
     setup() {
@@ -14,14 +18,26 @@ export default{
 }
 </script>
 <template>
-    <div>CURRICULUM</div>
-    <ButtonDownload :button="mainStore.btnCvPage"
+    <Header 
+        :header="mainStore.mainHeader"
     />
+
+    <main class="container">
+        <h1>Scarica il mio curriculum aggiornato</h1>
+        <ButtonDownload :button="mainStore.btnCvPage"
+    />
+    </main>
+    
+    <Footer :icons="mainStore.logoFooter" />
     
 </template>
 
 <style scoped lang="scss">
 @use '../assets/styles/generic.scss' as *;
 
+main{
+    min-height: 50vh;
+   
+}
 
 </style>
