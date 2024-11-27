@@ -1,13 +1,12 @@
 <script lang="ts">
-import ButtonDownload from '../stories/Buttons/ButtonDownload.vue';
-
 import { useMainStore } from '../store.ts';
 import Header from '../components/layout/Header.vue';
 import Footer from '../components/layout/Footer.vue';
+import ButtonCustom from '../stories/Buttons/ButtonCustom.vue';
 export default{
     name: 'CvPage',
     components:{
-        ButtonDownload,
+        ButtonCustom,
         Header,
         Footer,
     },
@@ -25,7 +24,7 @@ export default{
 
     <main class="container">
         <h1>Scarica il mio curriculum aggiornato</h1>
-        <ButtonDownload size="large" :button="mainStore.btnCvPage"
+        <ButtonCustom isDownload size="large" :button="mainStore.btnCvPage"
     />
     </main>
     

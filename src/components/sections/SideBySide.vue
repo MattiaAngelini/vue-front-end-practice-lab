@@ -1,13 +1,14 @@
 <script lang="ts">
-import ButtonRoute from '../../stories/Buttons/ButtonRoute.vue'
+
 import { SideBySide } from '../../models/SideBySide';
 import { useMainStore } from '../../store';
 import { PropType } from 'vue';
+import ButtonCustom from '../../stories/Buttons/ButtonCustom.vue';
 
 export default {
     name: 'SideBySide',
     components: {
-        ButtonRoute,
+        ButtonCustom,
     },
     props: {
         layout: {
@@ -33,7 +34,7 @@ export default {
             <div>{{ layout.description }}</div>
 
             <div class="d-flex justify-content-center">
-                <ButtonRoute size="small" :button="mainStore.btnSideBySide" />     
+                <ButtonCustom size="medium" :button="mainStore.btnSideBySide" />     
             </div>
         </div>
     </section>

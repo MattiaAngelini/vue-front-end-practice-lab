@@ -1,10 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
-import ButtonHref from '../Buttons/ButtonHref.vue';
-
-
+import ButtonCustom from './ButtonCustom.vue';
 const meta = {
-    title: 'Example/ButtonHref',
-    component: ButtonHref,
+    title: 'ButtonCustom',
+    component: ButtonCustom,
     tags: ['autodocs'],
 
     //props del pannello controllo storybook
@@ -12,7 +10,8 @@ const meta = {
         //Permette di controllare l'oggetto `button` dal pannello
         button: { 
             control: 'object', // selettore di oggetti nella colonna control
-        }
+        },
+        size: { control: 'select', options: ['small', 'medium', 'large'] },
     },
   // Valori predefiniti globali per tutte le storie
     args:{ 
@@ -24,7 +23,7 @@ const meta = {
           },
     },
    
-  } satisfies Meta<typeof ButtonHref>;
+  } satisfies Meta<typeof ButtonCustom>;
   
   export default meta;
   type Story = StoryObj<typeof meta>;
