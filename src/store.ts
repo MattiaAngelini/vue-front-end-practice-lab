@@ -81,7 +81,7 @@ export const useMainStore = defineStore('main', {
         //************CV-PAGE************//
               
         btnCvPage: { 
-           label:'Presentazione!', // Titolo
+           label:'DOWNLOAD', // Titolo
            url :'../public/test.jpg', // URL
            bgColor:'black', // Colore di sfondo
            color:'rgb(255, 103, 31)' // Colore del testo}   

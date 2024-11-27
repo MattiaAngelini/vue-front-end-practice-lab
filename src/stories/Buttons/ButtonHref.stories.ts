@@ -11,6 +11,7 @@ const meta = {
     argTypes: {
         //Permette di controllare l'oggetto `button` dal pannello
         button: { 
+            control: 'object', // selettore di oggetti nella colonna control
         }
     },
   // Valori predefiniti globali per tutte le storie
@@ -45,26 +46,26 @@ const meta = {
         },
   };
   
-  // Storia con colori personalizzati
-    export const CustomColor: Story = {
-        args: {
-        button: {
-            label: 'Custom Button',
-            url: '/custom/file.zip',
-            bgColor: '#FF5733',
-            color: '#000000',
-        },
-        },
-  };
+  // // Storia con colori personalizzati
+  //   export const CustomColor: Story = {
+  //       args: {
+  //       button: {
+  //           label: 'Custom Button',
+  //           url: '/custom/file.zip',
+  //           bgColor: '#FF5733',
+  //           color: '#000000',
+  //       },
+  //       },
+  // };
   
-  // Storia secondaria
-    export const Secondary: Story = {
-        args: {
-        button: {
-            label: 'Secondary Button',
-            url: '/secondary/file.zip',
-            bgColor: '#6C757D',
-            color: '#FFFFFF',
-        },
-        },
-  };
+  // // Storia secondaria
+  //   export const Secondary: Story = {
+  //       args: {
+  //       button: {
+  //           label: 'Secondary Button',
+  //           url: '/secondary/file.zip',
+  //           bgColor: '#6C757D',
+  //           color: '#FFFFFF',
+  //       },
+  //       },
+  // };

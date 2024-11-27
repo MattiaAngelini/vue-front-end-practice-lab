@@ -33,7 +33,7 @@ export default {
             <div>{{ layout.description }}</div>
 
             <div class="d-flex justify-content-center">
-                <ButtonRoute :button="mainStore.btnSideBySide" />     
+                <ButtonRoute size="small" :button="mainStore.btnSideBySide" />     
             </div>
         </div>
     </section>

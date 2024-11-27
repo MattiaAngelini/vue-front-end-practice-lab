@@ -1,6 +1,18 @@
 .mainStyle {
     border-radius: 10px;
-    padding: 20px;
-    font-weight: 800;
+    font-weight: 600;
     max-width: 300px;
+}
+
+.ms-button--small {
+    padding: 10px 16px;
+    font-size: 12px;
+}
+.ms-button--medium {
+    padding: 11px 20px;
+    font-size: 14px;
+}
+.ms-button--large {
+    padding: 12px 24px;
+    font-size: 16px;
 }

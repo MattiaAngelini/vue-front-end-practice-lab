@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
-
 import ButtonDownload from '../Buttons/ButtonDownload.vue';
 
 const meta = {
@@ -8,15 +7,16 @@ const meta = {
     tags: ['autodocs'],
 
     //props del pannello controllo storybook
-    argTypes: {
-        //Permette di controllare l'oggetto `button` dal pannello
-        button: { 
-        }
-    },
+    argTypes: {      
+      button: {
+        control: 'object', // selettore di oggetti nella colonna control 
+      },
+      size: { control: 'select', options: ['small', 'medium', 'large'] },
+    } ,
   // Valori predefiniti globali per tutte le storie
     args:{ 
         button: {
-            label: 'Custom Button',
+            label: 'TEST',
             url: '/custom/file.zip',
             bgColor: '#FF5733',
             color: '#000000',
@@ -37,7 +37,7 @@ const meta = {
     export const Default: Story = {
         args: {
         button: {
-            label: 'Default Button',
+            label: 'Default personale',
             url: '/default/file.zip',
             bgColor: '#007BFF',
             color: '#FFFFFF',
@@ -45,26 +45,26 @@ const meta = {
         },
   };
   
-  // Storia con colori personalizzati
-    export const CustomColor: Story = {
-        args: {
-        button: {
-            label: 'Custom Button',
-            url: '/custom/file.zip',
-            bgColor: '#FF5733',
-            color: '#000000',
-        },
-        },
-  };
+  // // Storia con colori personalizzati
+  //   export const CustomColor: Story = {
+  //       args: {
+  //       button: {
+  //           label: 'Custom Button',
+  //           url: '/custom/file.zip',
+  //           bgColor: '#FF5733',
+  //           color: '#000000',
+  //       },
+  //       },
+  // };
   
-  // Storia secondaria
-    export const Secondary: Story = {
-        args: {
-        button: {
-            label: 'Secondary Button',
-            url: '/secondary/file.zip',
-            bgColor: '#6C757D',
-            color: '#FFFFFF',
-        },
-        },
-  };
+  // // Storia secondaria
+  //   export const Secondary: Story = {
+  //       args: {
+  //       button: {
+  //           label: 'Secondary Button',
+  //           url: '/secondary/file.zip',
+  //           bgColor: '#6C757D',
+  //           color: '#FFFFFF',
+  //       },
+  //       },
+  // };

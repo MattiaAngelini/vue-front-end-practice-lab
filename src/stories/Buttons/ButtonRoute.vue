@@ -1,21 +1,33 @@
 <script lang="ts" setup>
 import { Button } from '../../models/Button';
+import { computed } from 'vue';
 import './msbutton.css'
 
-withDefaults(defineProps<{
-
-  button : Button
-
+const props =withDefaults(defineProps<{  
+  button: Button
+  size?: 'small' | 'medium' | 'large',
 }>(), {});
+
+const style = computed(() => ({
+  backgroundColor: props.button.bgColor,
+  color: props.button.color 
+}));
+
+const classes = computed(() => ({
+  [`storybook-button--${props.size || 'medium'}`]: true,
+}));
+
 </script>
 
 <template>
     <router-link :to="{name: button.url}">
-        <button 
+        <button       
             class="mainStyle"
-            :style="{ backgroundColor: button.bgColor, color: button.color }" 
+            :style="style" 
+            :class="classes"
         >
-            <slot>{{ button.label }}</slot>
+            {{ button.label }}
+            <slot></slot>
         </button>
    </router-link>
 </template>

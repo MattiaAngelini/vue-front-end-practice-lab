@@ -25,7 +25,7 @@ export default{
 
     <main class="container">
         <h1>Scarica il mio curriculum aggiornato</h1>
-        <ButtonDownload :button="mainStore.btnCvPage"
+        <ButtonDownload size="large" :button="mainStore.btnCvPage"
     />
     </main>
     
