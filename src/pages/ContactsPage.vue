@@ -2,12 +2,15 @@
 import { useMainStore } from '../store.ts';
 import Header from '../components/layout/Header.vue';
 import Footer from '../components/layout/Footer.vue';
+import HeaderStory from '../stories/Header.vue';
 export default{
     name: 'ContactsPage',
     components:{
     
         Header,
-        Footer
+        Footer,
+        HeaderStory
+        
     },
 
     setup() {
@@ -20,6 +23,8 @@ export default{
     <Header 
         :header="mainStore.mainHeader"
     />
+
+    <HeaderStory :user="{name: 'Mattia'}" />
         <main class="container">
             <h1>contatti</h1>
         </main>    

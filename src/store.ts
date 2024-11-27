@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia';
-import { Button } from './models/Button.ts';
 import { Offcanvas } from './models/Offcanvas.ts';
 import { Header } from './models/Header.ts';
 
@@ -42,13 +41,13 @@ export const useMainStore = defineStore('main', {
             image: '/src/assets/images/laptop.avif',
         },
 
-        btnSideBySide: new Button(
-            'Presentazione!', // Titolo
-            'AboutMePage', // URL
-            'black', // Colore di sfondo
-            'rgb(255, 103, 31)' // Colore del testo
-        ),
-
+        btnSideBySide: { 
+          label:'Presentazione!', // Titolo
+           url :'AboutMePage', // URL
+           bgColor:'black', // Colore di sfondo
+           color:'rgb(255, 103, 31)' // Colore del testo}   
+        },
+        
         //************CAROUSEL***********//
         cardsCarouselRoute : [
             {
@@ -81,12 +80,12 @@ export const useMainStore = defineStore('main', {
           ],
         //************CV-PAGE************//
               
-        btnCvPage: new Button(
-          'Download', // Titolo
-          '../public/test.jpg', // URL
-          'black', // Colore di sfondo
-          'rgb(255, 103, 31)' // Colore del testo
-      ),
+        btnCvPage: { 
+           label:'Presentazione!', // Titolo
+           url :'../public/test.jpg', // URL
+           bgColor:'black', // Colore di sfondo
+           color:'rgb(255, 103, 31)' // Colore del testo}   
+        },
 
         //************FOOTER************//
         logoFooter: [

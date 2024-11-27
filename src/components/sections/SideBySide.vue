@@ -1,5 +1,5 @@
 <script lang="ts">
-import ButtonRoute from '../common/buttons/ButtonRoute.vue';
+import ButtonRoute from '../../stories/Buttons/ButtonRoute.vue'
 import { SideBySide } from '../../models/SideBySide';
 import { useMainStore } from '../../store';
 import { PropType } from 'vue';

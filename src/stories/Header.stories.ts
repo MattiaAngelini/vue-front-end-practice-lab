@@ -1,21 +1,23 @@
 import { fn } from '@storybook/test';
 import type { Meta, StoryObj } from '@storybook/vue3';
-
 import MyHeader from './Header.vue';
+
+// utile solo a storyboo?
 
 const meta = {
   /* 👇 The title prop is optional.
    * See https://storybook.js.org/docs/configure/#configure-story-loading
    * to learn how to generate automatic titles
    */
-  title: 'Example/Header',
-  component: MyHeader,
-  render: (args: any) => ({
+  title: 'Example/Header', //titolo della storia
+  component: MyHeader,  //il componente
+
+  render: (args: any) => ({ //definisce come dev'essere renderizzato componente in storybook
     components: { MyHeader },
     setup() {
-      return { args };
+      return { args }; // return di funzione setup() in composition permette utilizzo di variabile nel template
     },
-    template: '<my-header :user="args.user" />',
+    template: '<my-header :user="args.user" />', //template
   }),
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
@@ -36,7 +38,7 @@ type Story = StoryObj<typeof meta>;
 export const LoggedIn: Story = {
   args: {
     user: {
-      name: 'Jane Doe',
+      name: 'bob',
     },
   },
 };
