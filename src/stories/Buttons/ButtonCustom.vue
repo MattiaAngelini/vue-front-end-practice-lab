@@ -8,7 +8,7 @@ const props =withDefaults(defineProps<{
   size?: 'small' | 'medium' | 'large',
   isDownload? : boolean,
   isRouter?: boolean
-}>(), {});
+}>(), { size: 'medium', isDownload: false});
 
 const style = computed(() => ({
   backgroundColor: props.button.bgColor,
@@ -16,15 +16,15 @@ const style = computed(() => ({
 }));
 
 const classes = computed(() => ({
-  [`storybook-button--${props.size || 'medium'}`]: true,
+  [`ms-button--${props.size || 'medium'}`]: true,
    'mainStyle': true
 }));
 
 </script>
 
 <template>
- 
-    <a v-if="isDownload" :href="button.url" download>
+
+    <a v-if="isDownload" download :href="button.url" >
         <button       
             :style="style" 
             :class="classes"

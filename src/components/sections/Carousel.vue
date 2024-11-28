@@ -1,36 +1,27 @@
 <script lang="ts">
 import { Card } from '../../../src/models/Card.ts';
-import CardRoute from '../common/cards/CardRoute.vue';
-import CardHref from '../common/cards/CardHref.vue';
+import CardCustom from '../../stories/CardCustom.vue';
 import { currentWindow } from '../../assets/styles/breakpoint.ts';
-import { PropType } from 'vue';
 
 export default {
     name: 'Carousel',
     components:{
-                CardRoute,
-                CardHref
+                CardCustom           
             },
-
     props: {
-        cardsRoute: {
-            type: Array as PropType<Card[]>,
-            required: false,
-        },
-        cardsHref: {
-            type: Array as PropType<Card[]>,
-            required: false,
-        },
+        cards: {
+            type: Array as() => Card[],
+            required: true
+        }, 
         bgColor: {
             type: String,
-            required: false,
-            default: 'white',
-        },
+            default: 'black',
+            required: false      
+        }  
     },
-
     data() {
         return {
-            gridColumns: (this.cardsRoute.length + this.cardsHref.length),
+            gridColumns: (this.cards.length),
             sizeWindow: currentWindow(window.innerWidth),
         };
     },
@@ -60,23 +51,13 @@ export default {
 <template>
     <section :style="{ backgroundColor: bgColor }"> 
         <div :style="columns" class="carousel">
-            <div class="ms-card" v-for="(card, index) in cardsRoute" :key="index">
-                <CardRoute  
-                    :title="card.title"    
-                    :description="card.description"
-                    :image="card.image"
-                    :url="card.url"
+
+            <div class="ms-card" v-for="(card, index) in cards" :key="index">
+                <CardCustom
+                    :card="card"
                 />    
             </div>
 
-            <div class="ms-card" v-for="(card, index) in cardsHref" :key="index">         
-                <CardHref 
-                    :title="card.title"    
-                    :description="card.description"
-                    :image="card.image"
-                    :url="card.url"
-                    />
-            </div>
         </div>   
     </section>
 </template>
@@ -84,8 +65,7 @@ export default {
 <style scoped lang="scss">
 @use '../../assets/styles/generic.scss' as *;
 
-section {
-   
+section {   
     padding:6%;
     display: grid;
 

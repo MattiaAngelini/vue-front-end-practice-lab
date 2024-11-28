@@ -24,7 +24,7 @@ export default{
 
     <main class="container">
         <h1>Scarica il mio curriculum aggiornato</h1>
-        <ButtonCustom isDownload size="large" :button="mainStore.btnCvPage"
+        <ButtonCustom size="large" isDownload :button="mainStore.btnCvPage"
     />
     </main>
     
@@ -37,7 +37,6 @@ export default{
 
 main{
     min-height: 50vh;
-   
 }
 
 </style>

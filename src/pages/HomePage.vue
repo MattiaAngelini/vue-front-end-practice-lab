@@ -28,19 +28,21 @@ export default {
         <Header 
         :header="mainStore.mainHeader"
         />
-        <Hero 
+        <main>
+            <Hero 
             :media="mainStore.heroVideo"  
             :title="mainStore.MyName"
             :description="mainStore.MyInfo"
         />
-        <SideBySide :layout="mainStore.AboutMeSideBySide"
-         />
-        <Carousel 
-            bgColor="black" 
-            :cardsRoute="mainStore.cardsCarouselRoute"
-            :cardsHref="mainStore.cardsCarouselHref"
-        />
-        <Footer :icons="mainStore.logoFooter" />
+            <SideBySide :layout="mainStore.AboutMeSideBySide"
+            />
+            <Carousel 
+                 
+                :cards="mainStore.cardsCarousel"
+                
+            />
+        </main>
+       <Footer :icons="mainStore.logoFooter" />
     </div>
 </template>
 

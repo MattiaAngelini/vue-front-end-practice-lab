@@ -2,5 +2,5 @@ export interface Card {
     title: string;
     description: string;
     image: string;
-    url: string;
+    url?: string;
   }

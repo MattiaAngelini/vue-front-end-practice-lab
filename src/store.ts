@@ -49,7 +49,7 @@ export const useMainStore = defineStore('main', {
         },
         
         //************CAROUSEL***********//
-        cardsCarouselRoute : [
+        cardsCarousel : [
             {
               title: 'Nel mondo del lavoro',
               description: 'Le mie esperienze lavorative',
@@ -62,9 +62,7 @@ export const useMainStore = defineStore('main', {
               image: '/src/assets/images/me.jpg',
               url: 'BjjPage',
             },         
-          ],
-          
-          cardsCarouselHref : [
+         
             {
               title: 'Linkedin',
               description: 'Il mio profilo Linkedin',

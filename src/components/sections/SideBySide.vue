@@ -34,7 +34,7 @@ export default {
             <div>{{ layout.description }}</div>
 
             <div class="d-flex justify-content-center">
-                <ButtonCustom size="medium" :button="mainStore.btnSideBySide" />     
+                <ButtonCustom size="medium" isRouter :button="mainStore.btnSideBySide" />     
             </div>
         </div>
     </section>
