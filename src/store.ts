@@ -39,6 +39,7 @@ export const useMainStore = defineStore('main', {
             title: 'Il mio sito vetrina',
             description: 'Benvenuti sul mio sito portfolio, se sei qui perchè cerchi informazioni sul mio background e vuoi scoprire chi sono ho preparato una lettera di presentazione al link qui sotto.',
             image: '/src/assets/images/laptop.avif',
+            info:true
         },
 
         btnSideBySide: { 
@@ -83,6 +84,13 @@ export const useMainStore = defineStore('main', {
            url :'../public/test.jpg', // URL
            bgColor:'black', // Colore di sfondo
            color:'rgb(255, 103, 31)' // Colore del testo}   
+        },
+        //************CONTACTS-PAGE************//
+        ContactsSideBySide: {
+          title: 'Il mio sito vetrina',
+          description: 'Benvenuti sul mio sito portfolio, se sei qui perchè cerchi informazioni sul mio background e vuoi scoprire chi sono ho preparato una lettera di presentazione al link qui sotto.',
+          image: '/src/assets/images/bg.jpeg',        
+          form: true
         },
 
         //************FOOTER************//

@@ -36,10 +36,8 @@ export default {
         />
             <SideBySide :layout="mainStore.AboutMeSideBySide"
             />
-            <Carousel 
-                 
-                :cards="mainStore.cardsCarousel"
-                
+            <Carousel            
+                :cards="mainStore.cardsCarousel"   
             />
         </main>
        <Footer :icons="mainStore.logoFooter" />

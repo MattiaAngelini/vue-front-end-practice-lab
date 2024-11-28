@@ -2,12 +2,14 @@
 import { useMainStore } from '../store.ts';
 import Header from '../components/layout/Header.vue';
 import Footer from '../components/layout/Footer.vue';
+import SideBySide from '../components/sections/SideBySide.vue';
 
 export default{
     name: 'ContactsPage',
     components:{
         Header,
-        Footer   
+        Footer  ,
+        SideBySide 
     },
 
     setup() {
@@ -20,9 +22,12 @@ export default{
     <Header 
         :header="mainStore.mainHeader"
     />
-        <main class="container">
-            <h1>contatti</h1>
-        </main>    
+    <main>                         
+            <div  class="layout">          
+                <SideBySide :layout="mainStore.ContactsSideBySide"
+                />
+            </div>                  
+    </main>    
     <Footer 
         :icons="mainStore.logoFooter" 
     />
@@ -30,9 +35,18 @@ export default{
 <style scoped lang="scss">
 @use '../assets/styles/generic.scss' as *;
 
-main{
-    min-height: 50vh;
-   
-}
+.layout{            
+    position: relative;
+    margin: 5% 10% 5% 10%;
+    width: 80%;
+    height: 80%;
+    border: 6px solid red;
+    z-index: 100;
 
+     
+        form{
+            display: grid;
+        }
+    }
+        
 </style>
