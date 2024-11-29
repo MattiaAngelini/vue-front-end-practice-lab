@@ -74,7 +74,7 @@ section {
         gap:30px;
         min-height: 60vh;
         width: 100%;
-        transition: grid-column 0.3s ease, transform 0.3s ease;
+        
 
         .ms-card:hover {
             transform:scale(1.1);        
