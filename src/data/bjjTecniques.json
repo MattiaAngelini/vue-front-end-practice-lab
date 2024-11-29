@@ -1,0 +1,69 @@
+[
+    {
+      "belt": "Bianca",
+      "technique": "Passaggio della guardia chiusa",
+      "difficulty": "Facile",
+      "age_range": "18-50"
+    },
+    {
+      "belt": "Bianca",
+      "technique": "Ribaltamento dalla mezza guardia",
+      "difficulty": "Facile",
+      "age_range": "18-50"
+    },
+    {
+      "belt": "Bianca",
+      "technique": "Kimura dalla guardia chiusa",
+      "difficulty": "Medio",
+      "age_range": "18-45"
+    },
+    {
+      "belt": "Blu",
+      "technique": "Attacco con triangolo dalla guardia",
+      "difficulty": "Medio",
+      "age_range": "18-40"
+    },
+    {
+      "belt": "Blu",
+      "technique": "Passaggio della guardia a farfalla",
+      "difficulty": "Medio",
+      "age_range": "18-40"
+    },
+    {
+      "belt": "Viola",
+      "technique": "Ribaltamento da De La Riva a X-Guard",
+      "difficulty": "Difficile",
+      "age_range": "18-35"
+    },
+    {
+      "belt": "Viola",
+      "technique": "Sottomissione con armbar dalla monta",
+      "difficulty": "Difficile",
+      "age_range": "18-40"
+    },
+    {
+      "belt": "Marrone",
+      "technique": "Attacco omoplata dalla guardia spider",
+      "difficulty": "Molto Difficile",
+      "age_range": "18-30"
+    },
+    {
+      "belt": "Marrone",
+      "technique": "Ribaltamento dal berimbolo inverso",
+      "difficulty": "Molto Difficile",
+      "age_range": "18-28"
+    },
+    {
+      "belt": "Nera",
+      "technique": "Attacco con strangolamento bow-and-arrow",
+      "difficulty": "Esperto",
+      "age_range": "18-35"
+    },
+    {
+      "belt": "Nera",
+      "technique": "Sottomissione con triangolo inverso da side control",
+      "difficulty": "Esperto",
+      "age_range": "18-35"
+    }
+  ]
+  

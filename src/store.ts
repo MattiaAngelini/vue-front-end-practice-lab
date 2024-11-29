@@ -101,6 +101,20 @@ export const useMainStore = defineStore('main', {
           {name: 'Message', type: 'text', placeholder:'inserisci il tuo nome', required:false},
         ],
 
+         //************FILTERED-PAGE************//
+
+         filters:[
+          { //props dropdown
+            belts: ["Bianca", "Blu", "Viola", "Marrone", "Nera"]
+          },
+          { //props dropdown
+            difficulty: ["Facile", "Medio", "Difficile", "Molto Difficile", "Esperto"]
+          },
+          { //props dropdown
+            age_range: ["18-28", "18-30", "18-35", "18-40", "18-45", "18-50"]
+          }
+        ],
+        
         //************FOOTER************//
         logoFooter: [
             { image: 'src/assets/images/logos/bootstrap.png', altText: 'bootstrap' },

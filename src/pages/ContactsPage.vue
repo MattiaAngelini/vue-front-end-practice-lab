@@ -19,15 +19,18 @@ export default{
 }
 </script>
 <template>
+    
     <Header 
         :header="mainStore.mainHeader"
     />
-    <main>                         
-            <div  class="layout">          
-                <SideBySide :layout="mainStore.ContactsSideBySide"
-                />
-            </div>                  
+
+    <main>                     
+        <div  class="layout">          
+            <SideBySide :layout="mainStore.ContactsSideBySide"
+            />
+        </div>                 
     </main>    
+
     <Footer 
         :icons="mainStore.logoFooter" 
     />
