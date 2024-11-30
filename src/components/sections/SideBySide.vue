@@ -1,6 +1,6 @@
 <script lang="ts">
 import { SideBySide } from '../../models/SideBySide';
-import { useMainStore } from '../../store';
+import { useMainStore} from '../../store';
 import { PropType } from 'vue';
 import ButtonCustom from '../../stories/Buttons/ButtonCustom.vue';
 
@@ -17,12 +17,10 @@ export default {
         },     
     },
 
-    methods: {
-   
-  },
-    setup() {
-        const mainStore = useMainStore(); // Usa lo store
-        return { mainStore };
+    data(){
+        return{
+            store: useMainStore()
+        }
     },
 
     computed:{
@@ -47,14 +45,14 @@ export default {
             <div>{{ layout.description }}</div>
 
             <div class="d-flex justify-content-center">
-                <ButtonCustom size="medium" isRo :button="mainStore.btnSideBySide" />     
+                <ButtonCustom size="medium" isRo :button="store.btnSideBySide" />     
             </div>
         </div>
 
         <div v-if="layout.form"  class="container-info p-3">
             <h1>E-mail</h1>
             <form action="" methods=""  ref="form" @submit.prevent="sendEmail">
-                <div v-for="input in mainStore.ContactsInput">
+                <div v-for="input in store.ContactsInput">
                     <label :for="input.name">{{input.name}}</label>
                     <input :type="input.type" 
                            :id="input.name" 

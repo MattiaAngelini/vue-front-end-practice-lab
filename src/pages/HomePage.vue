@@ -1,5 +1,5 @@
 <script lang="ts">
-import { useMainStore } from '../store.ts';
+import { useMainStore} from '../store.ts';
 import Hero from '../components/sections/Hero.vue';
 import Carousel from '../components/sections/Carousel.vue';
 import SideBySide from '../components/sections/SideBySide.vue';
@@ -20,34 +20,36 @@ export default {
         BjjPage
     },
 
-    setup() {
-        const mainStore = useMainStore(); // Usa lo store
-        return { mainStore };
+    data(){
+        return{
+            store: useMainStore()
+        }
     },
+
 };
 </script>
 
 <template>
     <div class="ms-container">  
         <Header 
-        :header="mainStore.mainHeader"
+        :header="store.mainHeader"
         />
         <main>
             <Hero 
-            :media="mainStore.heroVideo"  
-            :title="mainStore.MyName"
-            :description="mainStore.MyInfo"
+            :media="store.heroVideo"  
+            :title="store.MyName"
+            :description="store.MyInfo"
         />
             
-            <SideBySide :layout="mainStore.AboutMeSideBySide"
+            <SideBySide :layout="store.AboutMeSideBySide"
             />
             <Carousel            
-                :cards="mainStore.cardsCarousel"   
+                :cards="store.cardsCarousel"   
             />
             <BjjPage/>
             <ContactsPage/>
         </main>
-       <Footer :icons="mainStore.logoFooter" />
+       <Footer :icons="store.logoFooter" />
     </div>
 </template>
 

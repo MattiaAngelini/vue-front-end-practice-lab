@@ -1,13 +1,11 @@
 <script lang="ts">
-import { useMainStore } from './store.ts';
+import{ getTechniques } from './data/apiTechniques.ts'
 
 export default {
     name: 'App',
-  
-    setup() {
-        const mainStore = useMainStore(); // Usa lo store
-        return { mainStore };
-    },
+    mounted(){
+        getTechniques()
+    }
 };
 </script>
 

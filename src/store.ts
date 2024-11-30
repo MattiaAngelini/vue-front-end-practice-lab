@@ -103,6 +103,8 @@ export const useMainStore = defineStore('main', {
 
          //************FILTERED-PAGE************//
 
+         techniques:[],
+
          filters:[
           { //props dropdown
             belts: ["Bianca", "Blu", "Viola", "Marrone", "Nera"]

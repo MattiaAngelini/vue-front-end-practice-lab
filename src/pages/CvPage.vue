@@ -11,24 +11,25 @@ export default{
         Footer,
     },
 
-    setup() {
-        const mainStore = useMainStore(); // Usa lo store
-        return { mainStore };
+    data(){
+        return{
+            store: useMainStore()
+        }
     },
 }
 </script>
 <template>
     <Header 
-        :header="mainStore.mainHeader"
+        :header="store.mainHeader"
     />
 
     <main class="container">
         <h1>Scarica il mio curriculum aggiornato</h1>
-        <ButtonCustom size="large" isDownload :button="mainStore.btnCvPage"
+        <ButtonCustom size="large" isDownload :button="store.btnCvPage"
     />
     </main>
     
-    <Footer :icons="mainStore.logoFooter" />
+    <Footer :icons="store.logoFooter" />
     
 </template>
 

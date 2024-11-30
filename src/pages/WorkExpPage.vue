@@ -10,21 +10,22 @@ export default{
         Footer
     },
 
-    setup() {
-        const mainStore = useMainStore(); // Usa lo store
-        return { mainStore };
+    data(){
+        return{
+            store: useMainStore()
+        }
     },
 }
 </script>
 <template>
     <Header 
-        :header="mainStore.mainHeader"
+        :header="store.mainHeader"
     />
         <main class="container">
             <h1>Esperienze lavorative</h1>
         </main>    
     <Footer 
-        :icons="mainStore.logoFooter" 
+        :icons="store.logoFooter" 
     />
 </template>
 <style scoped lang="scss">

@@ -12,15 +12,16 @@ export default{
         SideBySide 
     },
 
-    setup() {
-        const mainStore = useMainStore(); // Usa lo store
-        return { mainStore };
+    data(){
+        return{
+            store: useMainStore()
+        }
     },
 }
 </script>
 <template>                
         <div  class="layout">          
-            <SideBySide :layout="mainStore.ContactsSideBySide"
+            <SideBySide :layout="store.ContactsSideBySide"
             />
         </div>                 
 </template>

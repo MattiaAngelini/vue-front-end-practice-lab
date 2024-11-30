@@ -2,29 +2,22 @@
 import { useMainStore } from '../store.ts';
 // import Header from '../components/layout/Header.vue';
 // import Footer from '../components/layout/Footer.vue';
-import DropDonwnBs from '../components/common/DropDonwnBs.vue';
 import CardBs from '../components/common/CardBs.vue';
-import axios from 'axios';
-
 export default{
     name: 'BjjPage',
     components:{   
         // Header,
-        // Footer,
-        DropDonwnBs,
+        // Footer,  
         CardBs
     },
-
-    setup() {
-        const mainStore = useMainStore(); // Usa lo store
-        return { mainStore };
-    },
-
+    
     data(){
         return{
             data: null,
-            isVisible: true
-        }
+            isVisible: true,
+            store: useMainStore(),
+            userChoices: []
+       }
     },
 
     methods:{
@@ -37,52 +30,54 @@ export default{
                 return 'Difficoltà'
             }         
         },
-
-        getTechniques(){
-           axios.get('https://mocki.io/v1/e2fe5cbc-9571-42fa-af5b-beace1837b70')
-            .then(response => {
-                this.data = response.data;
-            })
-            .catch(error => {
-                console.error('Errore nel recupero delle tecniche', error);
-            })       
-        }
     },
-    computed:{
-    },
-    mounted() {  
-        this.getTechniques();    
-    },
+    
 }
 </script>
 <template>
     <!-- <Header 
-        :header="mainStore.mainHeader"
+        :header="store.mainHeader"
     /> -->
 
  <main>
-    <h1 class="text-center p-3">MIGLIORA IL TUO BJJ E ALLENA LE TECNICHE IN BASE AL TUO LIVELLO</h1>
+    <h1 class="text-center p-3">MIGLIORA IL TUO BJJ E ALLENA LE TECNICHE IN BASE AL TUO LIVELLO</h1>   
+    <div class="dropdown d-flex gap-3 justify-content-center">
+        <div v-for="(filter, index) in store.filters" :key="index">
+            <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >
+                <!--chiavi oggetti nell'array filters in store, per label button-->
+                {{ labelDropdown(Object.keys(filter)[0]) }}
+            </button>
 
-   <div>
-        <div class="d-flex gap-3 justify-content-center">
-            <DropDonwnBs v-for="(filter,index) in mainStore.filters" :key="index" 
-                :items="mainStore.filters[index]" 
-                :label="labelDropdown(Object.keys(filter)[0])" />     
+            <ul class="dropdown-menu">
+                <li v-for="(values, index2) in filter" :key="index2">
+                    <label class="d-block" v-for="(value, index) in values" :key="index"
+                    >
+                        <input v-model="userChoices" type="checkbox" :value="value" />
+                        {{ value }}
+                    </label>
+                </li>
+            </ul>
+
         </div>
-   </div>
+    </div>
 
-   <section class="container">
-            <div class="d-flex justify-content-center item" v-for="(card, index) in mainStore.cardsCarousel" 
-                 :key="index">
-                <CardBs 
+   <section class="container p-5 card">
+            <div class="cards" 
+                 >
+                <CardBs v-for="(item, index) in store.techniques" 
                  v-show="isVisible"
-                 :card="mainStore.cardsCarousel[index]" 
-                 /> <!--costruire json, ora layout su cardsCarousel-->
-            </div>
-        </section>
+                 :card="store.techniques[index]" 
+                 />                
+            </div>     
+    </section>
 
  </main>
-    <!-- <Footer :icons="mainStore.logoFooter" /> -->
+    <!-- <Footer :icons="store.logoFooter" /> -->
 </template>
 
 <style scoped lang="scss">
@@ -91,9 +86,9 @@ export default{
 main{
     min-height: 100vh;
     background-color: lightgrey;
-        section{
+        .cards{
             display: grid;
-            grid-template-columns: 1fr 1fr;         
+            grid-template-columns: repeat(3,1fr);              
         }
 }
 </style>
