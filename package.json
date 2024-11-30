@@ -12,9 +12,11 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "axios": "^1.7.8",
     "bootstrap": "^5.3.3",
     "pinia": "^2.2.6",
     "vue": "^3.5.12",
+    "vue-axios": "^3.5.2",
     "vue-router": "^4.4.5"
   },
   "devDependencies": {

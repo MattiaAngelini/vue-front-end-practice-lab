@@ -6,7 +6,7 @@ import SideBySide from '../components/sections/SideBySide.vue';
 import Header from '../components/layout/Header.vue';
 import Footer from '../components/layout/Footer.vue';
 import ContactsPage from '../pages/ContactsPage.vue';
-import FilteredPage from '../pages/FilteredPage.vue';
+import BjjPage from './BjjPage.vue';
 
 export default {
     name: 'HomePage',
@@ -17,7 +17,7 @@ export default {
         Header,
         Footer,
         ContactsPage,
-        FilteredPage
+        BjjPage
     },
 
     setup() {
@@ -32,20 +32,19 @@ export default {
         <Header 
         :header="mainStore.mainHeader"
         />
-
-        
         <main>
             <Hero 
             :media="mainStore.heroVideo"  
             :title="mainStore.MyName"
             :description="mainStore.MyInfo"
         />
-        <FilteredPage/>
+            
             <SideBySide :layout="mainStore.AboutMeSideBySide"
             />
             <Carousel            
                 :cards="mainStore.cardsCarousel"   
             />
+            <BjjPage/>
             <ContactsPage/>
         </main>
        <Footer :icons="mainStore.logoFooter" />
