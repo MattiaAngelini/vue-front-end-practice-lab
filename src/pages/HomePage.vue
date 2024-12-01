@@ -47,7 +47,7 @@ export default {
                 :cards="store.cardsCarousel"   
             />
             <BjjPage/>
-            <ContactsPage/>
+            <!-- <ContactsPage/> -->
         </main>
        <Footer :icons="store.logoFooter" />
     </div>

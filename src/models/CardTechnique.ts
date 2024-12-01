@@ -1,4 +1,4 @@
-export interface CardTechnique {
+export interface CardTechnique { // interfaccia JSON che arriva da API
     id: number;
     belt: string;
     image: string;
