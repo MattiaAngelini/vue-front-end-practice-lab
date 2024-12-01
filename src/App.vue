@@ -1,11 +1,6 @@
 <script lang="ts">
-import{ getTechniques } from './data/apiTechniques.ts'
-
 export default {
     name: 'App',
-    mounted(){
-        getTechniques()
-    }
 };
 </script>
 

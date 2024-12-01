@@ -132,7 +132,12 @@ export const useMainStore = defineStore('main', {
             { image: 'src/assets/images/logos/node.png', altText: 'node' },
             { image: 'src/assets/images/logos/github.png', altText: 'github' },
         ],
+
+        count:0,
+        
     }),
+
+  
 
     getters: {
         // computed of store
