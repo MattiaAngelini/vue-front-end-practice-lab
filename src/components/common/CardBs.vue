@@ -29,7 +29,7 @@ export default {
 @use '../../assets/styles/generic.scss' as *;
 
 .card{
-    width: 400px;
+    
 }
 
 </style>

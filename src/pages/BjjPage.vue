@@ -4,6 +4,7 @@ import axios from 'axios';
 // import Header from '../components/layout/Header.vue';
 // import Footer from '../components/layout/Footer.vue';
 import CardBs from '../components/common/CardBs.vue';
+import { currentWindow } from '../assets/styles/breakpoint.ts';
 
 export default {
     name: 'BjjPage',
@@ -18,7 +19,8 @@ export default {
             data: null,
             store: useMainStore(),
             userChoices: [],
-            techniques: []
+            techniques: [],
+            sizeWindow: currentWindow(window.innerWidth),
         };
     },
 
@@ -32,6 +34,7 @@ export default {
                 return 'Difficoltà';
             }         
         },
+
         getTechniques() {
             axios.get('https://mocki.io/v1/93b6195f-e54e-48e2-866e-f94a591761da')
                 .then(response => {
@@ -41,15 +44,15 @@ export default {
                     console.error('Errore nel recupero delle tecniche', error);
                 });
         },
+        
         filters() {
-            this.techniques.forEach(technique => {   
-                technique.isVisible = true;
-                // Controlla ogni filtro selezionato
+            this.techniques.forEach(technique => {       
                 this.userChoices.forEach(choice => {
-                    // ciclo nelle options e verifico
-                    // se il valore sia presente in una proprietà delle tecniche
-                    if (!(technique.belt === choice || technique.difficulty === choice || technique.age_range === choice )){                   
+                    if (!(technique.belt === choice || 
+                          technique.difficulty === choice || 
+                          technique.age_range === choice )){                   
                         technique.isVisible = false;} // Nascondo se non presente
+                        
                 });
             });
         },
@@ -58,11 +61,37 @@ export default {
             this.techniques.forEach(technique => {   
                 technique.isVisible = true;           
             });
+        },
+
+        getLayout(){
+                //ogni volta che finestra cambia viene ricalcolato 'sizeWindow' con funzione dei breakppoints 
+                window.addEventListener('resize', () => {
+                this.sizeWindow = currentWindow(window.innerWidth);
+                console.log(this.sizeWindow)
+            });
 
         }
     },
+
+    computed:{
+        //layout delle colonne grid in base ai breakpoints
+        columns():Record<string,string> {
+            if (this.sizeWindow === 'xl' || this.sizeWindow === 'xxl') {
+                return { gridTemplateColumns: 'repeat(4, 1fr)' };
+            }      
+            else if (this.sizeWindow === 'xs' || this.sizeWindow === 'xxs') {
+                return { gridTemplateColumns:  '1fr'};
+            }
+            else {
+                return { gridTemplateColumns: 'repeat(2, 1fr)' };
+            }
+        },
+
+    },
+
     mounted() {
         this.getTechniques();
+        this.getLayout();
     }
 };
 </script>
@@ -102,7 +131,7 @@ export default {
     </div>
 
    <section class="container p-5 card">
-            <div class="cards" 
+            <div :style="columns"  class="cards" 
                  >
                 <CardBs  v-for="(item, index) in techniques" 
                  :card="techniques[index]" 
@@ -121,9 +150,11 @@ export default {
 main{
     min-height: 100vh;
     background-color: lightgrey;
-        .cards{
-            display: grid;
-            grid-template-columns: repeat(3,1fr);              
+
+    .cards{
+        display: grid;  
+        // grid-template-columns: 1fr 1fr 1fr;
+                  
         }
 }
 </style>
