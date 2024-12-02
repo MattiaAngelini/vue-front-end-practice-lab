@@ -40,12 +40,13 @@ export default {
                 .get('https://mocki.io/v1/93b6195f-e54e-48e2-866e-f94a591761da')
                 .then(response => {
                     this.techniques = response.data;
+                    console.log(this.techniques);
                 })
                 .catch(error => {
                     console.error('Errore nel recupero delle tecniche', error);
                 });
         },
-        
+
         getLayout() {
             window.addEventListener('resize', () => {
                 this.sizeWindow = currentWindow(window.innerWidth);
@@ -54,26 +55,24 @@ export default {
         },
 
         filters() {
-            //creare computed sulle options
             this.techniques.forEach(technique => {
-                technique.isVisible = true;
-                this.userChoices.forEach(choice => {
-                    if (!(technique.belt === choice ||
-                          technique.difficulty === choice ||
-                          technique.age_range === choice)) {
+                if (this.userChoices.length === 0) {
+                    technique.isVisible = true;
+                }
+                else{
+                    this.userChoices.forEach(choice => {
+                    if (
+                        technique.belt.includes(choice)||
+                        technique.difficulty.includes(choice) ||
+                        technique.age_range.includes(choice)
+                    ) {
+                       
+                    } else {
                         technique.isVisible = false;
                     }
-                });
+                });}
             });
         },
-
-        resetFilters() {
-            this.userChoices = [];
-            this.techniques.forEach(technique => {
-                technique.isVisible = true;
-            });
-        },
-
     },
 
     computed: {
@@ -95,6 +94,7 @@ export default {
 };
 </script>
 
+
 <template>
     <!-- <Header :header="store.mainHeader" /> -->
     <main class="p-5">
@@ -114,15 +114,13 @@ export default {
                 <ul class="dropdown-menu">
                     <li v-for="(values, index2) in filter" :key="index2">
                         <label class="d-block" v-for="(value, index) in values" :key="index">
-                            <input v-model="userChoices" type="checkbox" :value="value" />
+                            <input @change="filters" v-model="userChoices" type="checkbox" :value="value" />
                             {{ value }}
                         </label>
                     </li>
                 </ul>
             </div>
 
-            <button type="button" class="btn btn-success m-1" @click="filters">FILTRA</button>
-            <button type="button" class="btn btn-warning m-1" @click="resetFilters">PULISCI FILTRI</button>
         </div>
 
         <section class="p-3">
