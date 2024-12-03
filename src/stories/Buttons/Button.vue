@@ -1,5 +1,5 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }} </button>
+  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }}</button>
 </template>
 
 <script lang="ts" setup>
@@ -38,7 +38,10 @@ const classes = computed(() => ({
 }));
 
 const style = computed(() => ({
-  backgroundColor: props.backgroundColor
+  backgroundColor: props.backgroundColor,
+  fontSize: '16px',
+  display: 'flex',
+  justifyContent: 'center',
 }));
 
 const onClick = () => {

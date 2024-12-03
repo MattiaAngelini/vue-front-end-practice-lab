@@ -54,23 +54,20 @@ export default {
             });
         },
 
+        //
         filters() {
             this.techniques.forEach(technique => {
-                if (this.userChoices.length === 0) {
-                    technique.isVisible = true;
-                }
-                else{
-                    this.userChoices.forEach(choice => {
+                technique.isVisible = true; //default tutte              
+                this.userChoices.forEach(choice => {
                     if (
                         technique.belt.includes(choice)||
-                        technique.difficulty.includes(choice) ||
+                        technique.difficulty.includes(choice)||
                         technique.age_range.includes(choice)
-                    ) {
-                       
-                    } else {
-                        technique.isVisible = false;
-                    }
-                });}
+                    ) { //se combaciano non fa nulla perchè IsVisible già true - ***FUNZIONA MA DA RIVEDERE***
+             
+                     }else {technique.isVisible = false;}
+                     //altrimenti se non combaciano con le scelte utente le nasconde filtrando
+                });
             });
         },
     },

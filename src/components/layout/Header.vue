@@ -1,12 +1,12 @@
 <script lang="ts">
 import { Header } from '../../models/Header.ts';
 import {  PropType } from 'vue';
-import Offcanvas from '../common/Offcanvas.vue';
+import Hamburger from '../common/Hamburger.vue';
 
 export default {
     name: 'Header',
     components:{
-        Offcanvas
+        Hamburger
     },
     props: {
         header: {
@@ -44,7 +44,7 @@ export default {
                 <router-link :to="{ name: link.href }"> {{ link.label }} </router-link>
             </a>
             <!--componente hamburger-->
-            <Offcanvas :offcanvas="header.hamburger" />
+            <Hamburger :offcanvas="header.hamburger" />
         </div>
     </header>
 </template>
