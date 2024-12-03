@@ -4,7 +4,6 @@ import { useMainStore} from '../../store';
 import { PropType } from 'vue';
 import ButtonCustom from '../../stories/Buttons/ButtonCustom.vue';
 
-
 export default {
     name: 'SideBySide',
     components: {
@@ -14,7 +13,12 @@ export default {
         layout: {
             type: Object as PropType<SideBySide>,
             required: true,
-        },     
+        },
+        imageLeft:{
+            type: Boolean,
+            required:false,
+            default: true
+        }     
     },
 
     data(){
@@ -22,20 +26,11 @@ export default {
             store: useMainStore()
         }
     },
-
-    computed:{
-        msLayout(){ 
-            if(this.layout.info){
-                return {minHeight: '100vh', gridTemplateColumns: '1fr 1fr'}
-                }
-            }
-        }
     }
 </script>
 
 <template>
-    
-    <section :style="msLayout">
+    <section>
         <div class="container-img">
             <img :src="layout.image" alt="" />
         </div>
@@ -60,30 +55,25 @@ export default {
                            :placeholder="input.placeholder" 
                            :required="input.required">
                 </div>
-
                 <div>
                     <button type="submit" value="Send">Invia</button>
-                </div>
-                
-            </form>
-          
+                </div>                
+            </form>         
         </div>
-
     </section>
 </template>
 
 <style scoped lang="scss">
 @use '../../assets/styles/generic.scss' as *;
-@use '../../assets/styles/partials/mediaqueries.scss' as *;
+@use '../../assets/styles/partials/mediaqueries/mediaqueries.scss' as *;
 
 section { 
     background-color: lightgray;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
 
     .container-img {
-        min-width: 60%;
-
         img {
             width: 100%;
             height: 100%;
@@ -91,7 +81,7 @@ section {
         }
     }
 
-    .container-info {
+    .container-info {  
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -106,7 +96,7 @@ section {
         display: block;
     }
     input, textArea{
-        width: 100%;
+        width: 80%;
     }
 }
 </style>

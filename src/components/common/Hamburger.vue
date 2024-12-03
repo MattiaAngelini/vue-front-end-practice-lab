@@ -1,7 +1,6 @@
 <script lang="ts">
 import { Offcanvas } from '../../models/Offcanvas';
 import { PropType } from 'vue';
-
 export default {
     name: 'Hamburger',
     props: {
@@ -42,18 +41,18 @@ export default {
         type="button" 
         @click="toggle()" 
     ></i>
-
     <div :class="change" class="hamburger-body">
-        <div class="d-flex justify-content-between gap-3">
-            <h2>{{ offcanvas.title }}</h2>
+        <div class="d-flex justify-content-between">
+            <h1>{{ offcanvas.title }}</h1>       
             <button class="btn btn-danger" @click="toggle">
                 <i>X</i>
             </button>
         </div>
         <div>
+            <div class="rule"></div>
             <ul>
                 <li 
-                    class="list-unstyled mt-5" 
+                    class="list-unstyled" 
                     v-for="(link, index) in offcanvas.links" 
                     :key="index"
                 >
@@ -71,7 +70,7 @@ export default {
 
 .hamburger-body {
     color: black;
-    padding: 30px;
+    padding: 20px;
     position: absolute;
     top: 0;
     left: 0;
@@ -81,6 +80,27 @@ export default {
     min-height: 100vh;
     animation-duration: 0.3s;
     animation-name: slide-in;
+
+        button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        }
+        .rule{
+            min-height: 2px;
+            margin: 10px 0 10px 0;
+            background-color: black;
+        }
+        a{
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 80px;
+            text-decoration: none;
+            font-weight: 600;
+            color: black;
+        }
 
     @keyframes slide-in {
         from {
@@ -92,25 +112,11 @@ export default {
     }
 }
 
-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-}
-
 i {
     grid-column: 6 / 6;
     align-self: center;
     padding: 10px;
     border-radius: 2px;
     font-size: 20px;
-}
-
-a {
-    text-decoration: none;
-    font-weight: 600;
-    color: black;
 }
 </style>

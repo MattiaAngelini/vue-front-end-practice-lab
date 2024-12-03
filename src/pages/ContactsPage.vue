@@ -19,26 +19,22 @@ export default{
     },
 }
 </script>
-<template>                
+<template> 
+         <Header 
+        :header="store.mainHeader"
+        />               
         <div  class="layout">          
             <SideBySide :layout="store.ContactsSideBySide"
             />
-        </div>                 
+        </div>
+        <Footer :icons="store.logoFooter" />                 
 </template>
 <style scoped lang="scss">
 @use '../assets/styles/generic.scss' as *;
 
-.layout{            
-    position: relative;
-    margin: 5% 10% 5% 10%;
-    width: 80%;
-    height: 80%;
-    border: 6px solid red;
-    z-index: 100;
-    
+.layout{              
         form{
             display: grid;
         }
-    }
-        
+    }     
 </style>

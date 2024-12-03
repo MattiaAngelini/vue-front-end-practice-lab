@@ -15,7 +15,7 @@ export const useMainStore = defineStore('main', {
            {label:'fa-brands fa-github',  href: 'https://github.com/MattiaAngelini'}
           ],
           new Offcanvas(
-            'Mattia Angelini', // title offcanvas
+            `MENU'`, // title offcanvas
             'fa-solid fa-bars', // icon hamburger
             'grey', // bgColor
             'black', // color
@@ -32,7 +32,7 @@ export const useMainStore = defineStore('main', {
         //************HERO************//
         heroVideo: '/src/assets/video/heroVideo.mp4',
         MyName: 'Mattia Angelini',
-        MyInfo: 'Front-end Web Developer',
+        MyInfo: 'Front-end Developer',
 
         //************SIDEBYSIDE************//
         AboutMeSideBySide: {

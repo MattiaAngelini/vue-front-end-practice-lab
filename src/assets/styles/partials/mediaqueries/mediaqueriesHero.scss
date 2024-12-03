@@ -1,0 +1,50 @@
+// MEDIA QUERIES
+
+// Very small devices (e.g., smartphones with screens smaller than 340px)
+@media (min-width: 200px) and (max-width: 320px) {
+  .content{
+    h1,p{font-size: 14px;}
+}
+  }
+  
+  // Smartphone
+  @media (min-width: 321px) and (max-width: 400px) {
+    .content{
+      h1,p{font-size: 20px;}
+  }
+  
+  }
+  
+  // Tablet
+  @media (min-width: 401px) and (max-width: 768px) {
+    .content{
+      h1,p{font-size: 30px;}
+  }
+  }
+  
+  // Small laptop
+  @media (min-width: 769px) and (max-width: 992px) {
+    .content{
+      h1,p{font-size: 40px;}
+  }
+  }
+  
+  // Large laptop and desktop
+  @media (min-width: 993px) and (max-width: 1200px) {
+    .content{
+      h1,p{font-size: 50px;}
+  }
+  }
+  
+  // Extra large screens
+  @media (min-width: 1201px) {
+    .content{
+      h1,p{font-size: 60px;}
+  }
+  }
+  
+  // Media query specifica
+  @media (min-width: 990px) {
+   
+  }
+  

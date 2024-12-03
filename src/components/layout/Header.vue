@@ -50,7 +50,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@use '../../assets//styles/partials/mediaqueries.scss' as *;
+@use '../../assets//styles/partials/mediaqueries/mediaqueries.scss' as *;
 
 header {
     color: white;

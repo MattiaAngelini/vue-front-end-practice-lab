@@ -42,9 +42,9 @@ export default {
             <Transition name="info" appear>
                 <div v-if="show" class="info">
                     <div class="content">
-                        <h1 class="name d-flex justify-content-center">{{ title }}</h1>
+                        <h1>{{ title }}</h1>
                         <hr>
-                        <p class="description d-flex justify-content-center">{{ description }}</p>
+                        <p>{{ description }}</p>
                     </div>
                 </div>
             </Transition>
@@ -54,5 +54,7 @@ export default {
 
 <style scoped lang="scss">
 @use '../../assets/styles/generic.scss' as *;
-@use '../../assets/styles/partials/styleHero.scss';
+@use '../../assets/styles/partials/styleHero.scss' as *;
+@use '../../assets/styles/partials/mediaqueries/mediaqueriesHero.scss' as *;
+
 </style>
