@@ -24,7 +24,7 @@ export default{
         :header="store.mainHeader"
         />               
         <div  class="layout">          
-            <SideBySide :layout="store.ContactsSideBySide"
+            <SideBySide :imageLeft="false" :layout="store.ContactsSideBySide"
             />
         </div>
         <Footer :icons="store.logoFooter" />                 

@@ -26,16 +26,25 @@ export default {
             store: useMainStore()
         }
     },
+
+    computed:{
+        layoutPosition(){
+            if(!this.imageLeft){
+                return  {gridColumn: '1'};
+            }
+            
+        }
+    }
     }
 </script>
 
 <template>
-    <section>
+    <section class="reverse-layout">
         <div class="container-img">
             <img :src="layout.image" alt="" />
         </div>
 
-        <div v-if="layout.info"  class="container-info p-4">
+        <div v-if="layout.info"  :style="layoutPosition"  class="container-info p-4">
             <h1>{{ layout.title }}</h1>
             <div>{{ layout.description }}</div>
 
@@ -44,7 +53,7 @@ export default {
             </div>
         </div>
 
-        <div v-if="layout.form"  class="container-info p-3">
+        <div v-if="layout.form" :style="layoutPosition" class="container-info p-3">
             <h1>E-mail</h1>
             <form action="" methods=""  ref="form" @submit.prevent="sendEmail">
                 <div v-for="input in store.ContactsInput">
@@ -70,18 +79,20 @@ export default {
 section { 
     background-color: lightgray;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;  
+    grid-template-rows: 1fr; 
     min-height: 100vh;
 
-    .container-img {
+    .container-img { 
+        grid-row: 1;
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
     }
-
-    .container-info {  
+    .container-info {     
+        grid-row: 1;
         width: 100%;
         display: flex;
         flex-direction: column;

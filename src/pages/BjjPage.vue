@@ -16,7 +16,7 @@ export default {
 
     data() {
         return {
-            data: null,
+            data: [],
             store: useMainStore(),
             userChoices: [],
             techniques: [],

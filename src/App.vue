@@ -1,7 +1,17 @@
 <script lang="ts">
 export default {
     name: 'App',
+
+methods:{
+  
+},
+
+mounted(){
+ 
+}
+
 };
+
 </script>
 
 <template>

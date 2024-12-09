@@ -6,7 +6,7 @@ import SideBySide from '../components/sections/SideBySide.vue';
 import Header from '../components/layout/Header.vue';
 import Footer from '../components/layout/Footer.vue';
 import ContactsPage from '../pages/ContactsPage.vue';
-import BjjPage from './BjjPage.vue';
+
 
 export default {
     name: 'HomePage',
@@ -17,7 +17,7 @@ export default {
         Header,
         Footer,
         ContactsPage,
-        BjjPage
+   
     },
 
     data(){
@@ -46,7 +46,7 @@ export default {
             <Carousel            
                 :cards="store.cardsCarousel"   
             />
-            <BjjPage/>
+          
             <!-- <ContactsPage/> -->
         </main>
        <Footer :icons="store.logoFooter" />
