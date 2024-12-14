@@ -93,13 +93,6 @@ export const useMainStore = defineStore('main', {
           form: true
         },
 
-        ContactsInput :[
-          {name: 'Nome*', type: 'text', placeholder:'inserisci il tuo nome', required:true},
-          {name: 'E-mail*', type: 'email',  placeholder:'inserisci la tua mail', required:true},
-          {name: 'Numero', type: 'text', placeholder:'inserisci il tuo numero', required:false},
-          {name: 'Azienda', type: 'text', placeholder:'inserisci azienda', required:false},
-          {name: 'Message', type: 'text', placeholder:'inserisci il tuo nome', required:false},
-        ],
 
          //************FILTERED-PAGE************//
 

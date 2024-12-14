@@ -13,7 +13,7 @@ export default{
 
     data(){
         return{
-            store: useMainStore()
+            store: useMainStore(),
         }
     },
 }
@@ -27,8 +27,9 @@ export default{
         <h1>Scarica il mio curriculum aggiornato</h1>
         <ButtonCustom size="large" isDownload :button="store.btnCvPage"
     />
+
     </main>
-    
+
     <Footer :icons="store.logoFooter" />
     
 </template>
@@ -36,8 +37,10 @@ export default{
 <style scoped lang="scss">
 @use '../assets/styles/generic.scss' as *;
 
-main{
-    min-height: 50vh;
+.container{
+    height: 100vh;
 }
+
+
 
 </style>

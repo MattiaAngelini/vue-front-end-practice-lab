@@ -3,11 +3,17 @@ import { SideBySide } from '../../models/SideBySide';
 import { useMainStore} from '../../store';
 import { PropType } from 'vue';
 import ButtonCustom from '../../stories/Buttons/ButtonCustom.vue';
-
+import emailjs from '@emailjs/browser';
 export default {
     name: 'SideBySide',
     components: {
         ButtonCustom,
+    },
+    data(){
+        return{
+            store: useMainStore(),
+            emailSent: false       
+        }
     },
     props: {
         layout: {
@@ -21,18 +27,35 @@ export default {
         }     
     },
 
-    data(){
-        return{
-            store: useMainStore()
-        }
+    methods :{
+        sendEmail() {
+      emailjs
+        .sendForm('service_s9wonvb', 'template_4wunygu', this.$refs.form, {
+          publicKey: 'liM4P9Emnvlm8w4sW',
+        })
+        .then(
+          () => {
+            console.log('SUCCESS!');
+            this.emailSent = true;
+
+            setTimeout(() => {
+                location.reload()
+                }, "2000");
+            
+          },
+          (error) => {
+            console.log('FAILED...', error.text);
+          },
+        );
     },
 
+    }
+    ,
     computed:{
         layoutPosition(){
             if(!this.imageLeft){
                 return  {gridColumn: '1'};
-            }
-            
+            }         
         }
     }
     }
@@ -42,39 +65,45 @@ export default {
     <section class="reverse-layout">
         <div class="container-img">
             <img :src="layout.image" alt="" />
+            <Transition name="alert">
+                <div v-if="emailSent" class="ms-alert">
+                <h1>E-MAIL INVIATA!</h1>
+            </div>
+            </Transition>
         </div>
 
         <div v-if="layout.info"  :style="layoutPosition"  class="container-info p-4">
-            <h1>{{ layout.title }}</h1>
+            <h1>{{  layout.title }}</h1>
             <div>{{ layout.description }}</div>
 
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center p-3">
                 <ButtonCustom size="medium" isRo :button="store.btnSideBySide" />     
             </div>
         </div>
 
-        <div v-if="layout.form" :style="layoutPosition" class="container-info p-3">
+        <div class="ms-form">
+            <div v-if="layout.form" :style="layoutPosition">
             <h1>E-mail</h1>
-            <form action="" methods=""  ref="form" @submit.prevent="sendEmail">
-                <div v-for="input in store.ContactsInput">
-                    <label :for="input.name">{{input.name}}</label>
-                    <input :type="input.type" 
-                           :id="input.name" 
-                           :name="input.name" 
-                           :placeholder="input.placeholder" 
-                           :required="input.required">
-                </div>
-                <div>
-                    <button type="submit" value="Send">Invia</button>
-                </div>                
-            </form>         
+            <form ref="form" @submit.prevent="sendEmail">
+                <label>Nome:</label>
+                <input required type="text" name="userName">
+                <label>E-mail:</label>
+                <input required type="email" name="userEmail">
+                <label>Oggetto:</label>
+                <input required type="text" name="subject">
+                <label>Messaggio:</label>
+                <textarea required name="message"></textarea>
+                <input required @click="clearInput" type="submit" value="Send">
+            </form>      
         </div>
+
+        </div>
+        
     </section>
 </template>
 
 <style scoped lang="scss">
 @use '../../assets/styles/generic.scss' as *;
-@use '../../assets/styles/partials/mediaqueries/mediaqueries.scss' as *;
 
 section { 
     background-color: lightgray;
@@ -84,30 +113,49 @@ section {
     min-height: 100vh;
 
     .container-img { 
-        grid-row: 1;
+           
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover;      
+        }
+        .ms-alert{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 15%;
+            width:50%;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);   
+            border: 8px solid black;   
+            border-radius: 10px;
+        }
+
+        .alert-enter-active,
+        .alert-leave-active{
+            transition: opacity 0.3s ease-in-out;
+        }
+        .alert-enter-from,
+        .alert-leave-to{
+            opacity: 0;
         }
     }
     .container-info {     
-        grid-row: 1;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
         margin: auto;
-        position: relative;
-        bottom: 0;
-        font-size: 12px;
     }
 
-    label{
-        display: block;
+    .ms-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4% 
     }
+
     input, textArea{
-        width: 80%;
+        width: 100%;
     }
 }
 </style>
