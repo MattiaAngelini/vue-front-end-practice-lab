@@ -3,21 +3,14 @@ import { useMainStore} from '../store.ts';
 import Hero from '../components/sections/Hero.vue';
 import Carousel from '../components/sections/Carousel.vue';
 import SideBySide from '../components/sections/SideBySide.vue';
-import Header from '../components/layout/Header.vue';
-import Footer from '../components/layout/Footer.vue';
 import ContactsPage from '../pages/ContactsPage.vue';
-
-
 export default {
     name: 'HomePage',
     components: {
         Hero,
         Carousel,
         SideBySide,
-        Header,
-        Footer,
         ContactsPage,
-   
     },
 
     data(){
@@ -31,9 +24,6 @@ export default {
 
 <template>
     <div class="ms-container">  
-        <Header 
-        :header="store.mainHeader"
-        />
         <main>
             <Hero 
             :media="store.heroVideo"  
@@ -47,9 +37,8 @@ export default {
                 :cards="store.cardsCarousel"   
             />
           
-            <!-- <ContactsPage/> -->
+            <ContactsPage/>
         </main>
-       <Footer :icons="store.logoFooter" />
     </div>
 </template>
 

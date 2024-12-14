@@ -78,7 +78,6 @@ section {
 
         .ms-card:hover {
             transform:scale(1.1);        
-            z-index: 999;
             border: 10px solid $primary-color;
             border-radius: 6px;
             transition-duration: 0.3s;

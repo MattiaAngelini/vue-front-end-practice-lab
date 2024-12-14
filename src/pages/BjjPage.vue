@@ -1,16 +1,12 @@
 <script lang="ts">
 import { useMainStore } from '../store.ts';
 import axios from 'axios';
-// import Header from '../components/layout/Header.vue';
-// import Footer from '../components/layout/Footer.vue';
 import CardBs from '../components/common/CardBs.vue';
 import { currentWindow } from '../assets/styles/breakpoint.ts';
 
 export default {
     name: 'BjjPage',
     components: {
-        // Header,
-        // Footer,
         CardBs
     },
 
@@ -93,7 +89,6 @@ export default {
 
 
 <template>
-    <!-- <Header :header="store.mainHeader" /> -->
     <main class="p-5">
         <h1 class="text-center mb-5">MIGLIORA IL TUO BJJ E ALLENA LE TECNICHE IN BASE AL TUO LIVELLO</h1>
 
@@ -130,7 +125,6 @@ export default {
             </div>
         </section>
     </main>
-    <!-- <Footer :icons="store.logoFooter" /> -->
 </template>
 
 <style scoped lang="scss">

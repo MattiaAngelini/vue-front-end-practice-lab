@@ -20,6 +20,10 @@ export default {
             type: Object as PropType<SideBySide>,
             required: true,
         },
+        btnInfo :{
+            type: Boolean,
+            default:true
+        },
         imageLeft:{
             type: Boolean,
             required:false,
@@ -77,12 +81,12 @@ export default {
             <div>{{ layout.description }}</div>
 
             <div class="d-flex justify-content-center p-3">
-                <ButtonCustom size="medium" isRo :button="store.btnSideBySide" />     
+                <ButtonCustom v-if="btnInfo" size="medium" :button="store.btnSideBySide" />     
             </div>
         </div>
 
-        <div class="ms-form">
-            <div v-if="layout.form" :style="layoutPosition">
+        <div v-if="layout.form"  class="ms-form">
+            <div :style="layoutPosition">
             <h1>E-mail</h1>
             <form ref="form" @submit.prevent="sendEmail">
                 <label>Nome:</label>

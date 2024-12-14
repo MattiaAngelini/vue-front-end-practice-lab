@@ -36,17 +36,24 @@ export const useMainStore = defineStore('main', {
 
         //************SIDEBYSIDE************//
         AboutMeSideBySide: {
-            title: 'Il mio sito vetrina',
-            description: 'Benvenuti sul mio sito portfolio, se sei qui perchè cerchi informazioni sul mio background e vuoi scoprire chi sono ho preparato una lettera di presentazione al link qui sotto.',
+            title: 'Benvenuto sul mio sito portfolio',
+            description: 'Se sei qui perchè cerchi informazioni sul mio background e vuoi scoprire chi sono ho preparato una lettera di presentazione al link qui sotto.',
             image: '/src/assets/images/laptop.avif',
             info:true
         },
 
         btnSideBySide: { 
           label:'Presentazione!', // Titolo
-           url :'AboutMePage', // URL
+           url :'http://localhost:5173/AboutMe', // URL
            bgColor:'black', // Colore di sfondo
            color:'rgb(255, 103, 31)' // Colore del testo}   
+        },
+          //************ABOUT ME PAGE************//
+          AboutMe: {
+            title: 'Ciao!',
+            description: 'Mi chiamo Mattia Angelini sono nato a Udine bla bla bla.',
+            image: '/src/assets/images/me.jpg',
+            info:true
         },
         
         //************CAROUSEL***********//
@@ -55,13 +62,13 @@ export const useMainStore = defineStore('main', {
               title: 'Nel mondo del lavoro',
               description: 'Le mie esperienze lavorative',
               image: '/src/assets/images/me.jpg',
-              url: 'WorkExpPage',
+              url: 'http://localhost:5173/MyWorkExperiences',
             },
             {
               title: 'Il BJJ',
               description: 'Il Brazilian jiu-jitsu',
               image: '/src/assets/images/me.jpg',
-              url: 'BjjPage',
+              url: 'http://localhost:5173/IlBrazilianJiuJitsu',
             },         
          
             {
@@ -77,8 +84,7 @@ export const useMainStore = defineStore('main', {
               url: 'https://github.com/MattiaAngelini',
             },
           ],
-        //************CV-PAGE************//
-              
+        //************CV-PAGE************//            
         btnCvPage: { 
            label:'DOWNLOAD', // Titolo
            url :'../public/test.jpg', // URL
@@ -87,12 +93,9 @@ export const useMainStore = defineStore('main', {
         },
         //************CONTACTS-PAGE************//
         ContactsSideBySide: {
-          title: 'Il mio sito vetrina',
-          description: 'Benvenuti sul mio sito portfolio, se sei qui perchè cerchi informazioni sul mio background e vuoi scoprire chi sono ho preparato una lettera di presentazione al link qui sotto.',
           image: '/src/assets/images/bg.jpeg',        
           form: true
         },
-
 
          //************FILTERED-PAGE************//
 

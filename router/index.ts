@@ -6,7 +6,6 @@ import WorkExpPage from '../src/pages/WorkExpPage.vue';
 import BjjPage from '../src/pages/BjjPage.vue';
 import AboutMePage from '../src/pages/AboutMePage.vue';
 
-
 const routes = [
     { path: '/', name: 'HomePage', component: HomePage },
     { path: '/Contatti', name: 'ContactsPage', component: ContactsPage },
