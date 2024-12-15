@@ -19,7 +19,7 @@ export default{
     <section>
       
         <div class="container pt-5 pb-5">
-            <SideBySide :btnInfo="false" :layout="store.AboutMe"/>
+            <SideBySide :imageLeft="false" :btnInfo="false" :layout="store.AboutMe"/>
         </div>
        
     </section>
@@ -29,17 +29,6 @@ export default{
 @use '../assets/styles/generic.scss' as *;
 
 section{
-    background-color: lightgray;
-
-        .info{
-            width: 50%;
-            
-        }
-        .mainImg{
-            width: 50%;
-            img{
-                width: 100%;
-            }            
-        }
+    background-color: grey;
 }
 </style>

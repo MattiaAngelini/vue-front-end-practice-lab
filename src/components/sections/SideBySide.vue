@@ -26,7 +26,6 @@ export default {
         },
         imageLeft:{
             type: Boolean,
-            required:false,
             default: true
         }     
     },
@@ -52,14 +51,13 @@ export default {
           },
         );
     },
-
     }
     ,
     computed:{
         layoutPosition(){
-            if(!this.imageLeft){
-                return  {gridColumn: '1'};
-            }         
+            if(!this.imageLeft === true){
+                return  {order: '2'};
+            }      
         }
     }
     }
@@ -67,7 +65,9 @@ export default {
 
 <template>
     <section class="reverse-layout">
-        <div class="container-img">
+
+        <!--IMMAGINE-->
+        <div  :style="layoutPosition" class="container-img">
             <img :src="layout.image" alt="" />
             <Transition name="alert">
                 <div v-if="emailSent" class="ms-alert">
@@ -76,7 +76,8 @@ export default {
             </Transition>
         </div>
 
-        <div v-if="layout.info"  :style="layoutPosition"  class="container-info p-4">
+        <!--TITOLO E DESCRIZIONE-->
+        <div v-if="layout.info"   class="container-info p-4">
             <h1>{{  layout.title }}</h1>
             <div>{{ layout.description }}</div>
 
@@ -85,8 +86,9 @@ export default {
             </div>
         </div>
 
+        <!--FORM-->
         <div v-if="layout.form"  class="ms-form">
-            <div :style="layoutPosition">
+            <div >
             <h1>E-mail</h1>
             <form ref="form" @submit.prevent="sendEmail">
                 <label>Nome:</label>
@@ -111,13 +113,13 @@ export default {
 
 section { 
     background-color: lightgray;
-    display: grid;
-    grid-template-columns: 1fr 1fr;  
-    grid-template-rows: 1fr; 
+    display: flex;
     min-height: 100vh;
 
     .container-img { 
-           
+        width: 50%;
+        
+      
         img {
             width: 100%;
             height: 100%;
@@ -149,9 +151,11 @@ section {
     }
     .container-info {     
         margin: auto;
+        width: 50%;
     }
 
     .ms-form{
+        width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;

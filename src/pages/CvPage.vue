@@ -15,7 +15,7 @@ export default{
 </script>
 <template>
     <main class="container">
-        <h1>Scarica il mio curriculum aggiornato</h1>
+        <h1>Ill mio curriculum aggiornato!</h1>
         <ButtonCustom size="large" isDownload :button="store.btnCvPage"
     />
     </main>

@@ -47,12 +47,13 @@ export default {
                     v-for="(icon, index) in icons" 
                     :key="index" 
                     class="logo"
-                >
-                    <img 
+                >         
+                        <img 
                         v-show="icon.image !== ''" 
                             :src="icon.image" 
                             :alt="icon.altText"
                         >
+                   
                 </div>
             </div>
 
@@ -74,7 +75,7 @@ footer {
     display: grid;
 
     h1 {
-        color: white;
+        color: $secondary-color;
         padding: 6%;
     }
 
@@ -87,7 +88,7 @@ footer {
         display: grid;
         justify-items: center;
         grid-template-rows: repeat(3, 1fr);
-        gap: 4px;
+        gap: 1.5px;
         background: radial-gradient(circle, rgba(255, 103, 31, 0.6) 0%, rgba(0, 0, 0, 0) 75%);
 
         .logo {
@@ -103,12 +104,18 @@ footer {
                 height: 80%;
                 width: 80%;
             }
+
+            .logos-enter-active,
+            .logos-leave-active{
+                transform: scale(1.0);
+                transition: transform 4s ease-in-out;
+            }
+            .logos-enter-from,
+            .logos-leave-to{
+                transform: scale(1.3);
+            }
         }
 
-        .logo:hover {
-            background: radial-gradient($secondary-color 0%, rgb(41, 36, 36) 70%);
-            transition: all 0.3s ease-in-out;
-        }
     }
 
     .policy {

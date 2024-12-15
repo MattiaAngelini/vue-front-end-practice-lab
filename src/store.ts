@@ -9,7 +9,7 @@ export const useMainStore = defineStore('main', {
         mainHeader: new Header(
           [{label:'Home',href:'HomePage'},
            {label:'Contatti',href:'ContactsPage'},
-           {label:'CV',href:'CvPage'},
+           {label:'Download CV',href:'CvPage'},
           ],
           [{label:'fa-brands fa-linkedin', href: 'https://www.linkedin.com/in/mattia-angelini-b00427311/'},
            {label:'fa-brands fa-github',  href: 'https://github.com/MattiaAngelini'}
