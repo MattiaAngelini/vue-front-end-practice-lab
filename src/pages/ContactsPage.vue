@@ -16,15 +16,20 @@ export default{
 }
 </script>
 <template>          
+    <section>
+        <div>
             <SideBySide :imageLeft="false" :layout="store.ContactsSideBySide"
-            />  
+            /> 
+        </div>
+    </section>
+           
 </template>
 <style scoped lang="scss">
 @use '../assets/styles/generic.scss' as *;
 
-.layout{              
-        form{
-            display: grid;
-        }
-    }     
+section{
+    background-color: $secondary-color;
+    min-height: 80vh;
+}
+
 </style>

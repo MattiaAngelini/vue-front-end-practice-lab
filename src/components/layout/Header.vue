@@ -1,6 +1,6 @@
 <script lang="ts">
 import { Header } from '../../models/Header.ts';
-import {  PropType } from 'vue';
+import { PropType } from 'vue';
 import Hamburger from '../common/Hamburger.vue';
 
 export default {

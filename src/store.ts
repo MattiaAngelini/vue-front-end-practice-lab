@@ -41,48 +41,44 @@ export const useMainStore = defineStore('main', {
             image: '/src/assets/images/laptop.avif',
             info:true
         },
+        //************ABOUT-ME PAGE************//
+        AboutMe: {
+          title: 'Benvenuto sul mio sito portfolio',
+          description: 'Ciao, sono Mattia.Nato a Udine il 22 giugno 1993, oggi vivo a Bari. Il mio percorso nel mondo della programmazione è iniziato con la Boolean Tech Academy, dove ho completato una formazione intensiva come programmatore full stack. Da allora, continuo a crescere e a perfezionarmi, con particolare interesse per il front-end development. Oltre al codice, sono un insegnante di Brazilian Jiu-Jitsu, cintura viola con oltre 5 anni di pratica. La costanza, la disciplina e la dedizione che applico sul tatami sono gli stessi valori che porto nella mia vita professionale. In questo sito racconto il mio percorso, unendo lavoro, passioni e voglia di migliorarmi ogni giorno.',
+          image: '/src/assets/images/me.jpg',
+          info:true
+      },
 
         btnSideBySide: { 
-          label:'Presentazione!', // Titolo
+          label:'LEGGI',
            url :'http://localhost:5173/AboutMe', // URL
            bgColor:'black', // Colore di sfondo
-           color:'rgb(255, 103, 31)' // Colore del testo}   
+           color:'rgb(139, 134, 131)' // Colore del testo}   
         },
-          //************ABOUT ME PAGE************//
-          AboutMe: {
-            title: 'Ciao!',
-            description: 'Mi chiamo Mattia Angelini sono nato a Udine bla bla bla.',
-            image: '/src/assets/images/me.jpg',
-            info:true
-        },
+        
         
         //************CAROUSEL***********//
         cardsCarousel : [
-            {
-              title: 'Nel mondo del lavoro',
-              description: 'Le mie esperienze lavorative',
-              image: '/src/assets/images/me.jpg',
-              url: 'http://localhost:5173/MyWorkExperiences',
-            },
-            {
-              title: 'Il BJJ',
-              description: 'Il Brazilian jiu-jitsu',
-              image: '/src/assets/images/me.jpg',
-              url: 'http://localhost:5173/IlBrazilianJiuJitsu',
-            },         
-         
+                 
             {
               title: 'Linkedin',
               description: 'Il mio profilo Linkedin',
-              image: '/src/assets/images/bg.jpeg',
+              image: '/src/assets/images/linkedin.png',
               url: 'https://www.linkedin.com/in/mattia-angelini-b00427311/',
             },
             {
               title: 'Github',
               description: 'Il mio profilo Github',
-              image: '/src/assets/images/bg.jpeg',
+              image: '/src/assets/images/github.jpeg',
               url: 'https://github.com/MattiaAngelini',
             },
+              
+            {
+              title: 'Il BJJ',
+              description: 'Il Brazilian jiu-jitsu',
+              image: '/src/assets/images/gara.jpeg',
+              url: 'http://localhost:5173/IlBrazilianJiuJitsu',
+            }, 
           ],
         //************CV-PAGE************//            
         btnCvPage: { 
@@ -93,7 +89,7 @@ export const useMainStore = defineStore('main', {
         },
         //************CONTACTS-PAGE************//
         ContactsSideBySide: {
-          image: '/src/assets/images/bg.jpeg',        
+          image: '/src/assets/images/mail.webp',        
           form: true
         },
 
@@ -127,6 +123,9 @@ export const useMainStore = defineStore('main', {
             { image: 'src/assets/images/logos/vue.png', altText: 'vue' },
             { image: 'src/assets/images/logos/node.png', altText: 'node' },
             { image: 'src/assets/images/logos/github.png', altText: 'github' },
+            { image: '', altText: 'github' },
+            { image: '', altText: 'github' },
+            { image: '', altText: 'github' },
         ],
 
         count:0,

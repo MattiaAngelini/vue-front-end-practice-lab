@@ -4,6 +4,7 @@ import Hero from '../components/sections/Hero.vue';
 import Carousel from '../components/sections/Carousel.vue';
 import SideBySide from '../components/sections/SideBySide.vue';
 import ContactsPage from '../pages/ContactsPage.vue';
+import DiscoverMore from '../components/sections/DiscoverMore.vue';
 export default {
     name: 'HomePage',
     components: {
@@ -11,6 +12,7 @@ export default {
         Carousel,
         SideBySide,
         ContactsPage,
+        DiscoverMore
     },
 
     data(){
@@ -29,14 +31,10 @@ export default {
             :media="store.heroVideo"  
             :title="store.MyName"
             :description="store.MyInfo"
-        />
-            
+        />           
             <SideBySide :layout="store.AboutMeSideBySide"
-            />
-            <Carousel            
-                :cards="store.cardsCarousel"   
-            />
-          
+            />   
+            <DiscoverMore/>
             <ContactsPage/>
         </main>
     </div>

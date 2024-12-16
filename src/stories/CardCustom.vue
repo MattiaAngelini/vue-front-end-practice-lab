@@ -34,7 +34,9 @@ const classes = computed(() => ({
 
     <a v-else :href="card.url" >     
         <div class="ms-card">
-            <img  :src="props.card.image" alt="...">
+            <div class="container-img">
+                <img :src="props.card.image" alt="...">
+            </div>
             <div class="card-img-overlay">
                 <div class="info">
                     <h5>{{props.card.title}}</h5>

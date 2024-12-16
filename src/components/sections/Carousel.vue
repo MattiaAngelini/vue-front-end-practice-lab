@@ -15,7 +15,6 @@ export default {
         }, 
         bgColor: {
             type: String,
-            default: 'black',
             required: false      
         }  
     },
@@ -66,21 +65,15 @@ export default {
 @use '../../assets/styles/generic.scss' as *;
 
 section {   
-    padding:6%;
     display: grid;
-
     .carousel {
         display: grid;
         gap:30px;
-        min-height: 60vh;
-        width: 100%;
-        
-
+      
         .ms-card:hover {
             transform:scale(1.1);        
-            border: 10px solid $primary-color;
             border-radius: 6px;
-            transition-duration: 0.3s;
+            transition-duration: 0.6s;       
        }
     }
 }

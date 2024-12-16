@@ -13,7 +13,7 @@ export default {
 
     data() {
         return {
-            gridColumns: 4,
+            gridColumns: 5,
             sizeWindow: currentWindow(window.innerWidth),
         };
     },
@@ -40,7 +40,7 @@ export default {
 
 <template>
     <footer>
-        <h1 class="text-center">LINGUAGGI E STRUMENTI CON CUI LAVORO</h1>
+        <h3 class="text-center">LINGUAGGI E STRUMENTI CON CUI LAVORO</h3>
         <section>
             <div :style="columns" class="layout-footer container-logo">
                 <div 
@@ -70,17 +70,16 @@ export default {
 @use '../../assets/styles/generic.scss' as *;
 
 footer {
-    min-height: 70vh;
     background-color: rgb(41, 36, 36);
     display: grid;
 
-    h1 {
+    h3 {
         color: $secondary-color;
-        padding: 6%;
+        padding:3%;
     }
 
     .layout-footer {
-        width: 55%;
+        width: 60%;
         margin: auto;
     }
 
@@ -89,7 +88,7 @@ footer {
         justify-items: center;
         grid-template-rows: repeat(3, 1fr);
         gap: 1.5px;
-        background: radial-gradient(circle, rgba(255, 103, 31, 0.6) 0%, rgba(0, 0, 0, 0) 75%);
+        background: radial-gradient(circle, $secondary-color 0%, rgba(0, 0, 0, 0) 75%);
 
         .logo {
             height: auto;
