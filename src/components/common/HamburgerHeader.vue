@@ -2,7 +2,7 @@
 import { Offcanvas } from '../../models/Offcanvas';
 import { PropType } from 'vue';
 export default {
-    name: 'Hamburger',
+    name: 'HamburgerHeader',
     props: {
         offcanvas: {
             type: Object as PropType<Offcanvas>,
@@ -11,12 +11,24 @@ export default {
     },
     data() {
         return {
-            isVisible: false
+            isVisible: false,
+            isDownload: false,  
         };
     },
     methods: {
         toggle() {
              this.isVisible = !this.isVisible;
+        },
+        modal(label:string){
+            console.log(label)
+            if(label === 'Download CV'){
+             this.isDownload = true;
+            } else { this.isDownload = false}
+            console.log(this.isDownload)
+        },
+
+        closeModal(){
+            this.isDownload = false
         }
 
     },
@@ -56,13 +68,29 @@ export default {
                     v-for="(link, index) in offcanvas.links" 
                     :key="index"
                 >
-                    <router-link :to="{ name: link.url }">
+                    <router-link @click="modal(link.link)"  :to="{ name: link.url }">
                         <a>{{ link.link }}</a>
                     </router-link>
                 </li>
             </ul>
         </div>
     </div> 
+
+    <section class="ms-modal" v-if="isDownload">
+        <div class="d-flex justify-content-center mt-5">
+            <div class="info-modal">
+        <div>Confermi di voler scaricare il mio cv?</div>
+        <div>
+            <div class="buttons d-flex gap-3 p-3">
+                <a download href="../../../public/test.jpg" type="button" class="btn btn-primary p-1">DOWNLOAD</a>
+                <button @click="closeModal" type="button" class="btn btn-secondary p-1">CLOSE</button>
+            </div>
+        </div> 
+        </div>
+
+        </div>
+        
+     </section>
 </template>
 
 <style scoped lang="scss">
@@ -119,4 +147,31 @@ i {
     border-radius: 2px;
     font-size: 20px;
 }
+
+.ms-modal{
+        background-color: rgba(0,0,0,0.6);
+        z-index: 999;
+        position: fixed;
+        top:0;
+        left:0;
+        height: 100%;
+        width: 100%;
+
+        .info-modal{
+            color: black;
+            padding: 5%;
+            position: fixed;
+            top: 25%;
+            min-height: 30%;
+            min-width: 50%;
+            z-index: 998;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(195, 191, 191);
+            border-radius: 20px;   
+            border: 1px solid grey
+        }
+    }
 </style>

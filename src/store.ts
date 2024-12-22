@@ -9,10 +9,10 @@ export const useMainStore = defineStore('main', {
         mainHeader: new Header(
           [{label:'Home',href:'HomePage'},
            {label:'Contatti',href:'ContactsPage'},
-           {label:'Download CV',href:'CvPage'},
+           {label:'Download CV',href:''},
           ],
           [{label:'fa-brands fa-linkedin', href: 'https://www.linkedin.com/in/mattia-angelini-b00427311/'},
-           {label:'fa-brands fa-github',  href: 'https://github.com/MattiaAngelini'}
+           {label:'fa-brands fa-github',  href: 'https://github.com/MattiaAngelini'},          
           ],
           new Offcanvas(
             `MENU'`, // title offcanvas
@@ -24,7 +24,7 @@ export const useMainStore = defineStore('main', {
             [
               { link: 'Home', url: 'HomePage' },
               { link: 'Contatti', url: 'ContactsPage' },
-              { link: 'CV', url: 'CvPage' },
+              { link: 'Download CV', url: '' }
             ]
           ),
         ),
@@ -59,6 +59,12 @@ export const useMainStore = defineStore('main', {
         
         //************CAROUSEL***********//
         cardsCarousel : [
+            {
+              title: 'Projects',
+              description: 'My coding experience',
+              image: '/src/assets/images/laptop.avif',
+              url: 'http://localhost:5173/Projects',
+            },
                  
             {
               title: 'Linkedin',

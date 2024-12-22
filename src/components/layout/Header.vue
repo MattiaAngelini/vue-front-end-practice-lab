@@ -1,12 +1,17 @@
 <script lang="ts">
 import { Header } from '../../models/Header.ts';
 import { PropType } from 'vue';
-import Hamburger from '../common/Hamburger.vue';
-
+import HamburgerHeader from '../common/HamburgerHeader.vue';
 export default {
     name: 'Header',
     components:{
-        Hamburger
+        HamburgerHeader,
+    },
+    
+    data(){
+        return{
+            isDownload: false,     
+        }
     },
     props: {
         header: {
@@ -19,6 +24,19 @@ export default {
             return { gridTemplateColumns: `6fr repeat(${this.header.links.length}, 1fr)` };
         },
     },
+    methods:{
+        modal(label:string){
+            console.log(label)
+            if(label === 'Download CV'){
+             this.isDownload = true;
+            } else { this.isDownload = false}
+            console.log(this.isDownload)
+        },
+
+        closeModal(){
+            this.isDownload = false
+        }
+    }
 };
 </script>
 
@@ -28,25 +46,39 @@ export default {
         <div :style="Columns" class="links">
             <div class="d-flex gap-3 align-items-center">
                 <div class="myname">MATTIA ANGELINI</div>
-                <a :href="icon.href"
+                <a  
+                    :href="icon.href"
                     class="d-none d-lg-block" 
                     v-for="(icon, index) in header.icons" 
                     :key="index"
                 >
-                    <i :class="icon.label"></i>
+                    <i  :class="icon.label"></i>
                 </a>
             </div>
-            <a 
+
+            <a                
                 class="d-none d-lg-block" 
                 v-for="(link, index) in header.links" 
-                :key="index"
+                :key="index"               
             >
-                <router-link :to="{ name: link.href }"> {{ link.label }} </router-link>
-            </a>
-            <!--componente hamburger-->
-            <Hamburger :offcanvas="header.hamburger" />
+                <router-link @click="modal(link.label)" :to="{ name: link.href }"> {{ link.label }}  </router-link>                 
+            </a>       
+            <!--componente hamburgerHeader-->
+            <HamburgerHeader :offcanvas="header.hamburger" />
         </div>
     </header>
+    
+    <section class="ms-modal" v-if="isDownload">
+        <div class="info-modal">
+        <div>Confermi di voler scaricare il mio cv?</div>
+        <div>
+            <div class="buttons d-flex gap-3 p-3">
+                <a download href="../../../public/test.jpg" type="button" class="btn btn-primary p-1">DOWNLOAD</a>
+                <button @click="closeModal" type="button" class="btn btn-secondary p-1">CLOSE</button>
+            </div>
+        </div> 
+        </div>
+     </section>
 </template>
 
 <style scoped lang="scss">
@@ -85,4 +117,29 @@ header {
         }
     }
 }
+
+.ms-modal{
+        background-color: rgba(0,0,0,0.6);
+        z-index: 999;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+
+        .info-modal{
+            position: fixed;
+            left: 35%;
+            top: 35%;
+            height: 30%;
+            width: 30%;
+            z-index: 998;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(195, 191, 191);
+            border-radius: 20px;   
+            border: 1px solid grey
+        }
+    }
+
 </style>

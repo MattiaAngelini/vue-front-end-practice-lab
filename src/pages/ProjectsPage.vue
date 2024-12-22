@@ -2,7 +2,7 @@
 import { useMainStore } from '../store.ts';
 import ButtonCustom from '../stories/Buttons/ButtonCustom.vue';
 export default{
-    name: 'CvPage',
+    name: 'ProjectsPage',
     components:{
         ButtonCustom,
     },
