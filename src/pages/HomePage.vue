@@ -2,17 +2,19 @@
 import { useMainStore} from '../store.ts';
 import Hero from '../components/sections/Hero.vue';
 import Carousel from '../components/sections/Carousel.vue';
-import SideBySide from '../components/sections/SideBySide.vue';
 import ContactsPage from '../pages/ContactsPage.vue';
 import DiscoverMore from '../components/sections/DiscoverMore.vue';
+import AboutMePage from './AboutMePage.vue';
+import AnimatedSection from '../components/common/AnimatedSection.vue';
 export default {
     name: 'HomePage',
     components: {
         Hero,
         Carousel,
-        SideBySide,
         ContactsPage,
-        DiscoverMore
+        DiscoverMore,
+        AboutMePage,
+        AnimatedSection
     },
 
     data(){
@@ -20,7 +22,6 @@ export default {
             store: useMainStore()
         }
     },
-
 };
 </script>
 
@@ -31,11 +32,18 @@ export default {
             :media="store.heroVideo"  
             :title="store.MyName"
             :description="store.MyInfo"
-        />           
-            <SideBySide :layout="store.AboutMeSideBySide"
-            />   
+        />    
+        <AnimatedSection>
+            <AboutMePage/>
+        </AnimatedSection>
+                  
+        <AnimatedSection>
             <DiscoverMore/>
+        </AnimatedSection>
+
+        <AnimatedSection>
             <ContactsPage/>
+        </AnimatedSection>           
         </main>
     </div>
 </template>

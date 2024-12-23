@@ -1,66 +1,72 @@
 <script lang="ts">
 import { useMainStore} from '../store.ts';
+import { currentWindow } from '../assets/styles/breakpoint.ts';
+
 export default{
     name: 'AboutMePage',
     
     data(){
         return{
-            store: useMainStore()
+            store: useMainStore(),
+            sizeWindow: currentWindow(window.innerWidth),       
         }
     },
+    computed:{
+        layoutResponsive(){
+            if(this.sizeWindow !== 'xxs' &&
+               this.sizeWindow !== 'xs' &&
+               this.sizeWindow !== 'sm' ){
+                return  {background: 'linear-gradient(105deg, rgb(109, 112, 113) 40%, rgb(0, 0, 0) 60%)'}
+            } else { 
+                return {background: 'linear-gradient(-10deg, rgb(109, 112, 113) 40%, rgb(0, 0, 0) 60%)'}
+            }
+        },
+        imgResponsive(){
+            if(this.sizeWindow !== 'xxs' &&
+               this.sizeWindow !== 'xs' &&
+               this.sizeWindow !== 'sm' ){
+                return  {minWidth: '40%', maxHeight: '80%', position:'absolute', right:'0'}
+            } else { 
+                return {minWidth: '100%', maxHeight: '50%',}
+            }
+        },
+        infoResponsive(){
+            if(this.sizeWindow !== 'xxs' &&
+               this.sizeWindow !== 'xs' &&
+               this.sizeWindow !== 'sm' ){
+                return  { maxWidth: '50%'}
+            } else { 
+                return { minWidth: '100%'}
+            }
+        }
+    },
+    mounted(){
+        window.addEventListener('resize', () => {
+            this.sizeWindow = currentWindow(window.innerWidth);
+        });
+    }
 }
-
 </script>
 
 <template>
     <section>
-        <div class="container d-block d-md-flex p-4">
-
-            <div class="info p-3">
-                <h1>{{ store.AboutMe.title }}</h1>
-                <p>
-                    Ciao, sono Mattia.
-                    Nato a Udine il 22 giugno 1993, oggi vivo a Bari. Il mio percorso nel mondo della programmazione è iniziato con la Boolean Tech Academy, dove ho completato una formazione intensiva come programmatore full stack. Da allora, continuo a crescere e a perfezionarmi, con particolare interesse per il front-end development.
-                    Oltre al codice, sono un insegnante di Brazilian Jiu-Jitsu, cintura viola con oltre 5 anni di pratica. La costanza, la disciplina e la dedizione che applico sul tatami sono gli stessi valori che porto nella mia vita professionale.
-                    In questo sito racconto il mio percorso, unendo lavoro, passioni e voglia di migliorarmi ogni giorno.
-                </p>
-
+        <div :style="layoutResponsive" class="ms-container">
+            <div>
+                <img :style="imgResponsive" class="img-fluid" src="../assets/images/me_mode.png" alt="">
             </div>
-            
-
-            <div class="ms-cards">
-
-                <div class="container-img d-flex justify-content-center">
-                    <img :src="store.AboutMe.image" alt="">
-                </div>
-
-                <div class="stats pt-4">
-
-                    <div class="ms-badge">
-                        <div>+ 3.5</div>
-                        <p>Anni di esperienza</p>
-                    </div>
-
-                    <div class="ms-badge">
-                        <div>+ 3.5</div>
-                        <p>Anni di esperienza</p>
-                    </div>
-                    <div class="ms-badge">
-                        <div>+ 3.5</div>
-                        <p>Anni di esperienza</p>
-                    </div>
-                    <div class="ms-badge">
-                        <div>+ 3.5</div>
-                        <p>Anni di esperienza</p>
-                    </div>
-
-                </div>
-
-            </div>
-           
           
+            <div :style="infoResponsive" class="info">
+                <h1>Ciao, sono Mattia Angelini</h1>
+                <h3>Front-end Developer</h3>      
+                <p>                    
+                    In questo sito portfolio racconto il mio percorso, 
+                    unendo lavoro, passioni e voglia di migliorarmi ogni giorno.
+                </p>
+            </div>
+       </div>
 
-        </div>  
+       <div>      
+        </div>
     </section>
 </template>
 
@@ -68,26 +74,20 @@ export default{
 @use '../assets/styles/generic.scss' as *;
 
 section{
-    min-height: 100vh;
-    background-color: grey; 
-
-                img{              
-                    width: 400px;  
-                    border-radius: 6px,                                     
-                }
-
-                .stats{                   
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-row: 1fr 1fr;
-                gap: 10px;
-
-                    .ms-badge{
-                        border-radius: 10px;
-                        background-color: lightgray;
-                        padding: 6px;
-                    }
-                }
-                
+    .ms-container{        
+        position: relative;
+        min-height: 100vh;
+        
+            img{     
+            position: absolute;
+            bottom: 0;                                                          
+            }  
+            .info{
+                max-width: 40%;
+                color: white;
+                padding: 10%;
+                line-height: 30px;
+            }         
+    }
 }
 </style>

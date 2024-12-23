@@ -29,18 +29,11 @@ export const useMainStore = defineStore('main', {
           ),
         ),
  
-        //************HERO************//
+        //************HERO************// AGGIUSTARE PROPS
         heroVideo: '/src/assets/video/heroVideo.mp4',
         MyName: 'Mattia Angelini',
         MyInfo: 'Front-end Developer',
 
-        //************SIDEBYSIDE************//
-        AboutMeSideBySide: {
-            title: 'Benvenuto sul mio sito portfolio',
-            description: 'Se sei qui perchè cerchi informazioni sul mio background e vuoi scoprire chi sono ho preparato una lettera di presentazione al link qui sotto.',
-            image: '/src/assets/images/laptop.avif',
-            info:true
-        },
         //************ABOUT-ME PAGE************//
         AboutMe: {
           title: 'Benvenuto sul mio sito portfolio',
@@ -59,13 +52,7 @@ export const useMainStore = defineStore('main', {
         
         //************CAROUSEL***********//
         cardsCarousel : [
-            {
-              title: 'Projects',
-              description: 'My coding experience',
-              image: '/src/assets/images/laptop.avif',
-              url: 'http://localhost:5173/Projects',
-            },
-                 
+                
             {
               title: 'Linkedin',
               description: 'Il mio profilo Linkedin',
