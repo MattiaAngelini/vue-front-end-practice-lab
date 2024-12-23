@@ -90,10 +90,12 @@ header {
     top: 0;
     z-index: 999;
     width: 100%;
-    min-height: 10vh;
+    height: 10vh;
+    max-height: 20vh;
     background-color: rgba(0, 0, 0, 0.8);
     display: grid;
     align-items: center;
+    padding: 10px;
 
     a {
         text-decoration: none;

@@ -22,9 +22,9 @@ export default {
         modal(label:string){
             console.log(label)
             if(label === 'Download CV'){
-             this.isDownload = true;
-            } else { this.isDownload = false}
-            console.log(this.isDownload)
+                this.isDownload = true;
+            } else {
+                this.isDownload = false}
         },
 
         closeModal(){
@@ -48,11 +48,11 @@ export default {
 </script>
 
 <template>
-    <i 
-        class="fa-solid fa-bars d-block d-lg-none" 
-        type="button" 
-        @click="toggle()" 
-    ></i>
+    <div class="ms-hamburger d-block d-lg-none" type="button" @click="toggle()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
     <div :class="change" class="hamburger-body">
         <div class="d-flex justify-content-between">
             <h1>{{ offcanvas.title }}</h1>       
@@ -140,12 +140,21 @@ export default {
     }
 }
 
-i {
+.ms-hamburger {
     grid-column: 6 / 6;
     align-self: center;
     padding: 10px;
     border-radius: 2px;
     font-size: 20px;
+    width: 50px;
+
+        div{
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            margin: 6px;
+            border-radius: 4px;
+        }
 }
 
 .ms-modal{

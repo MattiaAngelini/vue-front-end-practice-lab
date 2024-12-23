@@ -38,12 +38,11 @@ export default {
         })
         .then(
           () => {
-            console.log('SUCCESS!');
             this.emailSent = true;
 
             setTimeout(() => {
                 location.reload()
-                }, "2000");
+                }, 1500);
             
           },
           (error) => {
@@ -64,18 +63,19 @@ export default {
 </script>
 
 <template>
+  
     <section class="reverse-layout">
+        <Transition appear name="alert">
+            <div v-if="emailSent" class="ms-alert">
+                <h1 class="p-3">E-MAIL INVIATA!</h1>
+            </div>
+        </Transition>
 
         <!--IMMAGINE-->
         <div class="container-img"  :style="layoutPosition">
             <div  class="ms-img">
                 <img :src="layout.image" alt="" />
             </div>
-            <Transition name="alert">
-                <div v-if="emailSent" class="ms-alert">
-                <h1>E-MAIL INVIATA!</h1>
-            </div>
-            </Transition>
         </div>
 
         <!--TITOLO E DESCRIZIONE-->
@@ -91,13 +91,13 @@ export default {
         <!--FORM-->
         <div v-if="layout.form"  class="ms-form">
             <div >
-            <h1 class="text-center p-3">CONTACT</h1>
+            <h1 class="text-center p-3">CONTATTAMI</h1>
             <form ref="form" @submit.prevent="sendEmail">
                 <input required placeholder="Nome*" type="text" name="userName">
                 <input required placeholder="E-mail*" type="email" name="userEmail">
                 <input required placeholder="Oggetto della Mail*" type="text" name="subject">
                 <textarea required placeholder="Scrivi il tuo messaggio*" name="message"></textarea>
-                <input required @click="clearInput" type="submit" value="Send">
+                <input required type="submit" value="Send">
             </form>      
         </div>
 
@@ -112,44 +112,42 @@ export default {
 section { 
     background-color: lightgray;
     display: flex;
-    min-height: 80vh;
+    min-height: 100vh;
+    position: relative;
+    background: linear-gradient(rgb(109, 112, 113) 40%, rgb(0, 0, 0) 80%);
+        
+        .ms-alert{
+        color: white;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+        display: flex;
+        justify-content: center;
+        padding-top: 150px;
+}
+    .alert-enter-active,
+    .alert-leave-active{
+        transition: opacity 0.3s ease-in-out;
+    }
+    .alert-enter-from,
+    .alert-leave-to{
+        opacity: 0;
+    }
    
     .container-img{
         width: 50%;
         .ms-img { 
             width: 100%;
             height: 100%;
-
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;      
-            }
-            .ms-alert{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 15%;
-                width:50%;
-                background-color: white;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%,-50%);   
-                border: 8px solid black;   
-                border-radius: 10px;
-            }
-
-            .alert-enter-active,
-            .alert-leave-active{
-                transition: opacity 0.3s ease-in-out;
-            }
-            .alert-enter-from,
-            .alert-leave-to{
-                opacity: 0;
-            }
+            }      
         }
-
     }
         
     .container-info {     
@@ -158,11 +156,13 @@ section {
     }
 
     .ms-form{
-        width: 50%;
+        width: 70%;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 4% 
+        padding: 4%;
+        line-height: 40px;
+        
     }
 
     input, textArea{

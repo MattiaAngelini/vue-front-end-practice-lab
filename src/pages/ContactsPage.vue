@@ -29,7 +29,7 @@ export default{
 
 section{
     background-color: $secondary-color;
-    min-height: 80vh;
+    min-height: 100vh;
 }
 
 </style>
