@@ -33,7 +33,7 @@ section{
     min-height: 80vh;
     padding: 2% 0 2% 0;
     background-color: $primary-color;
-    h1{color: $secondary-color;}    
+    h1{color: white;}    
 }
 
 </style>

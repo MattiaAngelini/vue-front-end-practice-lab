@@ -29,7 +29,6 @@ export default {
         },
     },
 
-
     mounted() {
         window.addEventListener('resize', () => {
             this.sizeWindow = currentWindow(window.innerWidth);
@@ -40,7 +39,7 @@ export default {
 
 <template>
     <footer>
-        <h3 class="text-center">LINGUAGGI E STRUMENTI CON CUI LAVORO</h3>
+        <div class="text-center ms-title">LINGUAGGI E STRUMENTI</div>
         <section>
             <div :style="columns" class="layout-footer container-logo">
                 <div 
@@ -59,8 +58,8 @@ export default {
 
             <div class="policy">
                 <div>Privacy Policy</div>
-                <div>All Rights Reserved</div>
-                <div>POWERED By Me and Myself</div>
+                
+                <div>© 2024 Mattia Angelini. Tutti i diritti riservati.</div>
             </div>
         </section>
     </footer>
@@ -73,9 +72,9 @@ footer {
     background-color: rgb(41, 36, 36);
     display: grid;
 
-    h3 {
-        color: $secondary-color;
-        padding:3%;
+    .ms-title {
+        color: white;
+        padding: 4%;
     }
 
     .layout-footer {
@@ -103,16 +102,6 @@ footer {
                 height: 80%;
                 width: 80%;
             }
-
-            .logos-enter-active,
-            .logos-leave-active{
-                transform: scale(1.0);
-                transition: transform 4s ease-in-out;
-            }
-            .logos-enter-from,
-            .logos-leave-to{
-                transform: scale(1.3);
-            }
         }
 
     }
@@ -121,7 +110,8 @@ footer {
         display: flex;
         justify-content: space-between;
         color: black;
-        margin: 100px 10px 30px 10px;
+        margin: 30px 10px 30px 10px;
+        font-size: 14px;
     }
 }
 </style>

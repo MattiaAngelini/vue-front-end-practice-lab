@@ -162,7 +162,7 @@ section {
         align-items: center;
         padding: 4%;
         line-height: 40px;
-        
+        color: white;
     }
 
     input, textArea{

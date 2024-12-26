@@ -2,10 +2,12 @@
 import { Header } from '../../models/Header.ts';
 import { PropType } from 'vue';
 import HamburgerHeader from '../common/HamburgerHeader.vue';
+import HomePage from '../../pages/HomePage.vue';
 export default {
     name: 'Header',
     components:{
         HamburgerHeader,
+        HomePage
     },
     
     data(){
@@ -45,7 +47,9 @@ export default {
         <!--Header Links-->
         <div :style="Columns" class="links">
             <div class="d-flex gap-3 align-items-center">
-                <div class="myname">MATTIA ANGELINI</div>
+                <router-link to="/"> 
+                    <div class="myname">MATTIA ANGELINI</div> 
+                </router-link>  
                 <a  
                     :href="icon.href"
                     class="d-none d-lg-block" 
@@ -73,7 +77,7 @@ export default {
         <div>Confermi di voler scaricare il mio cv?</div>
         <div>
             <div class="buttons d-flex gap-3 p-3">
-                <a download href="../../../public/test.jpg" type="button" class="btn btn-primary p-1">DOWNLOAD</a>
+                <a download href="../../../public/files/cv.pdf" type="button" class="btn btn-primary p-1">DOWNLOAD</a>
                 <button @click="closeModal" type="button" class="btn btn-secondary p-1">CLOSE</button>
             </div>
         </div> 
@@ -82,7 +86,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@use '../../assets//styles/partials/mediaqueries/mediaqueries.scss' as *;
+
 
 header {
     color: white;
@@ -96,6 +100,7 @@ header {
     display: grid;
     align-items: center;
     padding: 10px;
+    font-size: 20px;
 
     a {
         text-decoration: none;
@@ -108,9 +113,9 @@ header {
         width: 98%;
         margin: auto;
 
-        .myname {
-            font-size: 20px;
-            font-weight: 900;
+        .myname {    
+            font-weight: 800;
+            font-size: 18px;
         }
 
         .fa-bars {

@@ -16,18 +16,19 @@ export default{
             if(this.sizeWindow !== 'xxs' &&
                this.sizeWindow !== 'xs' &&
                this.sizeWindow !== 'sm' ){
-                return  {background: 'linear-gradient(105deg, rgb(109, 112, 113) 40%, rgb(0, 0, 0) 60%)'}
+                return  {background: 'linear-gradient(105deg, rgb(109, 112, 113) 55%, rgb(0, 0, 0) 60%)'}
             } else { 
-                return {background: 'linear-gradient(-10deg, rgb(109, 112, 113) 40%, rgb(0, 0, 0) 60%)'}
+                return {background: 'linear-gradient(-10deg, rgb(109, 112, 113) 20%, rgb(0, 0, 0) 60%)'}
             }
         },
         imgResponsive(){
             if(this.sizeWindow !== 'xxs' &&
                this.sizeWindow !== 'xs' &&
                this.sizeWindow !== 'sm' ){
-                return  {minWidth: '40%', maxHeight: '80%', position:'absolute', right:'0'}
+
+                return  {minWidth: '30%', maxHeight: '60%', position:'absolute', right:'0'}
             } else { 
-                return {minWidth: '100%', maxHeight: '50%',}
+                return {minWidth: '80%', maxHeight: '50%',position:'absolute', right:'0'}
             }
         },
         infoResponsive(){
@@ -56,11 +57,13 @@ export default{
             </div>
           
             <div :style="infoResponsive" class="info">
-                <h1>Ciao, sono Mattia Angelini</h1>
-                <h3>Front-end Developer</h3>      
-                <p>                    
-                    In questo sito portfolio racconto il mio percorso, 
-                    unendo lavoro, passioni e voglia di migliorarmi ogni giorno.
+                <h2>Ciao, sono Mattia Angelini</h2>
+                <h5 class="mt-2">Front-end Developer</h5>      
+                <p class="mt-2">                    
+                    Benvenuto nel mio portfolio! Qui condivido il mio percorso di crescita, 
+                    unendo passione per il coding, lavoro e la mia crescita. 
+                    Questo sito, sviluppato con Vue, è uno dei miei laboratori per sperimentare e migliorare le mie competenze nella programmazione.
+                    
                 </p>
             </div>
        </div>

@@ -69,7 +69,7 @@ export const useMainStore = defineStore('main', {
             {
               title: 'Il BJJ',
               description: 'Il Brazilian jiu-jitsu',
-              image: '/src/assets/images/gara.jpeg',
+              image: '/src../public/bjj/bjj3.jpg',
               url: 'http://localhost:5173/IlBrazilianJiuJitsu',
             }, 
           ],
@@ -86,21 +86,43 @@ export const useMainStore = defineStore('main', {
           form: true
         },
 
-         //************FILTERED-PAGE************//
+         //************BJJ-PAGE************//
 
-         techniques:[],
-
-         filters:[
-          { //props dropdown
-            belts: ["Bianca", "Blu", "Viola", "Marrone", "Nera"]
+         imagesCarousel : [               
+          {
+           src: '../public/bjj/bjj2.jpg',
           },
-          { //props dropdown
-            difficulty: ["Facile", "Medio", "Difficile", "Molto Difficile", "Esperto"]
-          },
-          { //props dropdown
-            age_range: ["18-28", "18-30", "18-35", "18-40", "18-45", "18-50"]
-          }
-        ],
+          {
+            src: '../public/bjj/bjj3.jpg',
+           },
+           {
+            src: '../public/bjj/bjj1.jpg',
+           },
+           {
+            src: '../public/bjj/bjj4.jpg',
+           },
+           {
+            src: '../public/bjj/bjj5.jpg',
+           },
+           {
+            src: '../public/bjj/bjj6.jpg',
+           },
+           {
+            src: '../public/bjj/bjj7.jpg',
+           },
+           {
+            src: '../public/bjj/sweep1.jpg',
+           },
+           {
+            src: '../public/bjj/sweep2.jpg',
+           },
+           {
+            src: '../public/bjj/sweep3.jpg',
+           },
+           {
+            src: '../public/bjj/sweep4.jpg',
+           },
+         ],
         
         //************FOOTER************//
         logoFooter: [
