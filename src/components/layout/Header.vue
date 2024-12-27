@@ -87,16 +87,15 @@ export default {
 
 <style scoped lang="scss">
 
-
 header {
-    color: white;
+   
     position: sticky;
     top: 0;
     z-index: 999;
     width: 100%;
     height: 10vh;
     max-height: 20vh;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color:black;
     display: grid;
     align-items: center;
     padding: 10px;
@@ -104,7 +103,7 @@ header {
 
     a {
         text-decoration: none;
-        color: white;
+        color:  white;
         font-weight: 500;
     }
 
@@ -116,6 +115,7 @@ header {
         .myname {    
             font-weight: 800;
             font-size: 18px;
+            color: rgb(39, 70, 128);
         }
 
         .fa-bars {

@@ -9,9 +9,11 @@ export default {
                 CardCustom           
             },
     props: {
-        cards: {
+        cardsHref: {
             type: Array as() => Card[],
-            required: true
+        }, 
+        cardsRouter: {
+            type: Array as() => Card[],
         }, 
         bgColor: {
             type: String,
@@ -20,10 +22,11 @@ export default {
     },
     data() {
         return {
-            gridColumns: (this.cards.length),
+            gridColumns: (this.cardsHref.length + this.cardsRouter.length),
             sizeWindow: currentWindow(window.innerWidth),
         };
     },
+
 
     computed: {
         columns():Record<string,string> {
@@ -49,12 +52,22 @@ export default {
 
 <template>
     <section :style="{ backgroundColor: bgColor }"> 
+      
         <div :style="columns" class="carousel">
 
-            <div class="ms-card" v-for="(card, index) in cards" :key="index">
+            <!--CARDS HREF-->
+            <div class="ms-card" v-for="(card, index) in cardsHref" :key="index">
                 <CardCustom
                     :card="card"
-                />    
+                />      
+            </div>
+
+            <!--CARDS ROUTERLINK-->
+            <div class="ms-card" v-for="(card, index) in cardsRouter" :key="index">
+                <CardCustom 
+                    :isRouter="true"
+                    :card="card"
+                />      
             </div>
 
         </div>   

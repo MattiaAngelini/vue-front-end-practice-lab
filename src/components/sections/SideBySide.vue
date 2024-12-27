@@ -110,11 +110,10 @@ export default {
 @use '../../assets/styles/generic.scss' as *;
 
 section { 
-    background-color: lightgray;
     display: flex;
     min-height: 100vh;
     position: relative;
-    background: linear-gradient(rgb(109, 112, 113) 40%, rgb(0, 0, 0) 80%);
+    background: linear-gradient(rgb(140, 140, 140) 40%, black 80%);
         
         .ms-alert{
         color: white;
@@ -162,7 +161,7 @@ section {
         align-items: center;
         padding: 4%;
         line-height: 40px;
-        color: white;
+        color: $baffo;
     }
 
     input, textArea{

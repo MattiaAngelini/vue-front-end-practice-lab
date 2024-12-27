@@ -51,8 +51,7 @@ export const useMainStore = defineStore('main', {
         
         
         //************CAROUSEL***********//
-        cardsCarousel : [
-                
+        cardsCarouselHref : [             
             {
               title: 'Linkedin',
               description: 'Il mio profilo Linkedin',
@@ -66,12 +65,15 @@ export const useMainStore = defineStore('main', {
               url: 'https://github.com/MattiaAngelini',
             },
               
+          ],
+          cardsRouterHref : [             
             {
-              title: 'Il BJJ',
-              description: 'Il Brazilian jiu-jitsu',
-              image: '/src../public/bjj/bjj3.jpg',
-              url: 'http://localhost:5173/IlBrazilianJiuJitsu',
-            }, 
+              title: 'IL Bjj',
+              description: 'My first passion',
+              image: '../public/bjj/bjj3.jpg',
+              url: 'BjjPage',
+            },
+        
           ],
         //************CV-PAGE************//            
         btnCvPage: { 

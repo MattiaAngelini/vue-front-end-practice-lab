@@ -6,17 +6,22 @@ export default {
       isVisible: false,
     };
   },
-  mounted() {
-    const observer = new IntersectionObserver((entries) => {
+
+  methods:{
+    animationComponents(){
+      const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           this.isVisible = true;
         }
       });
     });
-
     observer.observe(this.$refs.section);
+    }
   },
+  mounted() {
+    this.animationComponents()
+  }
 };
 </script>
 

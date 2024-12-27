@@ -28,7 +28,7 @@ export default{
 @use '../assets/styles/generic.scss' as *;
 
 section{
-    background-color: $secondary-color;
+ 
     min-height: 100vh;
 }
 

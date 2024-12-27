@@ -39,7 +39,7 @@ export default {
 
 <template>
     <footer>
-        <div class="text-center ms-title">LINGUAGGI E STRUMENTI</div>
+        <h2 class="text-center ms-title">LINGUAGGI E STRUMENTI</h2>
         <section>
             <div :style="columns" class="layout-footer container-logo">
                 <div 
@@ -69,12 +69,12 @@ export default {
 @use '../../assets/styles/generic.scss' as *;
 
 footer {
-    background-color: rgb(41, 36, 36);
+    background-color: $primary-color;
     display: grid;
 
     .ms-title {
-        color: white;
         padding: 4%;
+        color:  $baffo;
     }
 
     .layout-footer {
@@ -87,13 +87,13 @@ footer {
         justify-items: center;
         grid-template-rows: repeat(3, 1fr);
         gap: 1.5px;
-        background: radial-gradient(circle, $secondary-color 0%, rgba(0, 0, 0, 0) 75%);
+        background: radial-gradient(circle, black 0%, rgba(0, 0, 0, 0) 75%);
 
         .logo {
             height: auto;
             width: 100%;
             padding: 8%;
-            background-color: rgb(41, 36, 36);
+            background-color: $primary-color;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -109,9 +109,9 @@ footer {
     .policy {
         display: flex;
         justify-content: space-between;
-        color: black;
         margin: 30px 10px 30px 10px;
         font-size: 14px;
+        color: black;
     }
 }
 </style>

@@ -20,7 +20,7 @@ export default{
         <section>
             <h1 class="p-4 text-center">SCOPRI DI PIù</h1>
             <div class="container">
-                <Carousel :cards="store.cardsCarousel"/>
+                <Carousel :cardsRouter="store.cardsRouterHref" :cardsHref="store.cardsCarouselHref"/>
             </div>
         </section>
     
@@ -30,10 +30,10 @@ export default{
 @use '../../assets/styles/generic.scss' as *;
 
 section{  
+    color: $baffo;
     min-height: 80vh;
     padding: 2% 0 2% 0;
-    background-color: $primary-color;
-    h1{color: white;}    
+    background-color: $primary-color;  
 }
 
 </style>
