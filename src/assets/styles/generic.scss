@@ -1,16 +1,12 @@
-$primary-color: rgb(119, 119, 119);
-$secondary-color: rgb(190, 190, 190);
-$baffo:rgb(39, 70, 128);
+$primary-color: rgb(165, 165, 165);
+$secondary-color: rgb(12, 21, 37);
+$baffo:rgb(37, 62, 107);
 
 * { 
     margin: 0;
     padding: 0; 
     box-sizing: border-box;
-    // (Google Font)
-    // <uniquifier>: Use a unique and descriptive class name
-    // <weight>: Use a value from 100 to 900
 
-   
     font-family: "Kanit", serif;
     font-weight: 400;
     font-style: normal;

@@ -1,66 +1,69 @@
 // ANIMATIONS
-.layout-enter-active,
-.layout-leave-active {   
-    transform: scale(1.0);
-    transition: transform 4s ease-in-out;
-}
-.layout-enter-from,
-.layout-leave-to {
-    transform: scale(3.0); 
-}
+section{
 
-.info-enter-active,
-.info-leave-active {     
-    transition: opacity 1s ease-in-out;    
-}
+    .layout-enter-active,
+    .layout-leave-active {   
+        transform: scale(1.0);
+        transition: transform 4s ease-in-out;
+    }
+    .layout-enter-from,
+    .layout-leave-to {
+        transform: scale(3.0); 
+    }
 
-.info-enter-from,
-.info-leave-to {
-    opacity: 0;
-}
+    .info-enter-active,
+    .info-leave-active {     
+        transition: opacity 1s ease-in-out;    
+    }
 
-// LAYOUT VIDEO HERO
-.hero-media {
-    position: relative;
-    overflow: hidden;
+    .info-enter-from,
+    .info-leave-to {
+        opacity: 0;
+    }
 
-        .hero-video {
-            display: block; //Per margine creato da video
-            width: 100%;
-            height: 100vh;
-            object-fit: cover; 
-        }
-        &::after{
-            content:'';
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: rgba(0,0,0,0.5);
-        }
+    // LAYOUT VIDEO HERO
+    .hero-media {
+        position: relative;
+        overflow: hidden;
+        max-height: calc(100vh - 10vh);
 
-        .info{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+            .hero-video {
+                display: block; //Per margine creato da video
+                width: 100%;
+                height: 100vh;
+                object-fit: cover; 
+            }
+            &::after{
+                content:'';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba(0,0,0,0.5);
+            }
 
-        .content {
-            text-align: center;
-            color: white;
-            position: absolute;
-            bottom: 50%; 
-            left: 50%;
-            transform: translate(-50%,-50%);
-            z-index: 10;       
-            font-size: 40px;
+            .info{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
-            
-                hr{
-            
-                    margin: 4px;
-                   
-                }
-        }
+            .content {
+                text-align: center;
+                color: white;
+                position: absolute;
+                bottom: 50%; 
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 10;       
+               
+                    hr{
+                        margin: 4px;
+                    }
+            }
+    }
+
+
+
 }

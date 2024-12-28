@@ -35,10 +35,6 @@ export default{
             }
 
         },
-
-    
-
-
     },
     mounted(){
         window.addEventListener('resize', () => {
@@ -50,7 +46,6 @@ export default{
 
 <template>
     <section>
-
         <div  class="ms-container d-lg-flex justify-content-evenly align-items-center">
         
             <div :style="infoResponsive" class="info">
@@ -60,8 +55,7 @@ export default{
                     Benvenuto nel mio portfolio! Qui condivido il mio percorso di crescita, 
                     unendo passione per il coding, lavoro e la mia crescita. 
                     Questo sito, sviluppato con Vue, è uno dei miei laboratori per sperimentare e migliorare le mie competenze nella programmazione.
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quod, est molestiae corrupti ratione impedit voluptatem tempora rem laboriosam? Aliquam sit veritatis dolor deleniti natus aut esse neque tempora porro.
-                    
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quod, est molestiae corrupti ratione impedit voluptatem tempora rem laboriosam? Aliquam sit veritatis dolor deleniti natus aut esse neque tempora porro.          
                 </p>
             </div>
 
@@ -70,7 +64,6 @@ export default{
                     <div   class="borderAnimation rounded-circle border2"></div>  
                     <img class="rounded-circle p-3 " :style="imgResponsive"   src="../assets/images/me.jpg" alt="">     
             </div>
-          
        </div>
     </section>
 </template>
@@ -84,7 +77,7 @@ section{
     
     .ms-container{        
         min-height: 100vh;
-        background: linear-gradient(10deg, rgb(0, 0, 0) -30%, rgb(230,230,230) 100%);
+        background: linear-gradient(180deg, white 0%, $secondary-color 100%);
         position: relative;
 
         .picProfile{
@@ -94,7 +87,7 @@ section{
                 position: absolute;
             }
             .border1{
-                box-shadow: 1px 1px 1px 1px $baffo;
+                box-shadow: 1px 6px 6px 1px $baffo;
            
                 }
         

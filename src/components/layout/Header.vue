@@ -93,9 +93,9 @@ header {
     top: 0;
     z-index: 999;
     width: 100%;
-    height: 10vh;
+    min-height: 10vh;
     max-height: 20vh;
-    background-color:black;
+    background-color:rgb(165,165,165);
     display: grid;
     align-items: center;
     padding: 10px;
@@ -103,12 +103,12 @@ header {
 
     a {
         text-decoration: none;
-        color:  white;
+        color:  black;
         font-weight: 500;
     }
 
     i{
-        color: rgb(39, 70, 128);
+        color: rgb(55, 91, 158);
     }
 
     .links {
@@ -119,7 +119,7 @@ header {
         .myname {    
             font-weight: 800;
             font-size: 18px;
-            color: white;
+            color: black;
         }
 
         .fa-bars {

@@ -151,7 +151,7 @@ export default {
         div{
             width: 100%;
             height: 3px;
-            background-color: white;
+            background-color: $baffo;
             margin: 6px;
             border-radius: 4px;
         }

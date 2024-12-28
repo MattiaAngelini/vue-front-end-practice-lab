@@ -123,7 +123,7 @@ main {
     //section1
     .intro{
         max-height: 100vh;
-        background: linear-gradient(-60deg, rgb(0, 0, 0) -30%, rgb(230,230,230) 60%);
+        background:  linear-gradient(180deg, white 80%, $secondary-color 100%);
            
         .info{         
            margin: auto;
@@ -160,7 +160,7 @@ main {
     }
 
     .competitions{
-        background: linear-gradient(-60deg, rgb(0, 0, 0) -30%, rgb(230,230,230) 60%);
+        background:  linear-gradient(180deg, white 0%, $secondary-color 100%);
     }
 }
 </style>

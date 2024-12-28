@@ -44,7 +44,7 @@ export default {
                     <div class="content">
                         <h1>{{ title }}</h1>
                         <hr>
-                        <p>{{ description }}</p>
+                        <h5>{{ description }}</h5>
                     </div>
                 </div>
             </Transition>
@@ -55,6 +55,5 @@ export default {
 <style scoped lang="scss">
 @use '../../assets/styles/generic.scss' as *;
 @use '../../assets/styles/partials/styleHero.scss' as *;
-@use '../../assets/styles/partials/mediaqueries/mediaqueriesHero.scss' as *;
 
 </style>

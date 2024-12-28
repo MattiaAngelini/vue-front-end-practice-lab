@@ -74,7 +74,7 @@ footer {
 
     .ms-title {
         padding: 4%;
-        color:  black;
+        color:  $baffo;
     }
 
     .layout-footer {
