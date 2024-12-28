@@ -74,7 +74,7 @@ footer {
 
     .ms-title {
         padding: 4%;
-        color:  $baffo;
+        color:  black;
     }
 
     .layout-footer {
@@ -87,7 +87,7 @@ footer {
         justify-items: center;
         grid-template-rows: repeat(3, 1fr);
         gap: 1.5px;
-        background: radial-gradient(circle, black 0%, rgba(0, 0, 0, 0) 75%);
+        background: radial-gradient(circle, $baffo, rgba(0, 0, 0, 0) 75%);
 
         .logo {
             height: auto;

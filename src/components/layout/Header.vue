@@ -107,6 +107,10 @@ header {
         font-weight: 500;
     }
 
+    i{
+        color: rgb(39, 70, 128);
+    }
+
     .links {
         display: grid;
         width: 98%;
@@ -115,12 +119,13 @@ header {
         .myname {    
             font-weight: 800;
             font-size: 18px;
-            color: rgb(39, 70, 128);
+            color: white;
         }
 
         .fa-bars {
             grid-column: 6 / 6;
             font-size: 30px;
+            
         }
     }
 }

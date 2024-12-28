@@ -12,34 +12,33 @@ export default{
         }
     },
     computed:{
-        layoutResponsive(){
-            if(this.sizeWindow !== 'xxs' &&
-               this.sizeWindow !== 'xs' &&
-               this.sizeWindow !== 'sm' ){
-                return  {background: 'linear-gradient(0deg, black 0%,rgb(230,230,230)100%)'}
-            } else { 
-                return {background: 'linear-gradient(10deg, rgb(0, 0, 0) 0%, rgb(230,230,230) 100%)'}
-            }
-        },
         imgResponsive(){
             if(this.sizeWindow !== 'xxs' &&
                this.sizeWindow !== 'xs' &&
                this.sizeWindow !== 'sm' ){
 
-                return  {width: '360px', height: '360px', position:'absolute', right:'5%'}
+                return  {width: '360px', height: '360px'  }
             } else { 
-                return {width: '300px', height: '300px',position:'absolute', right:'50%', transform: 'translate(50%, 100%)'}
+                return {width: '280px', height: '280px'}
             }
         },
+
         infoResponsive(){
             if(this.sizeWindow !== 'xxs' &&
                this.sizeWindow !== 'xs' &&
-               this.sizeWindow !== 'sm' ){
-                return  { maxWidth: '50%'}
+               this.sizeWindow !== 'sm'&&
+               this.sizeWindow !== 'md' ){
+
+                return  {width: '50%',  }
             } else { 
-                return { minWidth: '100%'}
+                return {width: '100%', padding: '10%' }
             }
-        }
+
+        },
+
+    
+
+
     },
     mounted(){
         window.addEventListener('resize', () => {
@@ -51,11 +50,8 @@ export default{
 
 <template>
     <section>
-        <div :style="layoutResponsive" class="ms-container">
-            
-            <div class="borderRounded">
-                <img :style="imgResponsive" class="rounded-circle"  src="../assets/images/me.jpg" alt="">
-            </div>
+
+        <div  class="ms-container d-lg-flex justify-content-evenly align-items-center">
         
             <div :style="infoResponsive" class="info">
                 <h2>Ciao, sono <span>Mattia Angelini</span></h2>
@@ -64,13 +60,18 @@ export default{
                     Benvenuto nel mio portfolio! Qui condivido il mio percorso di crescita, 
                     unendo passione per il coding, lavoro e la mia crescita. 
                     Questo sito, sviluppato con Vue, è uno dei miei laboratori per sperimentare e migliorare le mie competenze nella programmazione.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quod, est molestiae corrupti ratione impedit voluptatem tempora rem laboriosam? Aliquam sit veritatis dolor deleniti natus aut esse neque tempora porro.
                     
                 </p>
             </div>
-       </div>
 
-       <div>      
-        </div>
+            <div class="picProfile d-flex justify-content-center ">         
+                    <div :style="imgResponsive"  class="borderAnimation rounded-circle border1"></div>     
+                    <div   class="borderAnimation rounded-circle border2"></div>  
+                    <img class="rounded-circle p-3 " :style="imgResponsive"   src="../assets/images/me.jpg" alt="">     
+            </div>
+          
+       </div>
     </section>
 </template>
 
@@ -80,27 +81,37 @@ export default{
 section{
 
     span{color: $baffo;}
+    
     .ms-container{        
-        position: relative;
         min-height: 100vh;
-        
-            img{
-                max-width: 100%;
-                max-block-size: 100%;
-                bottom: 50%;
-                transform: translate(-0%,50%);       
+        background: linear-gradient(10deg, rgb(0, 0, 0) -30%, rgb(230,230,230) 100%);
+        position: relative;
+
+        .picProfile{
+             //animazione immagin
+             .borderAnimation{
+                animation: move2 2s linear infinite;            
+                position: absolute;
             }
-
-            //animazione immagine
-          
-
-
-            .info{
-                max-width: 40%; 
-                padding: 10%;
-                line-height: 30px;
-                color: black;
-            }         
+            .border1{
+                box-shadow: 1px 1px 1px 1px $baffo;
+           
+                }
+        
+            @keyframes move2 {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+        
+        .info{
+            line-height: 30px;
+            color: black;  
+        }         
     }
 }
 </style>
