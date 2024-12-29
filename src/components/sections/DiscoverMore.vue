@@ -30,7 +30,7 @@ export default{
 @use '../../assets/styles/generic.scss' as *;
 
 section{  
-    color: $baffo;
+    color: white;
     min-height: 80vh;
     padding: 2% 0 2% 0;
     background-color: $primary-color;  

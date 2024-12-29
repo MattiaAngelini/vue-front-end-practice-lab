@@ -5,7 +5,9 @@ import Carousel from '../components/sections/Carousel.vue';
 import ContactsPage from '../pages/ContactsPage.vue';
 import DiscoverMore from '../components/sections/DiscoverMore.vue';
 import AboutMePage from './AboutMePage.vue';
-import AnimatedSection from '../components/common/AnimatedSection.vue';
+import Wrap from '../components/layout/Wrap.vue';
+import WrapHome from '../components/sections/WrapHome.vue';
+
 export default {
     name: 'HomePage',
     components: {
@@ -14,7 +16,8 @@ export default {
         ContactsPage,
         DiscoverMore,
         AboutMePage,
-        AnimatedSection
+        WrapHome,
+        Wrap
     },
 
     data(){
@@ -27,23 +30,18 @@ export default {
 
 <template>
     <div class="ms-container">  
+        <Wrap wrap="../../public/display.jpg" shadowRgba="rgba(0,0,0,0.6)"/>
         <main>
             <Hero 
             :media="store.heroVideo"  
             :title="store.MyName"
             :description="store.MyInfo"
         />    
-        <AnimatedSection>
+     
             <AboutMePage/>
-        </AnimatedSection>
-                  
-        <AnimatedSection>
+            <WrapHome />     
             <DiscoverMore/>
-        </AnimatedSection>
-
-        <AnimatedSection>
-            <ContactsPage/>
-        </AnimatedSection>           
+            <ContactsPage/>     
         </main>
     </div>
 </template>

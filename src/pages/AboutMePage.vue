@@ -77,7 +77,7 @@ section{
     
     .ms-container{        
         min-height: 100vh;
-        background: linear-gradient(180deg, white 0%, $secondary-color 100%);
+        background: linear-gradient(180deg, #bababa 0%, $secondary-color 100%);
         position: relative;
 
         .picProfile{

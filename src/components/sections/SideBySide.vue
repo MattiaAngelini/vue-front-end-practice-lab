@@ -113,7 +113,7 @@ section {
     display: flex;
     min-height: 100vh;
     position: relative;
-    background:linear-gradient(180deg, white 0%, $secondary-color 100%);
+    background:linear-gradient(180deg, #bababa 0%, $secondary-color 100%);
         
         .ms-alert{
         color: white;
