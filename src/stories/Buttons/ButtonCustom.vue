@@ -3,7 +3,7 @@ import { Button } from '../../models/Button';
 import { computed } from 'vue';
 import './buttonCustom.css'
 
-const props =withDefaults(defineProps<{  
+const props = withDefaults(defineProps<{  
   button: Button
   size?: 'small' | 'medium' | 'large',
   isDownload? : boolean,
@@ -12,7 +12,8 @@ const props =withDefaults(defineProps<{
 
 const style = computed(() => ({
   backgroundColor: props.button.bgColor,
-  color: props.button.color 
+  color: props.button.color,
+  border: props.button.border
 }));
 
 const classes = computed(() => ({

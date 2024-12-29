@@ -1,30 +1,32 @@
 <script lang="ts">
 import ButtonCustom from '../../stories/Buttons/ButtonCustom.vue';
-
+import { useMainStore} from '../../store';
 
 export default{
     name: 'WrapHome',
 
     components:{
         ButtonCustom
-    }
+    },
+    data(){
+        return{
+            store: useMainStore(),
+              
+        }
+    },
 }
 </script>
 <template>  
 
 <section>
-
     <div class="d-flex justify-content-center align-items-center info">
         <div class="d-flex flex-column align-items-center">
-            <h1 class="text-center">My coding experience</h1>
-            <button class="btn m-3">VAI</button>
+            <h1 class="text-center p-3">My coding experience</h1>
+            <ButtonCustom :button="store.btnProjectsPage" isRouter ></ButtonCustom>
         
         </div>
     </div>
-
-
 </section>
-
 
 </template>
 

@@ -14,15 +14,15 @@ export default{
 }
 </script>
 <template>
-    <main >
-  
-    </main>
+    <section>
+        
+    </section>
 </template>
 
 <style scoped lang="scss">
 @use '../assets/styles/generic.scss' as *;
 
-.container{
+section {
     height: 100vh;
 }
 </style>

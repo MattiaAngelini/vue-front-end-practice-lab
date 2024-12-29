@@ -48,7 +48,7 @@ export default {
         <div :style="Columns" class="links">
             <div class="d-flex gap-3 align-items-center">
                 <router-link to="/"> 
-                    <div class="myname">MATTIA ANGELINI</div> 
+                    <img class="nameLogo" src="../../../public/namelogo.png" alt="">
                 </router-link>  
                 <a  
                     :href="icon.href"
@@ -101,13 +101,18 @@ header {
     padding: 10px;
     font-size: 20px;
 
+    .nameLogo{
+      
+       height: 20px;
+    }
+
     a {
         text-decoration: none;
         color:  white;
         font-weight: 500;
     }
     i{
-        color: rgb(211, 86, 9);
+        color: rgb(140, 9, 211);
     }
 
     .links {
@@ -124,8 +129,6 @@ header {
         .fa-bars {
             grid-column: 6 / 6;
             font-size: 30px;
-            
-            
         }
     }
 }

@@ -69,37 +69,36 @@ export default {
             <h1>IL MIO SECONDO LAVORO</h1>       
         </section>
 
-        <!--CLASSE FUNDAMENTALS-->
-        <div class="fundamentals d-md-flex p-2">
-
-                <div class="description">
-                    <h1 class="text-center p-4">La Classe <span>Fundamentals</span></h1>
-                    <p class="container">
-                        A gennaio 2024 mi è stata affidata la classe 'Fundamentals', 
-                        segnando il mio primo ruolo ufficiale come insegnante di Brazilian Jiu-Jitsu.
-                         Questo corso è rivolto principalmente ai principianti, 
-                         dove accompagno gli studenti nei primi passi nel mondo del Jiu-Jitsu, 
-                         trasmettendo le basi tecniche e i principi fondamentali di questo sport. 
-                         Il mio obiettivo principale è creare un ambiente accogliente e motivante,
-                          in cui ogni allievo possa apprendere e migliorare con fiducia e costanza. 
-                          Questo ruolo, che svolgo con passione rappresenta ad oggi il mio secondo lavoro che mi ha permesso di crescere non solo come atleta,
-                           ma anche come guida per chi si avvicina al Jiu-Jitsu, rafforzando le mie capacità comunicative e organizzative.
-                    </p>   
-                </div>
-
-                <div class="locandina">                                       
-                    <div>
-                        <img src="../../public/bjj/locandina.jpg" alt="">     
-                    </div>                      
-                </div>
+     <!--CLASSE FUNDAMENTALS-->
+        <div class="fundamentals d-flex flex-column flex-lg-row p-2">
+            <div class="description order-1 order-lg-2">
+                <h1 class="text-center p-4">La Classe <span>Fundamentals</span></h1>
+                <p class="container">
+                    A gennaio 2024 mi è stata affidata la classe 'Fundamentals', 
+                    segnando il mio primo ruolo ufficiale come insegnante di Brazilian Jiu-Jitsu.
+                    Questo corso è rivolto principalmente ai principianti, 
+                    dove accompagno gli studenti nei primi passi nel mondo del Jiu-Jitsu, 
+                    trasmettendo le basi tecniche e i principi fondamentali di questo sport. 
+                    Il mio obiettivo principale è creare un ambiente accogliente e motivante,
+                    in cui ogni allievo possa apprendere e migliorare con fiducia e costanza. 
+                    Questo ruolo, che svolgo con passione rappresenta ad oggi il mio secondo lavoro che mi ha permesso di crescere non solo come atleta,
+                    ma anche come guida per chi si avvicina al Jiu-Jitsu, rafforzando le mie capacità comunicative e organizzative.
+                </p>   
+            </div>
+            <div class="locandina order-2 order-lg-1">                                       
+                <div>
+                    <img src="../../public/bjj/locandina.jpg" alt="Locandina Classe Fundamentals">     
+                </div>                      
+            </div>
         </div>
+
 
          <section class="wrap d-flex justify-content-center align-items-center">
             <h1>L'AGONISMO</h1>       
         </section>
       <!--COMPETITIONS-->
         <div class="competitions d-flex flex-column flex-md-row">
-            <div class="description order-1 order-lg-2 p-2 ">       
+            <div class="description order-1 order-lg-1 p-2 ">       
                 <h1 class="text-center p-4">Competere per <span>Evolvere</span></h1>
                 <p class="container">
                     L'agonismo rappresenta per me una sfida fondamentale, un percorso che va oltre la competizione stessa. 
@@ -107,7 +106,7 @@ export default {
                     Questo impegno costante mi insegna disciplina, resilienza e la capacità di gestire la pressione, valori che applico in ogni ambito della mia vita.
                 </p>
             </div>      
-            <div class="images-carousel order-2 order-lg-1">
+            <div class="images-carousel order-2 order-lg-2 mt-5">
                 <Splide :options="{ rewind: true }" aria-label="bjj-competitions-pics">
                     <SplideSlide v-for="image in store.imagesCarousel" :key="image.src">
                         <img :style="imageSlider" :src="`${image.src}`" alt="Competition Image">
@@ -124,7 +123,7 @@ export default {
 main {
    
     .wrap{
-        min-height: 65vh;
+        min-height: 50vh;
         h1{
             color: white;
         }
@@ -140,8 +139,7 @@ main {
        
        }
         .img-container{ 
-            margin: auto;
-            
+            margin: auto;   
         img{ 
                 width: 100%;          
                 margin-right: 50px;
@@ -174,12 +172,12 @@ main {
         background-color:white;
 
         .description{
-            min-width: 40%;
+            min-width: 50%;
             margin: auto;
         }
 
         .images-carousel{
-            min-width: 60%;
+            min-width: 50%;
             padding: 1%;
 
         }

@@ -72,6 +72,8 @@ export default {
                         <a @click="toggle">{{ link.link }}</a>
                     </router-link>
                 </li>
+                <li class="list-unstyled" ><a href="https://www.linkedin.com/in/mattia-angelini-b00427311/">Linkedin</a></li>
+                <li class="list-unstyled" ><a href="https://github.com/MattiaAngelini">Git-Hub</a></li>             
             </ul>
         </div>
     </div> 

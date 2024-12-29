@@ -3,4 +3,5 @@ export interface Button {
     url: string;
     bgColor?: string;
     color?: string;
+    border?: string;
   }

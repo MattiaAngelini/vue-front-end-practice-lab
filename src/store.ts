@@ -42,11 +42,12 @@ export const useMainStore = defineStore('main', {
           info:true
       },
 
-        btnSideBySide: { 
+        btnProjectsPage: { 
           label:'LEGGI',
-           url :'http://localhost:5173/AboutMe', // URL
-           bgColor:'black', // Colore di sfondo
-           color:'rgb(139, 134, 131)' // Colore del testo}   
+           url :'ProjectsPage', // URL
+           bgColor:'rgba(0,0,0,3)', // Colore di sfondo
+           color:'white', // Colore del testo} 
+           border: '2px solid rgb(140, 9, 211)'  
         },
         
         
