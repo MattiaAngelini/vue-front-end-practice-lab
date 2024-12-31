@@ -51,7 +51,7 @@ export const useMainStore = defineStore('main', {
         },
         
         
-        //************CAROUSEL***********//
+        //************CAROUSEL HOMEPAGE***********//
         cardsCarouselHref : [             
             {
               title: 'Linkedin',
@@ -76,13 +76,78 @@ export const useMainStore = defineStore('main', {
             },
         
           ],
-        //************CV-PAGE************//            
-        btnCvPage: { 
-           label:'DOWNLOAD', // Titolo
-           url :'../public/test.jpg', // URL
-           bgColor:'black', // Colore di sfondo
-           color:'rgb(255, 103, 31)' // Colore del testo}   
-        },
+
+          //************CAROUSEL splide PROJECTS PAGE***********//
+          cardsBoolean : [             
+          
+            {
+              title: 'DropoBox',
+              description: 'Il mio profilo Linkedin',
+              image: '../public/projects-img/dropbox.jpg',
+            },
+            {
+              title: 'Dc Comics',
+              description: 'Il mio profilo Github',
+              image: '../public/projects-img/dc-comics.jpg',
+            },
+            {
+              title: 'Spotify',
+              description: 'Il mio profilo Linkedin',
+              image: '../public/projects-img/spotify.jpg',
+            },
+            {
+              title: 'Whatsapp',
+              description: 'Il mio profilo Github',
+              image: '../public/projects-img/whatsapp.jpg',
+            },
+            {
+              title: 'Campo Minato',
+              description: 'Il mio profilo Linkedin',
+              image: '../public/projects-img/campo-minato.jpg',
+            },
+            {
+              title: 'Autocar',
+              description: 'Il mio profilo Github',
+              image: '../public/projects-img/autocar1.jpg',
+            },
+            {
+              title: 'Filtri Autocar',
+              description: 'Il mio profilo Github',
+              image: '../public/projects-img/autocar2.jpg',
+            },
+            {
+              title: 'Boolfix',
+              description: 'Il mio profilo Github',
+              image: '../public/projects-img/boolfix.jpg',
+            },
+              
+          ],
+          cardsProjects: [             
+          
+            {
+              title: 'PortFolio',
+              description: 'Il mio sito Portfolio realizzato con vue',
+              linkRepo: 'https://github.com/MattiaAngelini/vue-front-end-practice-lab',
+              image1: '../public/projects-img/siteSM.png',
+              image2: '../public/projects-img/siteXL.png',
+              image3: '../public/projects-img/bjjpage.png',
+              image4: '',
+              image5: '',
+              
+            },
+            {
+              title: 'React Aliens Game',
+              description: 'Progetto iniziato per studiare e imparare ad utilizzare React',
+              linkRepo:'https://github.com/MattiaAngelini/react-aliens-game',
+              image1: '../public/projects-img/aliengame1.jpg',
+              image2: '../public/projects-img/aliengame2.jpg',
+              image3: '../public/projects-img/aliengame3.jpg',
+              image4: '../public/projects-img/aliengame4.jpg',
+              image5: '../public/projects-img/aliengame5.jpg',
+            
+            },
+          ],
+       
         //************CONTACTS-PAGE************//
         ContactsSideBySide: {
           image: '/src/assets/images/mail.webp',        

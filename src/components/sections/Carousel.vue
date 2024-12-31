@@ -29,6 +29,7 @@ export default {
 
 
     computed: {
+        
         columns():Record<string,string> {
             if (this.sizeWindow === 'xl' || this.sizeWindow === 'xxl') {
                 return { gridTemplateColumns: `repeat(${this.gridColumns}, 1fr)` };
