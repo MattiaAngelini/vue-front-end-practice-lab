@@ -4,7 +4,6 @@ import { useMainStore} from '../../store';
 
 export default{
     name: 'WrapHome',
-
     components:{
         ButtonCustom
     },

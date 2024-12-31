@@ -2,12 +2,10 @@
 import { Header } from '../../models/Header.ts';
 import { PropType } from 'vue';
 import HamburgerHeader from '../common/HamburgerHeader.vue';
-import HomePage from '../../pages/HomePage.vue';
 export default {
     name: 'Header',
     components:{
         HamburgerHeader,
-        HomePage
     },
     
     data(){
@@ -74,21 +72,20 @@ export default {
     
     <section class="ms-modal" v-if="isDownload">
         <div class="info-modal">
-        <div>Confermi di voler scaricare il mio cv?</div>
-        <div>
-            <div class="buttons d-flex gap-3 p-3">
-                <a download href="../../../public/files/cv.pdf" type="button" class="btn btn-primary p-1">DOWNLOAD</a>
-                <button @click="closeModal" type="button" class="btn btn-secondary p-1">CLOSE</button>
-            </div>
-        </div> 
+            <div>Confermi di voler scaricare il mio cv?</div>
+            <div>
+                <div class="buttons d-flex gap-3 p-3">
+                    <a download href="../../../public/files/cv.pdf" type="button" class="btn btn-primary p-1">DOWNLOAD</a>
+                    <button @click="closeModal" type="button" class="btn btn-secondary p-1">CLOSE</button>
+                </div>
+            </div> 
         </div>
      </section>
 </template>
 
 <style scoped lang="scss">
 
-header {
-   
+header { 
     position: sticky;
     top: 0;
     z-index: 999;
@@ -101,8 +98,7 @@ header {
     padding: 10px;
     font-size: 20px;
 
-    .nameLogo{
-      
+    .nameLogo{    
        height: 20px;
     }
 
@@ -111,6 +107,7 @@ header {
         color:  white;
         font-weight: 500;
     }
+    
     i{
         color: rgb(140, 9, 211);
     }

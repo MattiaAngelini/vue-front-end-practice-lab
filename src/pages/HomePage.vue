@@ -1,10 +1,9 @@
 <script lang="ts">
 import { useMainStore} from '../store.ts';
 import Hero from '../components/sections/Hero.vue';
-import Carousel from '../components/sections/Carousel.vue';
-import ContactsPage from '../pages/ContactsPage.vue';
+import ContactsPage from '../components/sections/ContactsPage.vue';
 import DiscoverMore from '../components/sections/DiscoverMore.vue';
-import AboutMePage from './AboutMePage.vue';
+import AboutMePage from '../components/sections/AboutMePage.vue';
 import Wrap from '../components/layout/Wrap.vue';
 import WrapHome from '../components/sections/WrapHome.vue';
 
@@ -12,7 +11,6 @@ export default {
     name: 'HomePage',
     components: {
         Hero,
-        Carousel,
         ContactsPage,
         DiscoverMore,
         AboutMePage,
@@ -37,7 +35,6 @@ export default {
             :title="store.MyName"
             :description="store.MyInfo"
         />    
-     
             <AboutMePage/>
             <WrapHome />     
             <DiscoverMore/>

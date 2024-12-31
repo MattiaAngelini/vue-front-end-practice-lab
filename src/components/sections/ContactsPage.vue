@@ -1,6 +1,6 @@
 <script lang="ts">
-import { useMainStore } from '../store.ts';
-import SideBySide from '../components/sections/SideBySide.vue';
+import { useMainStore } from '../../store.ts';
+import SideBySide from '../../components/sections/SideBySide.vue';
 
 export default{
     name: 'ContactsPage',
@@ -21,15 +21,12 @@ export default{
             <SideBySide :imageLeft="false" :layout="store.ContactsSideBySide"
             /> 
         </div>
-    </section>
-           
+    </section>          
 </template>
 <style scoped lang="scss">
-@use '../assets/styles/generic.scss' as *;
+@use '../../assets/styles/generic.scss' as *;
 
 section{
- 
     min-height: 100vh;
 }
-
 </style>

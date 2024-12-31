@@ -33,7 +33,6 @@ export default{
 @use '../../assets/styles/generic.scss' as *;
 
 div{
- 
     min-width: 100%;
     position: fixed;
     bottom: 0;
@@ -42,17 +41,16 @@ div{
     img{
         width: 100%;
         min-height: 100vh;
-     
-
-    }   .shadow{
-            content: '';
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 10;
-          
+    }   
+    
+    .shadow{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;         
         }
 }
 

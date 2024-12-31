@@ -1,6 +1,6 @@
 <script lang="ts">
 import { useMainStore } from '../../store.ts';
-import Carousel from './Carousel.vue';
+import Carousel from '../layout/Carousel.vue';
 
 export default{
     name: 'DiscoverMore',
@@ -15,15 +15,13 @@ export default{
     },
 }
 </script>
-<template>
-    
+<template>   
         <section>
             <h1 class="p-4 text-center">SCOPRI DI PIù</h1>
             <div class="container">
                 <Carousel :cardsRouter="store.cardsRouterHref" :cardsHref="store.cardsCarouselHref"/>
             </div>
-        </section>
-    
+        </section>  
 </template>
 
 <style scoped lang="scss">

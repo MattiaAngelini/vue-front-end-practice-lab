@@ -13,17 +13,7 @@ export default {
             store: useMainStore()
         }
     },
-
-methods:{
-  
-},
-
-mounted(){
- 
-}
-
 };
-
 </script>
 
 <template>

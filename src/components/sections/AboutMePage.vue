@@ -1,6 +1,6 @@
 <script lang="ts">
-import { useMainStore} from '../store.ts';
-import { currentWindow } from '../assets/styles/breakpoint.ts';
+import { useMainStore} from '../../store.ts';
+import { currentWindow } from '../../assets/styles/breakpoint.ts';
 
 export default{
     name: 'AboutMePage',
@@ -33,7 +33,6 @@ export default{
             } else { 
                 return {width: '100%', padding: '10%' }
             }
-
         },
     },
     mounted(){
@@ -60,35 +59,33 @@ export default{
             </div>
 
             <div class="picProfile d-flex justify-content-center ">         
-                    <div :style="imgResponsive"  class="borderAnimation rounded-circle border1"></div>     
-                    <div   class="borderAnimation rounded-circle border2"></div>  
-                    <img class="rounded-circle p-3 " :style="imgResponsive"   src="../assets/images/me.jpg" alt="">     
+                <div :style="imgResponsive"  class="borderAnimation rounded-circle border1"></div>     
+                <div   class="borderAnimation rounded-circle border2"></div>  
+                <img class="rounded-circle p-3 " :style="imgResponsive"   src="../../assets/images/me.jpg" alt="">     
             </div>
        </div>
     </section>
 </template>
 
 <style scoped lang="scss">
-@use '../assets/styles/generic.scss' as *;
+@use '../../assets/styles/generic.scss' as *;
 
 section{
 
     span{color: $baffo;}
-    
     .ms-container{        
         min-height: 100vh;
         background: linear-gradient(180deg, #bababa 0%, $secondary-color 100%);
         position: relative;
 
         .picProfile{
-             //animazione immagin
+             //animazione immagine
              .borderAnimation{
                 animation: move2 2s linear infinite;            
                 position: absolute;
             }
             .border1{
-                box-shadow: 1px 6px 6px 1px $baffo;
-           
+                box-shadow: 1px 6px 6px 1px $baffo;           
                 }
         
             @keyframes move2 {

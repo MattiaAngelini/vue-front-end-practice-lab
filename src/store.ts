@@ -35,13 +35,7 @@ export const useMainStore = defineStore('main', {
         MyInfo: 'Front-end Developer',
 
         //************ABOUT-ME PAGE************//
-        AboutMe: {
-          title: 'Benvenuto sul mio sito portfolio',
-          description: 'Ciao, sono Mattia.Nato a Udine il 22 giugno 1993, oggi vivo a Bari. Il mio percorso nel mondo della programmazione è iniziato con la Boolean Tech Academy, dove ho completato una formazione intensiva come programmatore full stack. Da allora, continuo a crescere e a perfezionarmi, con particolare interesse per il front-end development. Oltre al codice, sono un insegnante di Brazilian Jiu-Jitsu, cintura viola con oltre 5 anni di pratica. La costanza, la disciplina e la dedizione che applico sul tatami sono gli stessi valori che porto nella mia vita professionale. In questo sito racconto il mio percorso, unendo lavoro, passioni e voglia di migliorarmi ogni giorno.',
-          image: '/src/assets/images/me.jpg',
-          info:true
-      },
-
+  
         btnProjectsPage: { 
           label:'LEGGI',
            url :'ProjectsPage', // URL
@@ -49,8 +43,7 @@ export const useMainStore = defineStore('main', {
            color:'white', // Colore del testo} 
            border: '2px solid rgb(140, 9, 211)'  
         },
-        
-        
+              
         //************CAROUSEL HOMEPAGE***********//
         cardsCarouselHref : [             
             {
@@ -214,9 +207,7 @@ export const useMainStore = defineStore('main', {
         count:0,
         
     }),
-
-  
-
+    
     getters: {
         // computed of store
         doubleCount: (state) => state.count * 2,
