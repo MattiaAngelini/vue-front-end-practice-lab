@@ -52,27 +52,24 @@ export default{
 <template>
     <section>
         <AnimatedSection>
-        <div  class="ms-container d-lg-flex justify-content-evenly align-items-center">
-                    
-            <div :style="infoResponsive" class="info">
-                <h2>Ciao, sono <span>Mattia Angelini</span></h2>
-                <h5 class="mt-2">Front-end Developer</h5>      
-                <p class="mt-2">                    
+            <div class="ms-container d-xl-flex flex-lg-row flex-column justify-content-evenly align-items-center">
+                <div :style="infoResponsive" class="info order-2 order-lg-1">
+                    <h2>Ciao, sono <span>Mattia Angelini</span></h2>
+                    <h5 class="mt-2">Front-end Developer</h5>
+                    <p class="mt-2">
                     Benvenuto nel mio portfolio! Qui condivido il mio percorso di crescita, 
                     unendo passione per il coding, lavoro e la mia crescita. 
                     Questo sito, sviluppato con Vue, è uno dei miei laboratori per sperimentare e migliorare le mie competenze nella programmazione.
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quod, est molestiae corrupti ratione impedit voluptatem tempora rem laboriosam? Aliquam sit veritatis dolor deleniti natus aut esse neque tempora porro.          
-                </p>
+                    </p>
+                </div>
+
+                <div class="picProfile d-flex justify-content-center order-1 order-lg-2">
+                    <div :style="imgResponsive" class="borderAnimation rounded-circle border1"></div>
+                    <div class="borderAnimation rounded-circle border2"></div>
+                    <img class="rounded-circle p-3" :style="imgResponsive" src="../../assets/images/me.jpg" alt="Mattia Angelini">
+                </div>
             </div>
-          
-            <div class="picProfile d-flex justify-content-center ">         
-                <div :style="imgResponsive"  class="borderAnimation rounded-circle border1"></div>     
-                <div   class="borderAnimation rounded-circle border2"></div>  
-                <img class="rounded-circle p-3 " :style="imgResponsive"   src="../../assets/images/me.jpg" alt="">     
-            </div>         
-            
-       </div>
-    </AnimatedSection>
+        </AnimatedSection>
     </section>
 </template>
 
@@ -84,7 +81,7 @@ section{
 
     span{color: $baffo;}
     .ms-container{        
-        min-height: 100vh;
+        padding: 10% 0 10% 0;
         
         position: relative;
 
@@ -95,7 +92,8 @@ section{
                 position: absolute;
             }
             .border1{
-                box-shadow: 1px 6px 6px 1px $baffo;           
+                box-shadow: 1px 1px 1px 1px $baffo;  
+                border: 1px solid black;         
                 }
         
             @keyframes move2 {

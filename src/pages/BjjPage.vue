@@ -139,7 +139,7 @@
             color: $baffo;
         }
         .wrap {
-            min-height: 50vh;
+            margin: 100px 0;
             h1 {
                 color: white;
             }

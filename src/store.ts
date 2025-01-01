@@ -75,42 +75,42 @@ export const useMainStore = defineStore('main', {
           
             {
               title: 'DropoBox',
-              description: 'Il mio profilo Linkedin',
+              description: 'La Home-Page di DropBox - HTML - CSS',
               image: '../public/projects-img/dropbox.jpg',
             },
             {
               title: 'Dc Comics',
-              description: 'Il mio profilo Github',
+              description: 'Griglia film DC Comics - HTML - CSS - JS - API',
               image: '../public/projects-img/dc-comics.jpg',
             },
             {
               title: 'Spotify',
-              description: 'Il mio profilo Linkedin',
+              description: 'La Home-Page di Sotify - HTML - CSS ',
               image: '../public/projects-img/spotify.jpg',
             },
             {
               title: 'Whatsapp',
-              description: 'Il mio profilo Github',
+              description: 'Interfaccia di messagistica con logiche di invio e risposte automatiche - VUE/JS',
               image: '../public/projects-img/whatsapp.jpg',
             },
             {
               title: 'Campo Minato',
-              description: 'Il mio profilo Linkedin',
+              description: 'Campo minato con 3 modalità di difficoltà - HTML - CSS - JS',
               image: '../public/projects-img/campo-minato.jpg',
             },
             {
               title: 'Autocar',
-              description: 'Il mio profilo Github',
+              description: 'SPA Autocar - VUE/JS',
               image: '../public/projects-img/autocar1.jpg',
             },
             {
               title: 'Filtri Autocar',
-              description: 'Il mio profilo Github',
+              description: 'Logica per filtri auto di Autocar - VUE/JS',
               image: '../public/projects-img/autocar2.jpg',
             },
             {
               title: 'Boolfix',
-              description: 'Il mio profilo Github',
+              description: 'Web-Site per ricerca film - HTML - CSS - API',
               image: '../public/projects-img/boolfix.jpg',
             },
               
@@ -119,7 +119,7 @@ export const useMainStore = defineStore('main', {
           
             {
               title: 'PortFolio',
-              description: 'Il mio sito Portfolio realizzato con vue',
+              description: "Il mio portfolio è un progetto che rappresenta la sintesi delle mie competenze tecniche e creative. Ho utilizzato HTML5, CSS3 e JavaScript per creare una struttura moderna e completamente responsive, affiancati da Vue.js per la gestione dei componenti dinamici. Il progetto include animazioni personalizzate, l'uso di librerie per slide, e la creazione di caroselli sviluppati interamente da me. Grazie all’integrazione di Vite e TypeScript, il codice è ottimizzato e tipizzato, garantendo efficienza e scalabilità. Ogni dettaglio, dalle transizioni fluide al design mobile-first, è stato curato per offrire un'esperienza utente coinvolgente e professionale.",
               linkRepo: 'https://github.com/MattiaAngelini/vue-front-end-practice-lab',
               image1: '../public/projects-img/siteSM.png',
               image2: '../public/projects-img/siteXL.png',
@@ -130,7 +130,7 @@ export const useMainStore = defineStore('main', {
             },
             {
               title: 'React Aliens Game',
-              description: 'Progetto iniziato per studiare e imparare ad utilizzare React',
+              description: "Alien Games è un progetto in fase di sviluppo, nato per esplorare e consolidare le mie competenze in React. Si tratta di un gioco interattivo che combina dinamismo e strategia, ispirato al classico stile di lotta Pokémon. Attualmente, il gioco include due schermate principali: una schermata iniziale per la scelta dei personaggi e una schermata di battaglia, dove i giocatori si sfidano in un sistema a turni. Ho utilizzato React per la gestione dei componenti, useState e useEffect per controllare lo stato del gioco e le dinamiche degli eventi. Alien Games rappresenta una sfida continua, con l'obiettivo di arricchire il gameplay e implementare nuove funzionalità in futuro.",
               linkRepo:'https://github.com/MattiaAngelini/react-aliens-game',
               image1: '../public/projects-img/aliengame1.jpg',
               image2: '../public/projects-img/aliengame2.jpg',

@@ -44,7 +44,7 @@ export default {
 <template>
     <footer>
         <AnimatedSection>
-            <h2 class="text-center ms-title">LINGUAGGI E STRUMENTI</h2>
+            <h2 class="text-center ms-title p-5">LINGUAGGI E STRUMENTI</h2>
             <section>
                 <div :style="columns" class="layout-footer container-logo">
                     <div 
@@ -62,8 +62,8 @@ export default {
                 </div>
                 <div class="policy">
                     <div>Privacy Policy</div>
-                    
-                    <div>© 2024 Mattia Angelini. Tutti i diritti riservati.</div>
+                    <div>© 2024 Mattia Angelini. </div>
+                    <div>Tutti i diritti riservati.</div>
                 </div>
             </section>
         </AnimatedSection>    
@@ -115,7 +115,7 @@ footer {
         display: flex;
         justify-content: space-between;
         margin: 30px 10px 30px 10px;
-        font-size: 14px;
+        font-size: 12px;
         color: black;
     }
 }

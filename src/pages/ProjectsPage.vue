@@ -48,20 +48,24 @@ export default {
 
 <template>
     <section>
-        <Wrap wrap="../../public/bjj/winner.jpg" shadowRgba="rgba(0,0,0,0.8)" />
+        <Wrap wrap="../../public//projects-img/display.jpg" shadowRgba="rgba(0,0,0,0.6)" />
         <!-- ATTESTATO -->
         <div class="d-lg-flex intro">
             <div class="description d-flex flex-column justify-content-evenly">
-                <AnimatedSection>
-                    <div>
-                    <h1>Start: Boolean Tech Academy</h1>
+                <AnimatedSection>          
+                <div>
+                    <h1 class="mb-3">LA PROGRAMMAZIONE</h1>
+                    <h3 class="mb-2">Start: Boolean Academy</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore animi illo magni beatae perspiciatis doloremque eum architecto blanditiis.
-                        Inventore accusantium quam ipsa tempore hic. Ad, corrupti. Sit, veniam? Reiciendis, architecto
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, dolorem iste laudantium numquam suscipit consectetur facilis nihil rem, similique ipsa minus iure incidunt dolor unde sapiente, sunt natus quia quasi?!
+                        Il mio percorso nel mondo della programmazione è iniziato con un corso intensivo presso Boolean Tech Academy, 
+                        un’esperienza che ha gettato le basi della mia carriera nel settore. Il programma, 
+                        della durata di sei mesi e composto da oltre 600 ore di formazione pratica, 
+                        mi ha permesso di sviluppare competenze solide sia nel front-end che nel back-end. 
+                        La mia determinazione mi ha portato a completare il corso senza mai un’assenza e consegnando puntualmente tutti gli esercizi assegnati, 
+                        dimostrando costanza e dedizione in ogni fase del percorso. 
                     </p>
                 </div>
-                <img style="width: 100%;" class="assenze" src="../../public/projects-img/assenze.jpg" alt="">
+                <img style="width: 100%;" class="assenze mt-3" src="../../public/projects-img/assenze.jpg" alt="">
             </AnimatedSection>
             
                
@@ -77,16 +81,19 @@ export default {
         <!-- PROGETTI BOOLEAN -->
         <div class="text-center wrap">
             <AnimatedSection>
-                <h1>PROGETTI BOOLEAN</h1>
+                <h1>BOOLEAN</h1>
             </AnimatedSection>  
         </div>
         <div class="booleanProj d-flex flex-column flex-lg-row justify-content-evenly gap-4">
+            
             <AnimatedSection class="description order-lg-2 m-lg-auto">
                 <h1>Alcuni dei miei progetti in Academy</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor minima soluta ex provident maiores laudantium itaque dolores obcaecati inventore expedita totam doloribus, veritatis cum earum possimus nesciunt, aliquam consequatur ad. adipisicing elit. Qui, commodi similique in at officia autem tempore ipsa debitis harum exercitationem ex rerum, ad minima nesciunt ullam illo ea. Et, doloremque.
+                    Durante il corso presso Boolean Tech Academy, ho avuto l'opportunità di sviluppare diversi progetti pratici, che rappresentano al meglio le competenze acquisite. Attraverso un approccio hands-on,
+                     ho realizzato applicazioni complete, affrontando sfide legate sia al front-end che al back-end.
+                      Nel carosello puoi trovare alcuni screenshot dei lavori               
                 </p>
-                <a href="">Le mie repo su Github</a>
+                <a class="" href="https://github.com/MattiaAngelini?tab=repositories">Qui puoi trovare le repo su Github</a>
             </AnimatedSection>
             
             <AnimatedSection class="carousel">
@@ -120,7 +127,7 @@ export default {
                                 <h3 class="p-2">{{store.cardsProjects[0].title}}</h3>
                                 <p class="p-lg-5">
                                     {{store.cardsProjects[0].description}}
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    
                                 </p>
                                 <a :href="store.cardsProjects[0].linkRepo">Link alla Repo</a>
                             </div>
@@ -143,7 +150,7 @@ export default {
                                 <h3 class="p-2">{{store.cardsProjects[1].title}}</h3>
                                 <p class="p-lg-5">
                                     {{store.cardsProjects[1].description}}
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    
                                 </p>
                                 <a :href="store.cardsProjects[1].linkRepo">Link alla Repo</a>
                             </div>
@@ -174,7 +181,7 @@ export default {
 // intro
 .intro {
     min-height: 100vh;
-    background: linear-gradient(170deg, #ffffff 60%, rgb(178, 178, 178) 50%);
+    background: linear-gradient(180deg, #ffffff 40%, rgb(173, 173, 173) 80%);
     .description {
         min-width: 70%;
         min-height: 60vh;
@@ -191,7 +198,7 @@ export default {
 // wrap
 .wrap {
     color: white;
-    margin: 120px 0;
+    margin: 100px 0;
 }
 
 // boolean

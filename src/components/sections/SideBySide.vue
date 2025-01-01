@@ -5,6 +5,8 @@ import { PropType } from 'vue';
 import ButtonCustom from '../../stories/Buttons/ButtonCustom.vue';
 import emailjs from '@emailjs/browser';
 import AnimatedSection from '../layout/AnimatedSection.vue';
+import { currentWindow } from '../../assets/styles/breakpoint.ts';
+
 export default {
     name: 'SideBySide',
     components: {
@@ -14,7 +16,8 @@ export default {
     data(){
         return{
             store: useMainStore(),
-            emailSent: false       
+            emailSent: false,
+            sizeWindow: currentWindow(window.innerWidth),    
         }
     },
     props: {
@@ -61,14 +64,29 @@ export default {
             }      
         },
 
-        // widthResponsive() {
-        //     if (this.sizeWindow === 'xl' || this.sizeWindow === 'xxl' ||
-        //         this.sizeWindow === 'md' || this.sizeWindow === 'lg') {
-        //         return { width: '50%' };
-        //     } else {
-        //         return { width: '100%' };
-        //     }
-        // },
+        widthResponsive() {
+            if (this.sizeWindow === 'xl' || this.sizeWindow === 'xxl' ||
+                this.sizeWindow === 'md' || this.sizeWindow === 'lg') {
+                return { width: '50%' };
+            } else {
+                return { width: '100%' };
+            }
+        },
+
+        maxHeightResponsive() {
+            if (this.sizeWindow === 'xl' || this.sizeWindow === 'xxl' ||
+                this.sizeWindow === 'md' || this.sizeWindow === 'lg') {
+                return { minHeight: '100vh' };
+            } else {
+                return { minHeight: '60vh' };
+            }
+        },
+    },
+
+    mounted(){
+        window.addEventListener('resize', () => {
+            this.sizeWindow = currentWindow(window.innerWidth);
+        });
     }
     }
 </script>
@@ -110,11 +128,25 @@ export default {
         </div>
                 
         <!--VIDEO-->
-        <AnimatedSection :style="widthResponsive"  class="ms-video">
-            <video  autoplay muted loop>
-                <source :src="layout.video" type="video/mp4" />
-            </video>
-        </AnimatedSection>
+        <div :style="widthResponsive"   class="ms-video">
+            <div>
+                <video :style="maxHeightResponsive"  autoplay muted loop>
+                    <source :src="layout.video" type="video/mp4" />
+                </video>
+
+                <div class="contacts">          
+                    <AnimatedSection class="p-4">
+                        <h2 class="text-center p-2">TELEFONO</h2>
+                        <div class="ms-badge">+39 339 783 9316</div>
+                    </AnimatedSection>
+                    
+                    <AnimatedSection class="p-4">
+                        <h2 class="text-center p-2">E-MAIL</h2>
+                        <div class="ms-badge"> mattiaangelini1993@gmail.com</div>
+                    </AnimatedSection>  
+                </div>
+            </div>
+        </div>
       
     </section>
 </template>
@@ -123,47 +155,74 @@ export default {
 @use '../../assets/styles/generic.scss' as *;
 
 section { 
+    position: relative;
         .ms-alert{
         color: white;
         position: absolute;
-        top: 0%;
-        left: 0%;
-        width: 100%;
-        height: 100%;
+        top: 25%;
+        left: 0%;      
+        min-width: 100%;      
         background-color: rgba(0,0,0,0.8);
         display: flex;
         justify-content: center;
-        padding-top: 150px;
+        z-index: 999;
+        
 }
     .alert-enter-active,
     .alert-leave-active{
-        transition: opacity 0.3s ease-in-out;
+        transform: translate(0px, 0px);
+        transition: transform 0.4s ease-out;
     }
     .alert-enter-from,
     .alert-leave-to{
-        opacity: 0;
+        transform: translate(-100vw, 0px);
     }
 
     .ms-video { 
-   
-        padding: 3%;
-     
         background-color: rgb(169, 169, 169);
-        
+        position: relative;
+    
         video {
-            width: 80%;
-            height: 50%;     
+            width: 100%;
+            height: 100%;
             margin: auto;
             object-fit: cover;  
             display:block;        
             border-radius: 10px;
             border: 1px solid $baffo;
-        }          
+            position: relative;
+            
+        }&::after{
+            content:'';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.2);
+        }
+    
+        .contacts{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            h2{color: $baffo;}
+
+           .ms-badge{
+                border: 1px solid $baffo;
+                border-radius: 10px;
+                padding: 20px;
+                background-color: rgb(118, 118, 118);
+                font-size: 1.2rem;
+                color: white;
+            }
+            
+        }
     }
     
     .ms-form{ 
         background-color: rgb(225, 225, 225);
-
         padding: 3%;
         line-height: 40px;
         color: $baffo;
