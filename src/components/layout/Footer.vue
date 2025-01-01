@@ -1,9 +1,13 @@
 <script lang="ts">
 import { Footer } from '../../models/Footer.ts';
 import { currentWindow } from '../../assets/styles/breakpoint.ts';
+import AnimatedSection from './AnimatedSection.vue';
 
 export default {
     name: 'Footer',
+    components:{
+        AnimatedSection
+    },
     props: {
         icons: {
             type: Array as() => Footer[],
@@ -39,29 +43,30 @@ export default {
 
 <template>
     <footer>
-        <h2 class="text-center ms-title">LINGUAGGI E STRUMENTI</h2>
-        <section>
-            <div :style="columns" class="layout-footer container-logo">
-                <div 
-                    v-for="(icon, index) in icons" 
-                    :key="index" 
-                    class="logo"
-                >         
-                        <img 
-                        v-show="icon.image !== ''" 
-                            :src="icon.image" 
-                            :alt="icon.altText"
-                        >
-                   
+        <AnimatedSection>
+            <h2 class="text-center ms-title">LINGUAGGI E STRUMENTI</h2>
+            <section>
+                <div :style="columns" class="layout-footer container-logo">
+                    <div 
+                        v-for="(icon, index) in icons" 
+                        :key="index" 
+                        class="logo"
+                    >         
+                            <img 
+                            v-show="icon.image !== ''" 
+                                :src="icon.image" 
+                                :alt="icon.altText"
+                            >
+                    
+                    </div>
                 </div>
-            </div>
-
-            <div class="policy">
-                <div>Privacy Policy</div>
-                
-                <div>© 2024 Mattia Angelini. Tutti i diritti riservati.</div>
-            </div>
-        </section>
+                <div class="policy">
+                    <div>Privacy Policy</div>
+                    
+                    <div>© 2024 Mattia Angelini. Tutti i diritti riservati.</div>
+                </div>
+            </section>
+        </AnimatedSection>    
     </footer>
 </template>
 

@@ -4,13 +4,15 @@ import { currentWindow } from '../assets/styles/breakpoint.ts';
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/vue-splide/css';
 import Wrap from '../components/layout/Wrap.vue';
+import AnimatedSection from '../components/layout/AnimatedSection.vue';
 
 export default {
     name: 'ProjectsPage',
     components: {
         Splide,
         SplideSlide,
-        Wrap
+        Wrap,
+        AnimatedSection
     },
     data() {
         return {
@@ -50,33 +52,44 @@ export default {
         <!-- ATTESTATO -->
         <div class="d-lg-flex intro">
             <div class="description d-flex flex-column justify-content-evenly">
-                <div>
+                <AnimatedSection>
+                    <div>
                     <h1>Start: Boolean Tech Academy</h1>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore animi illo magni beatae perspiciatis doloremque eum architecto blanditiis.
-                        Inventore accusantium quam ipsa tempore hic. Ad, corrupti. Sit, veniam? Reiciendis, architecto!
+                        Inventore accusantium quam ipsa tempore hic. Ad, corrupti. Sit, veniam? Reiciendis, architecto
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, dolorem iste laudantium numquam suscipit consectetur facilis nihil rem, similique ipsa minus iure incidunt dolor unde sapiente, sunt natus quia quasi?!
                     </p>
                 </div>
-                <img class="assenze" src="../../public/projects-img/assenze.jpg" alt="">
+                <img style="width: 100%;" class="assenze" src="../../public/projects-img/assenze.jpg" alt="">
+            </AnimatedSection>
+            
+               
             </div>
+            
             <div class="attestato d-flex align-items-center">
-                <div>
-                    <img :style="imageResponsive" src="../../public/projects-img/attestato.jpg" alt="">
-                </div>
+                    <AnimatedSection>
+                        <img :style="imageResponsive" src="../../public/projects-img/attestato.jpg" alt="">
+                    </AnimatedSection>           
             </div>
         </div>
 
         <!-- PROGETTI BOOLEAN -->
-        <h1 class="text-center wrap">PROGETTI BOOLEAN</h1>
+        <div class="text-center wrap">
+            <AnimatedSection>
+                <h1>PROGETTI BOOLEAN</h1>
+            </AnimatedSection>  
+        </div>
         <div class="booleanProj d-flex flex-column flex-lg-row justify-content-evenly gap-4">
-            <div class="description order-lg-2 m-lg-auto">
+            <AnimatedSection class="description order-lg-2 m-lg-auto">
                 <h1>Alcuni dei miei progetti in Academy</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, commodi similique in at officia autem tempore ipsa debitis harum exercitationem ex rerum, ad minima nesciunt ullam illo ea. Et, doloremque.
+                    Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor minima soluta ex provident maiores laudantium itaque dolores obcaecati inventore expedita totam doloribus, veritatis cum earum possimus nesciunt, aliquam consequatur ad. adipisicing elit. Qui, commodi similique in at officia autem tempore ipsa debitis harum exercitationem ex rerum, ad minima nesciunt ullam illo ea. Et, doloremque.
                 </p>
                 <a href="">Le mie repo su Github</a>
-            </div>
-            <div class="carousel">
+            </AnimatedSection>
+            
+            <AnimatedSection class="carousel">
                 <Splide :options="{ rewind: true }" aria-label="bjj-competitions-pics">
                     <SplideSlide v-for="card in store.cardsBoolean" :key="card.image">
                         <img :src="`${card.image}`" alt="Competition Image">
@@ -86,13 +99,19 @@ export default {
                         </div>
                     </SplideSlide>
                 </Splide>
-            </div>
+            </AnimatedSection>          
         </div>
 
         <!-- WRAP -->
-        <h1 class="wrap text-center">PERSONAL PROJECTS</h1>
+         
+        <div class="text-center wrap">
+            <AnimatedSection>
+                <h1>PROGETTI PERSONALI</h1>
+            </AnimatedSection>  
+        </div>
         <div class="projects">
-            <Splide :options="{ rewind: true, height: 'auto' }" aria-label="bjj-competitions-pics">
+            <AnimatedSection>
+                <Splide :options="{ rewind: true, height: 'auto' }" aria-label="bjj-competitions-pics">
                 <!-- PORTFOLIO -->
                 <SplideSlide>
                     <div class="slide">
@@ -142,6 +161,9 @@ export default {
                     </div>
                 </SplideSlide>
             </Splide>
+
+            </AnimatedSection>
+           
         </div>
     </section>
 </template>
@@ -154,8 +176,8 @@ export default {
     min-height: 100vh;
     background: linear-gradient(170deg, #ffffff 60%, rgb(178, 178, 178) 50%);
     .description {
-        min-width: 50%;
-        min-height: 50vh;
+        min-width: 70%;
+        min-height: 60vh;
         padding: 5%;
         margin: auto;
     }

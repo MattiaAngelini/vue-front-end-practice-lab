@@ -1,7 +1,7 @@
 <script lang="ts">
 import { Header } from '../../models/Header.ts';
 import { PropType } from 'vue';
-import HamburgerHeader from '../common/HamburgerHeader.vue';
+import HamburgerHeader from './HamburgerHeader.vue';
 export default {
     name: 'Header',
     components:{

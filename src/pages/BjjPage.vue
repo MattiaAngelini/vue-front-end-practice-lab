@@ -4,13 +4,15 @@
     import { currentWindow } from '../assets/styles/breakpoint.ts';
     import { Splide, SplideSlide } from '@splidejs/vue-splide';
     import '@splidejs/vue-splide/css';
+    import AnimatedSection from '../components/layout/AnimatedSection.vue';
 
     export default {
         name: 'BjjPage',
         components: {
             Splide,
             SplideSlide,
-            Wrap
+            Wrap,
+            AnimatedSection
         },
         data() {
             return {
@@ -54,7 +56,7 @@
 
         <!--INTRO-->
         <div class="d-md-flex intro p-2">
-            <div class="info">
+            <AnimatedSection class="info">
                 <h1 class="text-center p-4">Il Brazilian <span>Jiu-Jitsu</span></h1>
                 <p class="container">
                     La mia principale passione, a cui dedico la maggior parte del mio tempo libero, il Brazilian Jiu-Jitsu.
@@ -62,19 +64,22 @@
                     più vincenti d'Italia la W.C.R.A.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptate minus, a reprehenderit reiciendis temporibus nulla quibusdam sint dolorem eveniet tenetur, odio totam modi expedita. Ducimus perferendis laborum rerum impedit.
                 </p>
-            </div>
-            <div :style="widthResponsive" class="img-container d-flex justify-content-center align-items-center">
+            </AnimatedSection>
+
+            <AnimatedSection :style="widthResponsive" class="img-container d-flex justify-content-center align-items-center">
                 <img src="../../public/bjj/beltDay.png" alt="" />
-            </div>
+            </AnimatedSection>
         </div>
 
         <section class="wrap d-flex justify-content-center align-items-center">
-            <h1>IL MIO SECONDO LAVORO</h1>
+            <AnimatedSection>
+                <h1>IL MIO SECONDO LAVORO</h1>
+            </AnimatedSection>
         </section>
 
         <!--CLASSE FUNDAMENTALS-->
         <div class="fundamentals d-flex flex-column flex-lg-row p-2">
-            <div class="description order-1 order-lg-2">
+            <AnimatedSection class="description order-1 order-lg-2">
                 <h1 class="text-center p-4">La Classe <span>Fundamentals</span></h1>
                 <p class="container">
                     A gennaio 2024 mi è stata affidata la classe 'Fundamentals',
@@ -87,36 +92,41 @@
                     Questo ruolo, che svolgo con passione rappresenta ad oggi il mio secondo lavoro che mi ha permesso di crescere non solo come atleta,
                     ma anche come guida per chi si avvicina al Jiu-Jitsu, rafforzando le mie capacità comunicative e organizzative.
                 </p>
-            </div>
+            </AnimatedSection>
+        
             <!--LOCANDINA-->
-            <div class="locandina order-2 order-lg-1">
+            <AnimatedSection class="locandina order-2 order-lg-1">
                 <div>
                     <img src="../../public/bjj/locandina.jpg" alt="Locandina Classe Fundamentals" />
                 </div>
-            </div>
+            </AnimatedSection>
         </div>
 
         <!--COMPETITIONS-->
         <section class="wrap d-flex justify-content-center align-items-center">
-            <h1>L'AGONISMO</h1>
+            <AnimatedSection>
+                <h1>L'AGONISMO</h1>
+            </AnimatedSection>
         </section>
 
         <div class="competitions d-flex flex-column flex-md-row">
-            <div class="description order-1 order-lg-1 p-2">
+            <AnimatedSection class="description order-1 order-lg-1 p-2">       
                 <h1 class="text-center p-4">Competere per <span>Evolvere</span></h1>
                 <p class="container">
                     L'agonismo rappresenta per me una sfida fondamentale, un percorso che va oltre la competizione stessa.
                     Ogni gara è un'opportunità per mettermi alla prova, affrontare i miei limiti e migliorare non solo come atleta, ma anche come persona.
                     Questo impegno costante mi insegna disciplina, resilienza e la capacità di gestire la pressione, valori che applico in ogni ambito della mia vita.
                 </p>
-            </div>
-            <div class="images-carousel order-2 order-lg-2 mt-5">
+            </AnimatedSection>
+                
+            <AnimatedSection class="images-carousel order-2 order-lg-2 mt-5">
                 <Splide :options="{ rewind: true }" aria-label="bjj-competitions-pics">
                     <SplideSlide v-for="image in store.imagesCarousel" :key="image.src">
                         <img :style="imageSlider" :src="`${image.src}`" alt="Competition Image" />
                     </SplideSlide>
                 </Splide>
-            </div>
+            </AnimatedSection>
+    
         </div>
     </main>
 </template>

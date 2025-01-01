@@ -1,21 +1,21 @@
 // ANIMATIONS
 section{
-
+    //animazione sfondo
     .layout-enter-active,
     .layout-leave-active {   
         transform: scale(1.0);
-        transition: transform 4s ease-in-out;
+        transition: transform 2.5s ease-in-out;
     }
     .layout-enter-from,
     .layout-leave-to {
         transform: scale(3.0); 
     }
 
+    //animazione contenuto al centro
     .info-enter-active,
     .info-leave-active {     
         transition: opacity 1s ease-in-out;    
     }
-
     .info-enter-from,
     .info-leave-to {
         opacity: 0;
@@ -26,6 +26,7 @@ section{
         position: relative;
         overflow: hidden;
         max-height: calc(100vh - 10vh);
+        background-color: white;
 
             .hero-video {
                 display: block; //Per margine creato da video
@@ -40,7 +41,7 @@ section{
                 position: absolute;
                 top: 0;
                 left: 0;
-                background-color: rgba(0,0,0,0.5);
+                background-color: rgba(0,0,0,0.3);
             }
 
             .info{
@@ -63,7 +64,4 @@ section{
                     }
             }
     }
-
-
-
 }

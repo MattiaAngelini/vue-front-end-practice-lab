@@ -143,7 +143,7 @@ export const useMainStore = defineStore('main', {
        
         //************CONTACTS-PAGE************//
         ContactsSideBySide: {
-          image: '/src/assets/images/mail.webp',        
+          video: '/src/assets/video/videoContacts.mp4',        
           form: true
         },
 

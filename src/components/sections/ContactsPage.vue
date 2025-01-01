@@ -18,7 +18,7 @@ export default{
 <template>          
     <section>
         <div>
-            <SideBySide :imageLeft="false" :layout="store.ContactsSideBySide"
+            <SideBySide :layout="store.ContactsSideBySide"
             /> 
         </div>
     </section>          

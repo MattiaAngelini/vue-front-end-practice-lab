@@ -1,11 +1,13 @@
 <script lang="ts">
 import ButtonCustom from '../../stories/Buttons/ButtonCustom.vue';
 import { useMainStore} from '../../store';
+import AnimatedSection from '../layout/AnimatedSection.vue';
 
 export default{
     name: 'WrapHome',
     components:{
-        ButtonCustom
+        ButtonCustom,
+        AnimatedSection
     },
     data(){
         return{
@@ -18,13 +20,14 @@ export default{
 <template>  
 
 <section>
-    <div class="d-flex justify-content-center align-items-center info">
-        <div class="d-flex flex-column align-items-center">
-            <h1 class="text-center p-3">My coding experience</h1>
-            <ButtonCustom :button="store.btnProjectsPage" isRouter ></ButtonCustom>
-        
+    <AnimatedSection>
+        <div class="d-flex justify-content-center align-items-center info">
+            <div class="d-flex flex-column align-items-center">
+                <h1 class="text-center p-3">My coding experience</h1>
+                <ButtonCustom :button="store.btnProjectsPage" isRouter ></ButtonCustom>        
+            </div>
         </div>
-    </div>
+    </AnimatedSection>  
 </section>
 
 </template>

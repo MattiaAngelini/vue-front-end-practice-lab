@@ -1,9 +1,15 @@
 <script lang="ts">
 import { useMainStore} from '../../store.ts';
 import { currentWindow } from '../../assets/styles/breakpoint.ts';
+import AnimatedSection from '../layout/AnimatedSection.vue';
 
 export default{
     name: 'AboutMePage',
+
+    components:{
+        AnimatedSection
+
+    },
     
     data(){
         return{
@@ -45,8 +51,9 @@ export default{
 
 <template>
     <section>
+        <AnimatedSection>
         <div  class="ms-container d-lg-flex justify-content-evenly align-items-center">
-        
+                    
             <div :style="infoResponsive" class="info">
                 <h2>Ciao, sono <span>Mattia Angelini</span></h2>
                 <h5 class="mt-2">Front-end Developer</h5>      
@@ -57,13 +64,15 @@ export default{
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quod, est molestiae corrupti ratione impedit voluptatem tempora rem laboriosam? Aliquam sit veritatis dolor deleniti natus aut esse neque tempora porro.          
                 </p>
             </div>
-
+          
             <div class="picProfile d-flex justify-content-center ">         
                 <div :style="imgResponsive"  class="borderAnimation rounded-circle border1"></div>     
                 <div   class="borderAnimation rounded-circle border2"></div>  
                 <img class="rounded-circle p-3 " :style="imgResponsive"   src="../../assets/images/me.jpg" alt="">     
-            </div>
+            </div>         
+            
        </div>
+    </AnimatedSection>
     </section>
 </template>
 
@@ -71,11 +80,12 @@ export default{
 @use '../../assets/styles/generic.scss' as *;
 
 section{
+    background: linear-gradient(180deg, #bababa 0%, $secondary-color 100%);
 
     span{color: $baffo;}
     .ms-container{        
         min-height: 100vh;
-        background: linear-gradient(180deg, #bababa 0%, $secondary-color 100%);
+        
         position: relative;
 
         .picProfile{

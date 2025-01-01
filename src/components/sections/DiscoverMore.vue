@@ -1,11 +1,13 @@
 <script lang="ts">
 import { useMainStore } from '../../store.ts';
 import Carousel from '../layout/Carousel.vue';
+import AnimatedSection from '../layout/AnimatedSection.vue';
 
 export default{
     name: 'DiscoverMore',
     components:{
-        Carousel
+        Carousel,
+        AnimatedSection
      
     },
     data(){
@@ -17,10 +19,12 @@ export default{
 </script>
 <template>   
         <section>
-            <h1 class="p-4 text-center">SCOPRI DI PIù</h1>
-            <div class="container">
-                <Carousel :cardsRouter="store.cardsRouterHref" :cardsHref="store.cardsCarouselHref"/>
-            </div>
+            <AnimatedSection>
+                <h1 class="p-4 text-center">SCOPRI DI PIù</h1>   
+                <div class="container">
+                    <Carousel :cardsRouter="store.cardsRouterHref" :cardsHref="store.cardsCarouselHref"/>
+                </div>
+            </AnimatedSection>
         </section>  
 </template>
 
