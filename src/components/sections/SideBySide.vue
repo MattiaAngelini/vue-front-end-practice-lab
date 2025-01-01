@@ -78,7 +78,7 @@ export default {
                 this.sizeWindow === 'md' || this.sizeWindow === 'lg') {
                 return { minHeight: '100vh' };
             } else {
-                return { minHeight: '60vh' };
+                return { minHeight: '50vh' };
             }
         },
     },
@@ -111,43 +111,39 @@ export default {
         </div>
 
         <!--FORM-->
-        <div :style="widthResponsive"  v-if="layout.form"  class="ms-form">
+        <div :style="widthResponsive"  v-if="layout.form"  class="ms-form d-flex align-items-center">
             
-            <AnimatedSection> 
-            <h1 class="text-center p-4">CONTATTAMI</h1>
-            <div>
+        <AnimatedSection style="width: 80%;" class="m-auto">    
+                <h1 class="text-center p-4">CONTATTAMI</h1>
                 <form ref="form" @submit.prevent="sendEmail">
                     <input required placeholder="Nome*" type="text" name="userName">
                     <input required placeholder="E-mail*" type="email" name="userEmail">
                     <input required placeholder="Oggetto della Mail*" type="text" name="subject">
                     <textarea required placeholder="Scrivi il tuo messaggio*" name="message"></textarea>
-                    <input required type="submit" value="Send">
-                </form>      
-            </div>
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-primary" required type="submit" value="Send">Invia</button>
+                    </div>
+                </form>   
         </AnimatedSection>
         </div>
                 
-        <!--VIDEO-->
-        <div :style="widthResponsive"   class="ms-video">
-            <div>
-                <video :style="maxHeightResponsive"  autoplay muted loop>
-                    <source :src="layout.video" type="video/mp4" />
-                </video>
-
-                <div class="contacts">          
-                    <AnimatedSection class="p-4">
-                        <h2 class="text-center p-2">TELEFONO</h2>
+        <!--MEDIA-->
+        <div :style="widthResponsive"   class="side-media d-flex alignt-items-center">
+           
+            <div style="width: 80%; margin: auto" class="position-relative">
+                <div class="contacts text-center mb-5">          
+                    <AnimatedSection>
+                        <h2 class="p-2">TELEFONO</h2>
                         <div class="ms-badge">+39 339 783 9316</div>
-                    </AnimatedSection>
-                    
-                    <AnimatedSection class="p-4">
-                        <h2 class="text-center p-2">E-MAIL</h2>
+               
+                        <h2 class="p-2">E-MAIL</h2>
                         <div class="ms-badge"> mattiaangelini1993@gmail.com</div>
                     </AnimatedSection>  
                 </div>
             </div>
-        </div>
-      
+
+        </div>  
+          
     </section>
 </template>
 
@@ -178,62 +174,48 @@ section {
         transform: translate(-100vw, 0px);
     }
 
-    .ms-video { 
-        background-color: rgb(169, 169, 169);
+    .side-media { 
+        background-image: url('../../../public/display.jpg');
+        background-size: cover;       
         position: relative;
+        min-height: 70vh;
     
-        video {
-            width: 100%;
-            height: 100%;
-            margin: auto;
-            object-fit: cover;  
-            display:block;        
-            border-radius: 10px;
-            border: 1px solid $baffo;
-            position: relative;
-            
-        }&::after{
-            content:'';
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: rgba(0,0,0,0.2);
-        }
-    
-        .contacts{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
+        .contacts{   
             h2{color: $baffo;}
 
            .ms-badge{
                 border: 1px solid $baffo;
-                border-radius: 10px;
-                padding: 20px;
-                background-color: rgb(118, 118, 118);
-                font-size: 1.2rem;
+                border-radius: 8px;
+                padding: 4px;
+                background-color: rgb(118, 118, 118);          
                 color: white;
-            }
-            
+            }    
         }
     }
     
     .ms-form{ 
         background-color: rgb(225, 225, 225);
-        padding: 3%;
-        line-height: 40px;
         color: $baffo;
+        min-height: 60vh;
+        button{
+            background-color: rgb(87, 87, 87);
+            border: 1px solid $baffo;
+            color: white;
+            width: 100px;
+            margin: 4;
+        }
     }
 
     input, textArea{
         width: 100%;
-        padding: 2%;
-        margin: 1%;
+        padding: 4px; 
+        margin: 6px 0 6px 0;
         border: 1px solid $baffo;
         border-radius: 8px;
+    }
+
+    textArea{
+        height: 150px;
     }
 }
 </style>

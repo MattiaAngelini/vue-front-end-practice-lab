@@ -32,10 +32,9 @@ export default{
 @use '../../assets/styles/generic.scss' as *;
 
 section{  
-    color: white;
+    color: black;
     min-height: 80vh;
-    padding: 2% 0 2% 0;
-    background-color: $primary-color;  
+    background: linear-gradient(180deg, #bababa 0%, $secondary-color 100%);;
 }
 
 </style>

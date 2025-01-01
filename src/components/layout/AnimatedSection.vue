@@ -34,8 +34,8 @@ export default {
 <style scoped>
 section {
   opacity: 0;
-  transform: translate(0px, 250px);
-  transition: opacity 1s ease-out, transform 0.8s ease-out;
+  transform: translate(0px, 200px);
+  transition: opacity 1s ease-out, transform 0.5s ease-out;
 }
 
 section.visible {

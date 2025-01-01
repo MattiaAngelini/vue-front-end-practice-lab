@@ -26,7 +26,7 @@
                     this.sizeWindow === 'xl' || this.sizeWindow === 'xxl' ||
                     this.sizeWindow === 'md' || this.sizeWindow === 'lg'
                 ) {
-                    return { width: '35%' };
+                    return { width: '50%' };
                 } else {
                     return { width: '100%' };
                 }
@@ -58,11 +58,10 @@
         <div class="d-md-flex intro p-2">
             <AnimatedSection class="info">
                 <h1 class="text-center p-4">Il Brazilian <span>Jiu-Jitsu</span></h1>
-                <p class="container">
+                <p class="container px-lg-4">
                     La mia principale passione, a cui dedico la maggior parte del mio tempo libero, il Brazilian Jiu-Jitsu.
-                    Ho iniziato a praticare questo sport nel 2018 e oggi sono cintura viola, agonista e istruttore in uno dei team
-                    più vincenti d'Italia la W.C.R.A.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptate minus, a reprehenderit reiciendis temporibus nulla quibusdam sint dolorem eveniet tenetur, odio totam modi expedita. Ducimus perferendis laborum rerum impedit.
+                    Ho iniziato a praticare questo sport nel 2018 e oggi sono cintura viola, agonista e istruttore in uno dei team più vincenti d'Italia, la W.C.R.A.
+                    Questa disciplina non è solo uno sport, ma un percorso di crescita personale che mi ha insegnato valori fondamentali come disciplina, resilienza e rispetto.
                 </p>
             </AnimatedSection>
 
@@ -81,7 +80,7 @@
         <div class="fundamentals d-flex flex-column flex-lg-row p-2">
             <AnimatedSection class="description order-1 order-lg-2">
                 <h1 class="text-center p-4">La Classe <span>Fundamentals</span></h1>
-                <p class="container">
+                <p class="container px-lg-4">
                     A gennaio 2024 mi è stata affidata la classe 'Fundamentals',
                     segnando il mio primo ruolo ufficiale come insegnante di Brazilian Jiu-Jitsu.
                     Questo corso è rivolto principalmente ai principianti,

@@ -45,12 +45,7 @@ section{
         .info{
             min-height: 70vh;
         }
-        button{
-            width: 50px;
-            background-color: $baffo;
-            border: none;
-            color: white;
-        }
+    
         
 }
 </style>

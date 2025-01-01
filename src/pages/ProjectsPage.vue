@@ -59,7 +59,7 @@ export default {
                     <p>
                         Il mio percorso nel mondo della programmazione è iniziato con un corso intensivo presso Boolean Tech Academy, 
                         un’esperienza che ha gettato le basi della mia carriera nel settore. Il programma, 
-                        della durata di sei mesi e composto da oltre 600 ore di formazione pratica, 
+                        della durata di sei mesi e composto da oltre 700 ore di formazione pratica, 
                         mi ha permesso di sviluppare competenze solide sia nel front-end che nel back-end. 
                         La mia determinazione mi ha portato a completare il corso senza mai un’assenza e consegnando puntualmente tutti gli esercizi assegnati, 
                         dimostrando costanza e dedizione in ogni fase del percorso. 

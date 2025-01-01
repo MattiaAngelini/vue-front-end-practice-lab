@@ -81,7 +81,7 @@ section{
 
     span{color: $baffo;}
     .ms-container{        
-        padding: 10% 0 10% 0;
+        padding: 10% 0 10%;
         
         position: relative;
 

@@ -11,16 +11,6 @@ section{
         transform: scale(3.0); 
     }
 
-    //animazione contenuto al centro
-    .info-enter-active,
-    .info-leave-active {     
-        transition: opacity 1s ease-in-out;    
-    }
-    .info-enter-from,
-    .info-leave-to {
-        opacity: 0;
-    }
-
     // LAYOUT VIDEO HERO
     .hero-media {
         position: relative;
