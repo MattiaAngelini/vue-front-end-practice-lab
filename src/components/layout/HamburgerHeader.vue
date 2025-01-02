@@ -21,7 +21,7 @@ export default {
         },
         modal(label:string){
             console.log(label)
-            if(label === 'Download CV'){
+            if(label === 'DOWNLOAD CV'){
                 this.isDownload = true;
             } else {
                 this.isDownload = false}
@@ -72,8 +72,8 @@ export default {
                         <a @click="toggle">{{ link.link }}</a>
                     </router-link>
                 </li>
-                <li class="list-unstyled" ><a href="https://www.linkedin.com/in/mattia-angelini-b00427311/">Linkedin</a></li>
-                <li class="list-unstyled" ><a href="https://github.com/MattiaAngelini">Git-Hub</a></li>             
+                <li class="list-unstyled" ><a href="https://www.linkedin.com/in/mattia-angelini-b00427311/">LINKEDIN</a></li>
+                <li class="list-unstyled" ><a href="https://github.com/MattiaAngelini">GIT-HUB</a></li>             
             </ul>
         </div>
     </div> 
@@ -106,11 +106,13 @@ export default {
     left: 0;
     z-index: 999;
     background-color: white;
-    min-width: 60%;
+    min-width: 100%;
     min-height: 100vh;
+    height: 100%;
     animation-duration: 0.3s;
     animation-name: slide-in;
-
+    overflow-y: scroll;
+   
         button {
         display: flex;
         justify-content: center;

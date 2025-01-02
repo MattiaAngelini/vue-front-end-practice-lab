@@ -55,7 +55,7 @@ export default{
             <div class="ms-container d-xl-flex flex-lg-row flex-column justify-content-evenly align-items-center">
                 <div :style="infoResponsive" class="info order-2 order-lg-1">
                     <h2>Ciao, sono <span>Mattia Angelini</span></h2>
-                    <h5 class="mt-2">Front-end Developer</h5>
+                    <h5 class="mt-2">Jr Full Stack Web-Developer</h5>
                     <p class="mt-2">
                     Benvenuto nel mio portfolio! Qui condivido il mio percorso di crescita, 
                     unendo passione per il coding, lavoro e la mia crescita. 

@@ -50,18 +50,18 @@ export default{
 
     section{
         background-color: rgba(0,0,0,0.6);
-        z-index: 999;
         position: fixed;
         height: 100%;
         width: 100%;
 
         .ms-modal{
-            position: fixed;
-            left: 35%;
-            top: 35%;
-            height: 30%;
-            width: 30%;
-            z-index: 998;
+            position: absolute;
+            left: 25%;
+            top: 25%;
+            min-height: 30%;
+            min-width: 80%;
+            transform: translate(-25%, -5%);
+           
             display: flex;
             flex-direction: column;
             justify-content: center;

@@ -22,9 +22,9 @@ export const useMainStore = defineStore('main', {
             'medium', // size
             // links
             [
-              { link: 'Home', url: 'HomePage' },
-              { link: 'Contatti', url: 'ContactsPage' },
-              { link: 'Download CV', url: '' }
+              { link: 'HOME', url: 'HomePage' },
+              { link: 'CONTATTI', url: 'ContactsPage' },
+              { link: 'DOWNLOAD CV', url: '' }
             ]
           ),
         ),
@@ -32,7 +32,7 @@ export const useMainStore = defineStore('main', {
         //************HERO************// AGGIUSTARE PROPS
         heroVideo: '/src/assets/video/heroVideo.mp4',
         MyName: 'Mattia Angelini',
-        MyInfo: 'Front-end Developer',
+        MyInfo: 'Web Developer',
 
         //************ABOUT-ME PAGE************//
   
@@ -62,7 +62,7 @@ export const useMainStore = defineStore('main', {
           ],
           cardsRouterHref : [             
             {
-              title: 'IL Bjj',
+              title: 'Il Brazilian Jiu-Jitsu',
               description: 'My first passion',
               image: '../public/bjj/bjj3.jpg',
               url: 'BjjPage',
