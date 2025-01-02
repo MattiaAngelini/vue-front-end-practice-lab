@@ -30,7 +30,7 @@ export const useMainStore = defineStore('main', {
         ),
  
         //************HERO************// AGGIUSTARE PROPS
-        heroVideo: '/src/assets/video/heroVideo.mp4',
+        heroVideo: '../public/video/heroVIdeo.mp4',
         MyName: 'Mattia Angelini',
         MyInfo: 'Web Developer',
 
@@ -49,13 +49,13 @@ export const useMainStore = defineStore('main', {
             {
               title: 'Linkedin',
               description: 'Il mio profilo Linkedin',
-              image: '/src/assets/images/linkedin.png',
+              image: '../public/images/linkedin.png',
               url: 'https://www.linkedin.com/in/mattia-angelini-b00427311/',
             },
             {
               title: 'Github',
               description: 'Il mio profilo Github',
-              image: '/src/assets/images/github.jpeg',
+              image: '../public/images/github.jpeg',
               url: 'https://github.com/MattiaAngelini',
             },
               
@@ -187,18 +187,18 @@ export const useMainStore = defineStore('main', {
         
         //************FOOTER************//
         logoFooter: [
-            { image: 'src/assets/images/logos/bootstrap.png', altText: 'bootstrap' },
-            { image: 'src/assets/images/logos/css.png', altText: 'css' },
-            { image: 'src/assets/images/logos/html.png', altText: 'html' },
-            { image: 'src/assets/images/logos/js.png', altText: 'js' },
-            { image: 'src/assets/images/logos/laravel.png', altText: 'laravel' },
-            { image: 'src/assets/images/logos/mysql.png', altText: 'mysql' },
-            { image: 'src/assets/images/logos/php.png', altText: 'php' },
-            { image: 'src/assets/images/logos/sass.png', altText: 'sass' },
-            { image: 'src/assets/images/logos/ts.png', altText: 'ts' },
-            { image: 'src/assets/images/logos/vue.png', altText: 'vue' },
-            { image: 'src/assets/images/logos/node.png', altText: 'node' },
-            { image: 'src/assets/images/logos/github.png', altText: 'github' },
+            { image: '../public/images/logos/bootstrap.png', altText: 'bootstrap' },
+            { image: '../public/images/logos/css.png', altText: 'css' },
+            { image: '../public/images/logos/html.png', altText: 'html' },
+            { image: '../public/images/logos/js.png', altText: 'js' },
+            { image: '../public/images/logos/laravel.png', altText: 'laravel' },
+            { image: '../public/images/logos/mysql.png', altText: 'mysql' },
+            { image: '../public/images/logos/php.png', altText: 'php' },
+            { image: '../public/images/logos/sass.png', altText: 'sass' },
+            { image: '../public/images/logos/ts.png', altText: 'ts' },
+            { image: '../public/images/logos/vue.png', altText: 'vue' },
+            { image: '../public/images/logos/node.png', altText: 'node' },
+            { image: '../public/images/logos/github.png', altText: 'github' },
             { image: '', altText: 'github' },
             { image: '', altText: 'github' },
             { image: '', altText: 'github' },
