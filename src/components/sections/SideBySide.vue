@@ -35,28 +35,28 @@ export default {
         }     
     },
 
-    methods :{
-        sendEmail() {
-      emailjs
-        .sendForm('service_s9wonvb', 'template_4wunygu', this.$refs.form, {
-          publicKey: 'liM4P9Emnvlm8w4sW',
-        })
-        .then(
-          () => {
-            this.emailSent = true;
-
-            setTimeout(() => {
-                location.reload()
-                }, 1500);
-            
-          },
-          (error) => {
-            console.log('FAILED...', error.text);
-          },
-        );
+    methods: {
+    sendEmail() {
+        const form = this.$refs.form as HTMLFormElement;
+        emailjs
+            .sendForm('service_s9wonvb', 'template_4wunygu', form, {
+                publicKey: 'liM4P9Emnvlm8w4sW',
+            })
+            .then(
+                () => {
+                    this.emailSent = true;
+                    setTimeout(() => {
+                        location.reload();
+                    }, 1500);
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                }
+            );
     },
-    }
-    ,
+},
+
+    
     computed:{
         layoutPosition(){
             if(!this.imageLeft === true){
@@ -106,7 +106,7 @@ export default {
             <div>{{ layout.description }}</div>
 
             <div class="d-flex justify-content-center p-3">
-                <ButtonCustom v-if="btnInfo" size="large" :button="store.btnSideBySide" />     
+                <!-- <ButtonCustom v-if="btnInfo" size="large" :button="store.btnSideBySide" />      -->
             </div>
         </div>
 

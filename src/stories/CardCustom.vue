@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { Card } from '../models/Card';
-import { computed } from 'vue';
 import './card.css'
 
 const props =withDefaults(defineProps<{  
@@ -9,13 +8,6 @@ const props =withDefaults(defineProps<{
   
 }>(), { });
 
-const style = computed(() => ({
-
-}));
-
-const classes = computed(() => ({
-   
-}));
 
 </script>
 

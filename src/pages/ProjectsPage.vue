@@ -2,7 +2,7 @@
 import { useMainStore } from '../store.ts';
 import { currentWindow } from '../assets/styles/breakpoint.ts';
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
-import '@splidejs/vue-splide/css';
+import '../assets/styles/partials/splide.css';
 import Wrap from '../components/layout/Wrap.vue';
 import AnimatedSection from '../components/layout/AnimatedSection.vue';
 

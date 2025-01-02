@@ -1,14 +1,18 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
-import App from './App.vue'
+import App from './App.vue';
 import router from '../router/index.ts';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import VueSplide from '@splidejs/vue-splide';
+import { Splide, SplideSlide } from '@splidejs/vue-splide'; // Importa i componenti di Splide
 
 const app = createApp(App);
 const pinia = createPinia();
 
 app.use(router);
 app.use(pinia);
-app.use( VueSplide );
+
+// Registra i componenti di Splide globalmente
+app.component('Splide', Splide);
+app.component('SplideSlide', SplideSlide);
+
 app.mount('#app');

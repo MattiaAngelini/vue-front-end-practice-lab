@@ -21,14 +21,16 @@ export default {
         }  
     },
     data() {
-        return {
-            gridColumns: (this.cardsHref.length + this.cardsRouter.length),
+        return { 
             sizeWindow: currentWindow(window.innerWidth),
         };
     },
 
 
     computed: {
+        gridColumns(): number {
+            return (this.cardsHref?.length || 0) + (this.cardsRouter?.length || 0);
+        },
         
         columns():Record<string,string> {
             if (this.sizeWindow === 'xl' || this.sizeWindow === 'xxl') {
