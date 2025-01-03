@@ -25,7 +25,7 @@ export default{
 
                 return  {width: '360px', height: '360px'  }
             } else { 
-                return {width: '280px', height: '280px'}
+                return {width: '250px', height: '250px'}
             }
         },
 
@@ -65,7 +65,7 @@ export default{
 
                 <div class="picProfile d-flex justify-content-center order-1 order-lg-2">
                     <div :style="imgResponsive" class="borderAnimation rounded-circle border1"></div>
-                    <div class="borderAnimation rounded-circle border2"></div>
+                    
                     <img class="rounded-circle p-3" :style="imgResponsive" src="../../assets/images/me.jpg" alt="Mattia Angelini">
                 </div>
             </div>
@@ -85,31 +85,42 @@ section{
         
         position: relative;
 
-        .picProfile{
-             //animazione immagine
-             .borderAnimation{
-                animation: move2 2s linear infinite;            
-                position: absolute;
-            }
-            .border1{
-                box-shadow: 1px 1px 1px 1px $baffo;  
-                border: 1px solid black;         
-                }
-        
-            @keyframes move2 {
-                0% {
-                    transform: rotate(0deg);
-                }
-                100% {
-                    transform: rotate(360deg);
-                }
-            }
+        .picProfile {
+    position: relative;
+
+    .borderAnimation {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0deg); // Inizia senza rotazione
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border-top: 0.2rem solid transparent;
+        border-bottom: 0.2rem solid transparent;
+        border-left: 0.2rem solid $baffo;
+        border-right: 0.2rem solid $baffo;
+        animation: spin 5s linear infinite; // Associa l'animazione
+    }
+
+    @keyframes spin {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg); // Partenza senza rotazione
         }
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg); // Rotazione completa
+        }
+    }
+
+    img {
+        border-radius: 50%;
+        position: relative;
+        z-index: 1; // L'immagine rimane sopra il bordo animato
+    }
+}
+
         
-        .info{
-            line-height: 30px;
-            color: black;  
-        }         
+          
     }
 }
 </style>
