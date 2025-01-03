@@ -39,14 +39,12 @@ export default {
                 </video>
             </Transition>
           
-            <Transition name="info" appear>
-                <div v-if="show" class="info">
+            <Transition v-if="show" name="info" appear>         
                     <div class="content">
                         <h1>{{ title }}</h1>
                         <hr>
                         <h5>{{ description }}</h5>
-                    </div>
-                </div>
+                    </div>        
             </Transition>
         </div>
     </section>

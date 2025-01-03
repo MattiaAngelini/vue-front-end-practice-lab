@@ -183,6 +183,7 @@ section {
     
         .contacts{   
             h2{color: $baffo;}
+            position: relative;
 
            .ms-badge{
                 border: 1px solid $baffo;

@@ -11,6 +11,17 @@ section{
         transform: scale(3.0); 
     }
 
+     //animazione sfondo
+    .info-enter-active,
+    .info-leave-active {   
+        transition: opacity 2s ease-in-out;
+    }
+
+    .info-enter-from,
+    .info-leave-to {
+        opacity: 0;
+    }
+
     // LAYOUT VIDEO HERO
     .hero-media {
         position: relative;
@@ -32,12 +43,6 @@ section{
                 top: 0;
                 left: 0;
                 background-color: rgba(0,0,0,0.3);
-            }
-
-            .info{
-                display: flex;
-                justify-content: center;
-                align-items: center;
             }
 
             .content {
