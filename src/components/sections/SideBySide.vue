@@ -36,27 +36,29 @@ export default {
     },
 
     methods: {
-    sendEmail() {
-        const form = this.$refs.form as HTMLFormElement;
-        emailjs
-            .sendForm('service_s9wonvb', 'template_4wunygu', form, {
-                publicKey: 'liM4P9Emnvlm8w4sW',
-            })
-            .then(
-                () => {
-                    this.emailSent = true;
-                    setTimeout(() => {
-                        this.$router.go(0); // Ricarico usando il router, sul componente stesso
-                    }, 1500);
-                },
-                (error) => {
-                    console.log('FAILED...', error.text);
-                }
-            );
-    },
-},
+        sendEmail() {
+            const form = this.$refs.form as HTMLFormElement;
+            emailjs
+                .sendForm('service_s9wonvb', 'template_4wunygu', form, {
+                    publicKey: 'liM4P9Emnvlm8w4sW',
+                })
+                .then(
+                    () => {
+                        this.emailSent = true;
+                        // Reset dei campi del form
+                        form.reset();
+                        setTimeout(() => {
+                            this.emailSent = false; // Nascondo il messaggio di successo
+                        }, 3000);
+                    },
+                    (error) => {
+                        console.log('FAILED...', error.text);
+                    }
+                );
+            }
 
-    
+    },
+
     computed:{
         layoutPosition(){
             if(!this.imageLeft === true){
@@ -124,7 +126,7 @@ export default {
                         <button class="btn btn-primary mb-2" required type="submit" value="Send">Invia</button>
                     </div>
                 </form>   
-        </AnimatedSection>
+     </AnimatedSection>
         </div>
                 
         <!--MEDIA-->
