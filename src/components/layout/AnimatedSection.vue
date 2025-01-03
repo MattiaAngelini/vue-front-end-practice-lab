@@ -26,19 +26,19 @@ export default {
 </script>
 
 <template>
-  <section :class="{ visible: isVisible }" ref="section">
+  <div :class="{ visible: isVisible }" ref="section">
     <slot></slot>
-  </section>
+  </div>
 </template>
 
 <style scoped>
-section {
+div {
   opacity: 0;
   transform: translate(0px, 200px);
   transition: opacity 1s ease-out, transform 0.5s ease-out;
 }
 
-section.visible {
+div.visible {
   opacity: 1;
   transform: translate(0px, 0px);
 }
