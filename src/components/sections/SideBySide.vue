@@ -46,7 +46,7 @@ export default {
                 () => {
                     this.emailSent = true;
                     setTimeout(() => {
-                        location.reload();
+                        this.$router.go(0); // Ricarico usando il router, sul componente stesso
                     }, 1500);
                 },
                 (error) => {
