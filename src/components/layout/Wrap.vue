@@ -22,10 +22,9 @@ export default{
 }
 </script>
 <template>  
+
     <div>
-       
         <img :src= wrap alt="">
-  
         <div :style="shadow" class="shadow"></div>
     </div>
 </template>
@@ -34,13 +33,16 @@ export default{
 @use '../../assets/styles/generic.scss' as *;
 
 div{
- 
+    min-width: 100%;
     position: fixed;
     bottom: 0;
     z-index: -1;
-    min-height: 100vh;
     
-
+    img{
+        width: 100%;
+        min-height: 100vh;
+    }   
+    
     .shadow{
         content: '';
         width: 100%;
