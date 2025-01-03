@@ -23,7 +23,7 @@ export default{
     <AnimatedSection>
         <div class="d-flex justify-content-center align-items-center info">
             <div class="d-flex flex-column align-items-center">
-                <h1 class="text-center p-3">My coding experience</h1>
+                <h1 class="text-center p-3">Progetti e Competenze</h1>
                 <ButtonCustom :button="store.btnProjectsPage" isRouter ></ButtonCustom>        
             </div>
         </div>

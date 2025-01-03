@@ -38,7 +38,7 @@ export const useMainStore = defineStore('main', {
 
     //************ABOUT-ME PAGE************//
     btnProjectsPage: {
-      label: 'LEGGI',
+      label: 'VISUALIZZA',
       url: 'ProjectsPage', // URL
       bgColor: 'rgba(0,0,0,3)', // Colore di sfondo
       color: 'white', // Colore del testo
