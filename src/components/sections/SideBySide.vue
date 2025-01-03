@@ -121,7 +121,7 @@ export default {
                     <input required placeholder="Oggetto della Mail*" type="text" name="subject">
                     <textarea required placeholder="Scrivi il tuo messaggio*" name="message"></textarea>
                     <div class="d-flex justify-content-center">
-                        <button class="btn btn-primary" required type="submit" value="Send">Invia</button>
+                        <button class="btn btn-primary mb-2" required type="submit" value="Send">Invia</button>
                     </div>
                 </form>   
         </AnimatedSection>
