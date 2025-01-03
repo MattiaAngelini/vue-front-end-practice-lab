@@ -33,7 +33,7 @@ export default{
 @use '../../assets/styles/generic.scss' as *;
 
 div{
-    min-width: 100%;
+   width: 100%;
     position: fixed;
     bottom: 0;
     z-index: -1;
