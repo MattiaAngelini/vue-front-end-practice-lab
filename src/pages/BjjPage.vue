@@ -52,7 +52,7 @@
 
 <template>
     <main>
-        <Wrap wrap="../../public/bjj/winner.jpg" shadowRgba="rgba(0,0,0,0.8)" />
+        <Wrap wrap="/../../public/bjj/winner.jpg" shadowRgba="rgba(0,0,0,0.8)" />
 
         <!--INTRO-->
         <div class="d-md-flex intro p-2">
@@ -124,6 +124,7 @@
                         <img :style="imageSlider" :src="`${image.src}`" alt="Competition Image" />
                     </SplideSlide>
                 </Splide>
+       
             </AnimatedSection>
     
         </div>

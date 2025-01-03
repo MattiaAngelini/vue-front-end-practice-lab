@@ -38,7 +38,7 @@ export default {
                     <source :src="media" type="video/mp4" />
                 </video>
             </Transition>
-
+          
             <Transition name="info" appear>
                 <div v-if="show" class="info">
                     <div class="content">
