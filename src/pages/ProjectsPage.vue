@@ -48,7 +48,7 @@ export default {
 
 <template>
     <section>
-        <Wrap wrap="../../public//projects-img/display.jpg" shadowRgba="rgba(0,0,0,0.6)" />
+        <Wrap wrap="/projects-img/display.jpg" shadowRgba="rgba(0,0,0,0.6)" />
         <!-- ATTESTATO -->
         <div class="d-lg-flex intro">
             <div class="description d-flex flex-column justify-content-evenly">

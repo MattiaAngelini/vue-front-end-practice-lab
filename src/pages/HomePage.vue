@@ -28,7 +28,7 @@ export default {
 
 <template>
     <div class="ms-container">  
-        <Wrap wrap="../../public/display.jpg" shadowRgba="rgba(0,0,0,0.6)"/>
+        <Wrap wrap="/display.jpg" shadowRgba="rgba(0,0,0,0.6)"/>
         <main>
             <Hero 
             :media="store.heroVideo"  
