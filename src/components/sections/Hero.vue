@@ -20,7 +20,7 @@ export default {
         return {
             show: false,
             titleArray: this.title.split(''), 
-            timedArray: [], 
+            timedArray: [] as string[], 
         };
     },
 
