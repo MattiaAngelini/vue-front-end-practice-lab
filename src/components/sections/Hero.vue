@@ -8,7 +8,7 @@ export default {
         },
         title: {
             type: String,
-            required: false,
+            required: true,
         },
         description: {
             type: String,
@@ -19,13 +19,26 @@ export default {
     data() {
         return {
             show: false,
+            titleArray: this.title.split(''), 
+            timedArray: [], 
         };
     },
 
+    methods: {
+        populateArrayAnim() {
+            this.titleArray.forEach((letter, index) => {
+                setTimeout(() => {
+                    this.timedArray.push(letter); // Aggiunge una lettera all'array            
+                }, index * 120);                
+            });
+        },
+    },
+
     mounted() {
-        setTimeout(() => {
+        this.populateArrayAnim(); 
+        setTimeout(()=>{
             this.show = true;
-        }, 1000);
+        },1500)
     },
 };
 </script>
@@ -38,14 +51,17 @@ export default {
                     <source :src="media" type="video/mp4" />
                 </video>
             </Transition>
-          
-            <Transition v-if="show" name="info" appear>         
-                    <div class="content">
-                        <h1>{{ title }}</h1>
-                        <hr>
-                        <h5>{{ description }}</h5>
-                    </div>        
-            </Transition>
+            <div class="content">
+                <h1>
+                    <!-- lettere animate -->
+                    <span v-for="(letter, index) in timedArray" :key="index">{{ letter }}</span>
+                    <span class="dash">_</span>
+                </h1>
+                <hr>
+                <Transition v-show="show" name="info">
+                    <h5>{{ description }}</h5>
+                </Transition>
+            </div>
         </div>
     </section>
 </template>
@@ -53,5 +69,4 @@ export default {
 <style scoped lang="scss">
 @use '../../assets/styles/generic.scss' as *;
 @use '../../assets/styles/partials/styleHero.scss' as *;
-
 </style>
