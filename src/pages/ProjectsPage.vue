@@ -122,27 +122,29 @@ export default {
                 <Splide :options="{ rewind: true, height: 'auto', pagination:true, }" aria-label="bjj-competitions-pics">
 
                     <!-- SLIDES PROGETTI -->
-                <SplideSlide v-for="(slide,index) in store.cardsProjects">
-                    <div class="slide">
+                <SplideSlide class="d-flex align-items-center" v-for="(slide,index) in store.cardsProjects">
+                    <div >
+
+                        <div class="slide ">
                         <div class="d-md-flex">
                             <div :style="widthResponsive" class="description text-center">
                                 <h3 class="p-2">{{store.cardsProjects[index].title}}</h3>
-                                <p class="p-lg-5">
+                                <p class="p-lg-5 mb-1">
                                     {{store.cardsProjects[index].description}}
                                     
                                 </p>
-                                <a :href="store.cardsProjects[index].linkRepo">Link alla Repo </a>
+                                <a style="font-size: 16px;" :href="store.cardsProjects[index].linkRepo">LINK ALLA REPO</a>
                             </div>
-                            <div :style="widthResponsive" class="d-flex justify-content-center p-5">
-                                <div class="row">
-
-                                    <div v-for="myimage in slide.images">
-                                        <img :src="`${myimage}`" alt="projects-screenshot">
-                                    </div>
+                            <div :style="widthResponsive" class="justify-content-center p-5">    
+                                <div v-for="myimage in slide.images">
+                                    <img class="p-1" :src="`${myimage}`" alt="projects-screenshot">
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    </div>
+                  
                 </SplideSlide>
               </Splide>
             </AnimatedSection>
@@ -200,7 +202,7 @@ export default {
     background-color: white;
     border: 6px solid rgb(225, 225, 225);
     .slide {
-        padding: 5%;
+        padding: 3%;
     }
     .description {
         border: 2px solid rgb(225, 225, 225);
@@ -209,7 +211,7 @@ export default {
     }
     img {
         width: 100%;
-        max-height: 120vh;
+        max-height: 110vh;
     }
 }
 </style>

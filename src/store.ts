@@ -114,18 +114,41 @@ export const useMainStore = defineStore('main', {
     ],
     cardsProjects: [
       {
-        title: 'PortFolio',
-        description: "Il mio portfolio è un progetto che rappresenta la sintesi delle mie competenze tecniche e creative. Ho utilizzato HTML5, CSS3 e JavaScript per creare una struttura moderna e completamente responsive, affiancati da Vue.js per la gestione dei componenti dinamici. Il progetto include animazioni personalizzate, l'uso di librerie per slide, e la creazione di caroselli sviluppati interamente da me. Grazie all’integrazione di Vite e TypeScript, il codice è ottimizzato e tipizzato, garantendo efficienza e scalabilità. Ogni dettaglio, dalle transizioni fluide al design mobile-first, è stato curato per offrire un'esperienza utente coinvolgente e professionale.",
+        title: 'Sito Personale',
+        description: "Il mio sito portfolio è un progetto che rappresenta la sintesi delle mie competenze tecniche e creative. Ho utilizzato HTML5, CSS3 e JavaScript per creare una struttura moderna e completamente responsive, affiancati da Vue.js per la gestione dei componenti dinamici. Il progetto include animazioni personalizzate, l'uso di librerie per slide, e la creazione di caroselli sviluppati interamente da me. Grazie all’integrazione di Vite e TypeScript, il codice è ottimizzato e tipizzato, garantendo efficienza e scalabilità. Ogni dettaglio, dalle transizioni fluide al design mobile-first, è stato curato per offrire un'esperienza utente coinvolgente e professionale.",
         linkRepo: 'https://github.com/MattiaAngelini/vue-front-end-practice-lab',
         images: ['/projects-img/siteXL.png' ]
       },
       {
         title: 'React Aliens Game',
-        description:
-          "Alien Games è un progetto in fase di sviluppo, nato per esplorare e consolidare le mie competenze in React. Si tratta di un gioco interattivo che combina dinamismo e strategia, ispirato al classico stile di lotta Pokémon. Attualmente, il gioco include due schermate principali: una schermata iniziale per la scelta dei personaggi e una schermata di battaglia, dove i giocatori si sfidano in un sistema a turni. Ho utilizzato React per la gestione dei componenti, useState e useEffect per controllare lo stato del gioco e le dinamiche degli eventi. Alien Games rappresenta una sfida continua, con l'obiettivo di arricchire il gameplay e implementare nuove funzionalità in futuro.",
+        description:"Alien Games è un progetto in fase di sviluppo, nato per esplorare e consolidare le mie competenze in React. Si tratta di un gioco interattivo che combina dinamismo e strategia, ispirato al classico stile di lotta Pokémon. Attualmente, il gioco include due schermate principali: una schermata iniziale per la scelta dei personaggi e una schermata di battaglia, dove i giocatori si sfidano in un sistema a turni. Ho utilizzato React per la gestione dei componenti, useState e useEffect per controllare lo stato del gioco e le dinamiche degli eventi. Alien Games rappresenta una sfida continua, con l'obiettivo di arricchire il gameplay e implementare nuove funzionalità in futuro.",
         linkRepo: 'https://github.com/MattiaAngelini/react-aliens-game',
         images:['/projects-img/aliengame2.jpg',
           '/projects-img/aliengame3.jpg','/projects-img/aliengame4.jpg'
+        ]
+      },
+
+      {
+        title: 'To Do List Js Vanilla',
+        description:"La To-Do List è un'applicazione semplice ma efficace per gestire attività quotidiane. Ho utilizzato HTML5, CSS3 (con Bootstrap per lo styling) e JavaScript vanilla per creare un'interfaccia utente intuitiva e reattiva. L'app permette di aggiungere, completare e rimuovere task, con un contatore dinamico che tiene traccia dei task completati. Questo progetto mi ha permesso di approfondire la manipolazione del DOM e la gestione degli eventi in JavaScript, oltre a migliorare la mia capacità di creare interfacce utente funzionali e user-friendly.",  
+        linkRepo: 'https://github.com/MattiaAngelini/to-do-list-js-vanilla',
+        images:['/projects-img/screen-to-do-list.jpg',
+        ]
+      },
+
+      {
+        title: 'App Meteo Js Vanilla',
+        description:"La Weather App è un'applicazione che permette di cercare il meteo di una città utilizzando l'API di WeatherAPI.com. Ho utilizzato HTML5, CSS3 (con Bootstrap per lo styling) e JavaScript vanilla per creare un'interfaccia semplice e reattiva. L'app mostra informazioni dettagliate come la temperatura, le condizioni meteorologiche e un'icona rappresentativa. Ho implementato una funzionalità per salvare le città cercate di recente in una lista e la possibilità di cancellare la cronologia, migliorando l'usabilità. Questo progetto mi ha permesso di approfondire la gestione delle chiamate API, la manipolazione del DOM basata sui dati ricevuti e la gestione degli errori in JavaScript.",
+        linkRepo: 'https://github.com/MattiaAngelini/weather-app-js-vanilla',
+        images:['/projects-img/weatherApp1.jpg','/projects-img/weatherApp2.jpg' ]
+      },
+
+      {
+        title: 'App Note Js Vanilla',
+        description:"La Note App è un'applicazione per prendere appunti in modo organizzato e persistente. Ho utilizzato HTML5, CSS3 (con Bootstrap per un design pulito) e JavaScript vanilla per implementare funzionalità come l'aggiunta, la visualizzazione e l'eliminazione delle note. Le note vengono salvate nel localStorage, garantendo che i dati non vengano persi al refresh della pagina. Ho anche implementato una modale per visualizzare il contenuto completo delle note, migliorando l'esperienza utente. Questo progetto mi ha aiutato a comprendere meglio la gestione dello stato, l'uso del localStorage e la creazione di componenti interattivi senza l'uso di framework esterni.",
+        linkRepo: 'https://github.com/MattiaAngelini/note-app-js-vanilla',
+        images:['/projects-img/noteApp1.jpg','/projects-img/noteApp2.jpg',
+         
         ]
       },
     ],
