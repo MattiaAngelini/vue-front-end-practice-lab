@@ -6,6 +6,7 @@ import '../assets/styles/partials/splide.css';
 import Wrap from '../components/layout/Wrap.vue';
 import AnimatedSection from '../components/layout/AnimatedSection.vue';
 
+
 export default {
     name: 'ProjectsPage',
     components: {
@@ -118,57 +119,32 @@ export default {
         </div>
         <div class="projects">
             <AnimatedSection>
-                <Splide :options="{ rewind: true, height: 'auto' }" aria-label="bjj-competitions-pics">
-                <!-- PORTFOLIO -->
-                <SplideSlide>
+                <Splide :options="{ rewind: true, height: 'auto', pagination:true, }" aria-label="bjj-competitions-pics">
+
+                    <!-- SLIDES PROGETTI -->
+                <SplideSlide v-for="(slide,index) in store.cardsProjects">
                     <div class="slide">
                         <div class="d-md-flex">
                             <div :style="widthResponsive" class="description text-center">
-                                <h3 class="p-2">{{store.cardsProjects[0].title}}</h3>
+                                <h3 class="p-2">{{store.cardsProjects[index].title}}</h3>
                                 <p class="p-lg-5">
-                                    {{store.cardsProjects[0].description}}
+                                    {{store.cardsProjects[index].description}}
                                     
                                 </p>
-                                <a :href="store.cardsProjects[0].linkRepo">Link alla Repo</a>
+                                <a :href="store.cardsProjects[index].linkRepo">Link alla Repo </a>
                             </div>
                             <div :style="widthResponsive" class="d-flex justify-content-center p-5">
                                 <div class="row">
-                                    <div class="col-lg-12">
-                                        <img :src="`${store.cardsProjects[0].image2}`" alt="Competition Image">
+
+                                    <div v-for="myimage in slide.images">
+                                        <img :src="`${myimage}`" alt="projects-screenshot">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </SplideSlide>
-
-                <!-- ALIEN GAME -->
-                <SplideSlide>
-                    <div class="slide">
-                        <div class="d-md-flex">
-                            <div :style="widthResponsive" class="description text-center">
-                                <h3 class="p-2">{{store.cardsProjects[1].title}}</h3>
-                                <p class="p-lg-5">
-                                    {{store.cardsProjects[1].description}}
-                                    
-                                </p>
-                                <a :href="store.cardsProjects[1].linkRepo">Link alla Repo</a>
-                            </div>
-                            <div :style="widthResponsive" class="d-flex justify-content-center p-5">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <img class="mt-2" :src="`${store.cardsProjects[1].image3}`" alt="Competition Image">
-                                        <img class="mt-2" :src="`${store.cardsProjects[1].image2}`" alt="Competition Image">
-                                        <img class="mt-2" :src="`${store.cardsProjects[1].image5}`" alt="Competition Image">
-                                        <img v-if="sizeWindow === 'xs'" class="mt-2" style="height: 300px; width: 150px;" :src="`${store.cardsProjects[1].image1}`" alt="Competition Image">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </SplideSlide>
-            </Splide>
-
+              </Splide>
             </AnimatedSection>
            
         </div>

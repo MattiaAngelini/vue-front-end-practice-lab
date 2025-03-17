@@ -96,7 +96,7 @@ header {
     display: grid;
     align-items: center;
     padding: 10px;
-    font-size: 20px;
+    font-size: 16px;
 
     .nameLogo{    
        height: 20px;

@@ -31,7 +31,7 @@ export const useMainStore = defineStore('main', {
     ),
 
     //************HERO************//
-    heroVideo: '/video/heroVideo.mp4', // Corretto il percorso
+    heroVideo: '/video/heroVideo.mp4', 
 
     MyName: 'Mattia Angelini',
     MyInfo: 'Web Developer',
@@ -50,13 +50,13 @@ export const useMainStore = defineStore('main', {
       {
         title: 'Linkedin',
         description: 'Il mio profilo Linkedin',
-        image: '/images/linkedin.png', // Corretto il percorso
+        image: '/images/linkedin.png', 
         url: 'https://www.linkedin.com/in/mattia-angelini-b00427311/',
       },
       {
         title: 'Github',
         description: 'Il mio profilo Github',
-        image: '/images/github.jpeg', // Corretto il percorso
+        image: '/images/github.jpeg', 
         url: 'https://github.com/MattiaAngelini',
       },
     ],
@@ -64,7 +64,7 @@ export const useMainStore = defineStore('main', {
       {
         title: 'Il Brazilian Jiu-Jitsu',
         description: 'My first passion',
-        image: '/bjj/bjj3.jpg', // Corretto il percorso
+        image: '/bjj/bjj3.jpg', 
         url: 'BjjPage',
       },
     ],
@@ -74,66 +74,59 @@ export const useMainStore = defineStore('main', {
       {
         title: 'DropoBox',
         description: 'La Home-Page di DropBox - HTML - CSS',
-        image: '/projects-img/dropbox.jpg', // Corretto il percorso
+        image: '/projects-img/dropbox.jpg', 
       },
       {
         title: 'Dc Comics',
         description: 'Griglia film DC Comics - HTML - CSS - JS - API',
-        image: '/projects-img/dc-comics.jpg', // Corretto il percorso
+        image: '/projects-img/dc-comics.jpg', 
       },
       {
         title: 'Spotify',
         description: 'La Home-Page di Spotify - HTML - CSS ',
-        image: '/projects-img/spotify.jpg', // Corretto il percorso
+        image: '/projects-img/spotify.jpg', 
       },
       {
         title: 'Whatsapp',
         description: 'Interfaccia di messaggistica con logiche di invio e risposte automatiche - VUE/JS',
-        image: '/projects-img/whatsapp.jpg', // Corretto il percorso
+        image: '/projects-img/whatsapp.jpg', 
       },
       {
         title: 'Campo Minato',
         description: 'Campo minato con 3 modalità di difficoltà - HTML - CSS - JS',
-        image: '/projects-img/campo-minato.jpg', // Corretto il percorso
+        image: '/projects-img/campo-minato.jpg', 
       },
       {
         title: 'Autocar',
         description: 'SPA Autocar - VUE/JS',
-        image: '/projects-img/autocar1.jpg', // Corretto il percorso
+        image: '/projects-img/autocar1.jpg', 
       },
       {
         title: 'Filtri Autocar',
         description: 'Logica per filtri auto di Autocar - VUE/JS',
-        image: '/projects-img/autocar2.jpg', // Corretto il percorso
+        image: '/projects-img/autocar2.jpg', 
       },
       {
         title: 'Boolfix',
         description: 'Web-Site per ricerca film - HTML - CSS - API',
-        image: '/projects-img/boolfix.jpg', // Corretto il percorso
+        image: '/projects-img/boolfix.jpg', 
       },
     ],
     cardsProjects: [
       {
         title: 'PortFolio',
-        description:
-          "Il mio portfolio è un progetto che rappresenta la sintesi delle mie competenze tecniche e creative. Ho utilizzato HTML5, CSS3 e JavaScript per creare una struttura moderna e completamente responsive, affiancati da Vue.js per la gestione dei componenti dinamici. Il progetto include animazioni personalizzate, l'uso di librerie per slide, e la creazione di caroselli sviluppati interamente da me. Grazie all’integrazione di Vite e TypeScript, il codice è ottimizzato e tipizzato, garantendo efficienza e scalabilità. Ogni dettaglio, dalle transizioni fluide al design mobile-first, è stato curato per offrire un'esperienza utente coinvolgente e professionale.",
+        description: "Il mio portfolio è un progetto che rappresenta la sintesi delle mie competenze tecniche e creative. Ho utilizzato HTML5, CSS3 e JavaScript per creare una struttura moderna e completamente responsive, affiancati da Vue.js per la gestione dei componenti dinamici. Il progetto include animazioni personalizzate, l'uso di librerie per slide, e la creazione di caroselli sviluppati interamente da me. Grazie all’integrazione di Vite e TypeScript, il codice è ottimizzato e tipizzato, garantendo efficienza e scalabilità. Ogni dettaglio, dalle transizioni fluide al design mobile-first, è stato curato per offrire un'esperienza utente coinvolgente e professionale.",
         linkRepo: 'https://github.com/MattiaAngelini/vue-front-end-practice-lab',
-        image1: '/projects-img/siteSM.png', // Corretto il percorso
-        image2: '/projects-img/siteXL.png', // Corretto il percorso
-        image3: '/projects-img/bjjpage.png', // Corretto il percorso
-        image4: '',
-        image5: '',
+        images: ['/projects-img/siteXL.png' ]
       },
       {
         title: 'React Aliens Game',
         description:
           "Alien Games è un progetto in fase di sviluppo, nato per esplorare e consolidare le mie competenze in React. Si tratta di un gioco interattivo che combina dinamismo e strategia, ispirato al classico stile di lotta Pokémon. Attualmente, il gioco include due schermate principali: una schermata iniziale per la scelta dei personaggi e una schermata di battaglia, dove i giocatori si sfidano in un sistema a turni. Ho utilizzato React per la gestione dei componenti, useState e useEffect per controllare lo stato del gioco e le dinamiche degli eventi. Alien Games rappresenta una sfida continua, con l'obiettivo di arricchire il gameplay e implementare nuove funzionalità in futuro.",
         linkRepo: 'https://github.com/MattiaAngelini/react-aliens-game',
-        image1: '/projects-img/aliengame1.jpg', // Corretto il percorso
-        image2: '/projects-img/aliengame2.jpg', // Corretto il percorso
-        image3: '/projects-img/aliengame3.jpg', // Corretto il percorso
-        image4: '/projects-img/aliengame4.jpg', // Corretto il percorso
-        image5: '/projects-img/aliengame5.jpg', // Corretto il percorso
+        images:['/projects-img/aliengame2.jpg',
+          '/projects-img/aliengame3.jpg','/projects-img/aliengame4.jpg'
+        ]
       },
     ],
 
