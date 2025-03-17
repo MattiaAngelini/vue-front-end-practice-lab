@@ -75,7 +75,7 @@ export default {
             <div>Confermi di voler scaricare il mio cv?</div>
             <div>
                 <div class="buttons d-flex gap-3 p-3">
-                    <a download href="../../../public/images/files/cv.pdf" type="button" class="btn btn-primary p-1">DOWNLOAD</a>
+                    <a download href="/files/cv.pdf" type="button" class="btn btn-primary p-1">DOWNLOAD</a>
                     <button @click="closeModal" type="button" class="btn btn-secondary p-1">CLOSE</button>
                 </div>
             </div> 
