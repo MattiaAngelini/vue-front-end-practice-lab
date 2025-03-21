@@ -113,32 +113,25 @@ export const useMainStore = defineStore('main', {
       },
     ],
     cardsProjects: [
-      {
-        title: 'Sito Personale',
-        description: "Il mio sito portfolio è un progetto che rappresenta la sintesi delle mie competenze tecniche e creative. Ho utilizzato HTML5, CSS3 e JavaScript per creare una struttura moderna e completamente responsive, affiancati da Vue.js per la gestione dei componenti dinamici. Il progetto include animazioni personalizzate, l'uso di librerie per slide, e la creazione di caroselli sviluppati interamente da me. Grazie all’integrazione di Vite e TypeScript, il codice è ottimizzato e tipizzato, garantendo efficienza e scalabilità. Ogni dettaglio, dalle transizioni fluide al design mobile-first, è stato curato per offrire un'esperienza utente coinvolgente e professionale.",
-        linkRepo: 'https://github.com/MattiaAngelini/vue-front-end-practice-lab',
-        images: ['/projects-img/siteXL.png' ]
-      },
+      
       {
         title: 'React Aliens Game',
         description:"Alien Games è un progetto in fase di sviluppo, nato per esplorare e consolidare le mie competenze in React. Si tratta di un gioco interattivo che combina dinamismo e strategia, ispirato al classico stile di lotta Pokémon. Attualmente, il gioco include due schermate principali: una schermata iniziale per la scelta dei personaggi e una schermata di battaglia, dove i giocatori si sfidano in un sistema a turni. Ho utilizzato React per la gestione dei componenti, useState e useEffect per controllare lo stato del gioco e le dinamiche degli eventi. Alien Games rappresenta una sfida continua, con l'obiettivo di arricchire il gameplay e implementare nuove funzionalità in futuro.",
         linkRepo: 'https://github.com/MattiaAngelini/react-aliens-game',
-        images:['/projects-img/aliengame2.jpg',
-          '/projects-img/aliengame3.jpg','/projects-img/aliengame4.jpg'
+        images:['/projects-img/aliengame3.jpg',
+          '/projects-img/aliengame2.jpg',
         ]
       },
-
       {
-        title: 'To Do List Js Vanilla',
-        description:"La To-Do List è un'applicazione semplice ma efficace per gestire attività quotidiane. Ho utilizzato HTML5, CSS3 (con Bootstrap per lo styling) e JavaScript vanilla per creare un'interfaccia utente intuitiva e reattiva. L'app permette di aggiungere, completare e rimuovere task, con un contatore dinamico che tiene traccia dei task completati. Questo progetto mi ha permesso di approfondire la manipolazione del DOM e la gestione degli eventi in JavaScript, oltre a migliorare la mia capacità di creare interfacce utente funzionali e user-friendly.",  
-        linkRepo: 'https://github.com/MattiaAngelini/to-do-list-js-vanilla',
-        images:['/projects-img/screen-to-do-list.jpg',
-        ]
+        title: 'React My Shop',
+        description:"My Shop è un progetto e-commerce creato per approfondire Redux Toolkit e RTK Query. L'app simula la gestione di un magazzino e di un carrello, permettendo di acquistare e rimuovere prodotti. Include due sezioni principali: una per visualizzare i prodotti disponibili e una per gestire il carrello. RTK Query viene utilizzato per caricare i prodotti da Fake Store API, mentre Redux Toolkit gestisce lo stato globale con slice separati per magazzino e carrello, aggiornando dinamicamente la disponibilità dei prodotti.",
+        linkRepo: 'https://github.com/MattiaAngelini/redux-shopping-cart',
+        images:['/projects-img/myshopscreen.jpg', ]
       },
 
       {
         title: 'App Meteo Js Vanilla',
-        description:"La Weather App è un'applicazione che permette di cercare il meteo di una città utilizzando l'API di WeatherAPI.com. Ho utilizzato HTML5, CSS3 (con Bootstrap per lo styling) e JavaScript vanilla per creare un'interfaccia semplice e reattiva. L'app mostra informazioni dettagliate come la temperatura, le condizioni meteorologiche e un'icona rappresentativa. Ho implementato una funzionalità per salvare le città cercate di recente in una lista e la possibilità di cancellare la cronologia, migliorando l'usabilità. Questo progetto mi ha permesso di approfondire la gestione delle chiamate API, la manipolazione del DOM basata sui dati ricevuti e la gestione degli errori in JavaScript.",
+        description:"La Weather App consente di cercare il meteo di una città tramite l'API di WeatherAPI.com. Sviluppata con HTML5, CSS3 (Bootstrap) e JavaScript vanilla, offre un'interfaccia reattiva che mostra temperatura, condizioni meteo e icone rappresentative. Include una funzione per salvare le città cercate di recente e cancellare la cronologia, migliorando l'usabilità. Il progetto ha approfondito la gestione delle API, la manipolazione del DOM e la gestione degli errori in JavaScript.",
         linkRepo: 'https://github.com/MattiaAngelini/weather-app-js-vanilla',
         images:['/projects-img/weatherApp1.jpg','/projects-img/weatherApp2.jpg' ]
       },
@@ -150,6 +143,20 @@ export const useMainStore = defineStore('main', {
         images:['/projects-img/noteApp1.jpg','/projects-img/noteApp2.jpg',
          
         ]
+      },
+
+      {
+        title: 'To Do List Js Vanilla',
+        description:"La To-Do List è un'applicazione semplice ma efficace per gestire attività quotidiane. Ho utilizzato HTML5, CSS3 (con Bootstrap per lo styling) e JavaScript vanilla per creare un'interfaccia utente intuitiva e reattiva. L'app permette di aggiungere, completare e rimuovere task, con un contatore dinamico che tiene traccia dei task completati. Questo progetto mi ha permesso di approfondire la manipolazione del DOM e la gestione degli eventi in JavaScript, oltre a migliorare la mia capacità di creare interfacce utente funzionali e user-friendly.",  
+        linkRepo: 'https://github.com/MattiaAngelini/to-do-list-js-vanilla',
+        images:['/projects-img/screen-to-do-list.jpg',
+        ]
+      },
+      {
+        title: 'Sito Personale',
+        description: "Il mio sito portfolio è un progetto che rappresenta la sintesi delle mie competenze tecniche e creative. Ho utilizzato HTML5, CSS3 e JavaScript per creare una struttura moderna e completamente responsive, affiancati da Vue.js per la gestione dei componenti dinamici. Il progetto include animazioni personalizzate, l'uso di librerie per slide, e la creazione di caroselli sviluppati interamente da me. Grazie all’integrazione di Vite e TypeScript, il codice è ottimizzato e tipizzato, garantendo efficienza e scalabilità. Ogni dettaglio, dalle transizioni fluide al design mobile-first, è stato curato per offrire un'esperienza utente coinvolgente e professionale.",
+        linkRepo: 'https://github.com/MattiaAngelini/vue-front-end-practice-lab',
+        images: [ '/projects-img/sitopersonale.jpg',]
       },
     ],
 
