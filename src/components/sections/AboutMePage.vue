@@ -52,7 +52,7 @@ export default{
 <template>
     <section>
         <AnimatedSection>
-            <div class="ms-container d-xl-flex flex-lg-row flex-column justify-content-evenly align-items-center">
+            <div class="ms-container d-lg-flex flex-lg-row flex-column justify-content-evenly align-items-center">
                 <div :style="infoResponsive" class="info order-2 order-lg-1">
                     <h2>Ciao, sono <span>Mattia Angelini</span></h2>
                     <h5 class="mt-2">Jr Full Stack Web-Developer</h5>

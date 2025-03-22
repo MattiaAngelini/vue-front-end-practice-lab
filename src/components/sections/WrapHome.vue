@@ -49,7 +49,7 @@ export default{
 
 <section>
     <AnimatedSection>
-                <h1 class="text-center p-5">Progetti</h1>
+                <h1 class="text-center p-5">Progetti <i class="fa-brands fa-github"></i></h1>
                 <div class="projects mb-5">
      
                 <Splide :options="{ rewind: true, height: 'auto', pagination:true, }" aria-label="bjj-competitions-pics">
@@ -82,9 +82,7 @@ export default{
 </section>
 
 </template>
-
 <style scoped lang="scss">
-@use '../../assets/styles/generic.scss' as *;
 
 section{
     min-height: 100vh;

@@ -109,47 +109,6 @@ export default {
                 </Splide>
             </AnimatedSection>          
         </div>
-
-        <!-- WRAP -->
-         
-        <div class="text-center wrap">
-            <AnimatedSection>
-                <h1>PROGETTI PERSONALI</h1>
-            </AnimatedSection>  
-        </div>
-        <div class="projects">
-            <AnimatedSection>
-                <Splide :options="{ rewind: true, height: 'auto', pagination:true, }" aria-label="bjj-competitions-pics">
-
-                    <!-- SLIDES PROGETTI -->
-                <SplideSlide class="d-flex align-items-center" v-for="(slide,index) in store.cardsProjects">
-                    <div >
-
-                        <div class="slide ">
-                        <div class="d-md-flex">
-                            <div :style="widthResponsive" class="description text-center">
-                                <h3 class="p-2">{{store.cardsProjects[index].title}}</h3>
-                                <p class="p-lg-5 mb-1">
-                                    {{store.cardsProjects[index].description}}
-                                    
-                                </p>
-                                <a style="font-size: 16px;" :href="store.cardsProjects[index].linkRepo">LINK ALLA REPO</a>
-                            </div>
-                            <div :style="widthResponsive" class="justify-content-center p-5">    
-                                <div v-for="myimage in slide.images">
-                                    <img class="p-1" :src="`${myimage}`" alt="projects-screenshot">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    </div>
-                  
-                </SplideSlide>
-              </Splide>
-            </AnimatedSection>
-           
-        </div>
     </section>
 </template>
 

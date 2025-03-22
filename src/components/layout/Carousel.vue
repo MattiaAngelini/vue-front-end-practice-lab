@@ -56,7 +56,7 @@ export default {
 <template>
     <section :style="{ backgroundColor: bgColor }"> 
       
-        <div :style="columns" class="carousel gap-4">
+        <div :style="columns" class="carousel gap-4 m-md-5">
 
             <!--CARDS HREF-->
             <div class="ms-card" v-for="(card, index) in cardsHref" :key="index">
@@ -84,11 +84,9 @@ section {
     display: grid;
     .carousel {
         display: grid;
-   
-      
+       
         .ms-card:hover {
-            transform:scale(1.1);        
-            border-radius: 6px;
+            transform:scale(1.05);        
             transition-duration: 0.6s;       
        }
     }

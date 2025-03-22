@@ -47,12 +47,7 @@ export const useMainStore = defineStore('main', {
 
     //************CAROUSEL HOMEPAGE***********//
     cardsCarouselHref: [
-      {
-        title: 'Linkedin',
-        description: 'Il mio profilo Linkedin',
-        image: '/images/linkedin.png', 
-        url: 'https://www.linkedin.com/in/mattia-angelini-b00427311/',
-      },
+
       {
         title: 'Github',
         description: 'Il mio profilo Github',
@@ -61,6 +56,13 @@ export const useMainStore = defineStore('main', {
       },
     ],
     cardsRouterHref: [
+     
+      {
+        title: 'Boolean Academy',
+        description: 'Il mio percorso di studi',
+        image: '/images/boolean.png', 
+        url: 'ProjectsPage',
+      },
       {
         title: 'Il Brazilian Jiu-Jitsu',
         description: 'My first passion',
