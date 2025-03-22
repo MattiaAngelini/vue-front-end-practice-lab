@@ -57,9 +57,12 @@ export default{
                     <h2>Ciao, sono <span>Mattia Angelini</span></h2>
                     <h5 class="mt-2">Jr Full Stack Web-Developer</h5>
                     <p class="mt-2">
-                    Benvenuto nel mio portfolio! Qui condivido il mio percorso di crescita, 
-                    unendo passione per il coding, lavoro e la mia crescita. 
-                    Questo sito, sviluppato con Vue, è uno dei miei laboratori per sperimentare e migliorare le mie competenze nella programmazione.
+                        Benvenuto nel mio portfolio! Qui condivido il mio percorso di crescita,
+                        unendo la passione per il coding, il lavoro e il continuo miglioramento personale.
+                        Questo sito, sviluppato con Vue, rappresenta un laboratorio dinamico dove sperimento nuove tecnologie e 
+                        affino le mie competenze nella programmazione.
+                        All'interno troverai una selezione dei miei progetti, 
+                        che illustrano il mio percorso nel mondo dello sviluppo web e le mie passioni. 
                     </p>
                 </div>
 
