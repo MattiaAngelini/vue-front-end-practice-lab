@@ -133,7 +133,7 @@ export const useMainStore = defineStore('main', {
 
       {
         title: 'App Meteo Js Vanilla',
-        description:"La Weather App consente di cercare il meteo di una città tramite l'API di WeatherAPI.com. Sviluppata con HTML5, CSS3 (Bootstrap) e JavaScript vanilla, offre un'interfaccia reattiva che mostra temperatura, condizioni meteo e icone rappresentative. Include una funzione per salvare le città cercate di recente e cancellare la cronologia, migliorando l'usabilità. Il progetto ha approfondito la gestione delle API, la manipolazione del DOM e la gestione degli errori in JavaScript.",
+        description:"La Weather App consente di cercare il meteo di una città tramite l'API di WeatherAPI.com. Sviluppata con HTML5, CSS3 (Bootstrap) e JavaScript vanilla, offre un'interfaccia reattiva che mostra temperatura, condizioni meteo e icone rappresentative. Include una funzione per salvare le città cercate di recente , la possibilità di cancellare la cronologia e una dark/light mode migliorando l'usabilità. Il progetto ha approfondito la gestione delle API, la manipolazione del DOM e la gestione degli errori in JavaScript.",
         linkRepo: 'https://github.com/MattiaAngelini/weather-app-js-vanilla',
         images:['/projects-img/weatherApp1.jpg','/projects-img/weatherApp2.jpg' ]
       },
