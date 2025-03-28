@@ -16,9 +16,11 @@ export default {
         };
     },
     methods: {
+
         toggle() {
              this.isVisible = !this.isVisible;
         },
+
         modal(label:string){
             console.log(label)
             if(label === 'DOWNLOAD CV'){
@@ -49,20 +51,22 @@ export default {
 
 <template>
     <div class="ms-hamburger d-block d-lg-none" type="button" @click="toggle()">
+        <!--Hamburger creato con triplo div per problema icon-->
         <div></div>
         <div></div>
         <div></div>
     </div>
     <div :class="change" class="hamburger-body">
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between align-items-center">
             <h1>{{ offcanvas.title }}</h1>       
-            <button class="btn btn-danger" @click="toggle">
-                <i>X</i>
+            <button class="btn ms-btn-close" @click="toggle">
+                <i class="fa-solid fa-xmark"></i>
             </button>
         </div>
+        
         <div>
             <div class="rule"></div>
-            <ul>
+            <div>
                 <li 
                     class="list-unstyled" 
                     v-for="(link, index) in offcanvas.links" 
@@ -74,7 +78,7 @@ export default {
                 </li>
                 <li class="list-unstyled" ><a href="https://www.linkedin.com/in/mattia-angelini-b00427311/">LINKEDIN</a></li>
                 <li class="list-unstyled" ><a href="https://github.com/MattiaAngelini">GIT-HUB</a></li>             
-            </ul>
+            </div>
         </div>
     </div> 
 
@@ -96,22 +100,23 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@use '../../assets/styles/generic.scss' as *;
+
 
 .hamburger-body {
-    color: black;
+    font-family: "Kanit", serif;
+    color: white;
     padding: 20px;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 999;
-    background-color: white;
-    min-width: 100%;
+    background-color:#2d2d2d;
+    min-width:100%;
     min-height: 100vh;
     height: 100%;
     animation-duration: 0.3s;
     animation-name: slide-in;
-    overflow-y: scroll;
+    overflow-y: hidden;
    
         button {
         display: flex;
@@ -119,19 +124,31 @@ export default {
         align-items: center;
         width: 30px;
         height: 30px;
+        
         }
         .rule{
             min-height: 2px;
             margin: 10px 0 10px 0;
             background-color: black;
+            box-shadow: 0px 0px 5px 0.3px rgb(140, 9, 211);;
         }
         a{
+
             font-size: 20px;
             font-weight: 800;
-            line-height: 80px;
+            line-height: 60px;
             text-decoration: none;
             font-weight: 600;
-            color: black;
+            color: white;
+        }
+      
+        i{
+            font-size: 24px;
+        }
+        .ms-btn-close{
+            font-size: 20px;
+            font-weight: 900;
+            color: white;
         }
 
     @keyframes slide-in {
@@ -155,7 +172,7 @@ export default {
         div{
             width: 100%;
             height: 3px;
-            background-color: $baffo;
+            background-color:rgb(140, 9, 211);
             margin: 6px;
             border-radius: 4px;
         }
