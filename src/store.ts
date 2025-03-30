@@ -125,8 +125,8 @@ export const useMainStore = defineStore('main', {
         ]
       },
       {
-        title: 'React My Shop',
-        description:"My Shop è un progetto e-commerce creato per approfondire Redux Toolkit e RTK Query. L'app simula la gestione di un magazzino e di un carrello, permettendo di acquistare e rimuovere prodotti. Include due sezioni principali: una per visualizzare i prodotti disponibili e una per gestire il carrello. RTK Query viene utilizzato per caricare i prodotti da Fake Store API, mentre Redux Toolkit gestisce lo stato globale con slice separati per magazzino e carrello, aggiornando dinamicamente la disponibilità dei prodotti.",
+        title: 'React My Shop - (Redux)',
+        description:"My Shop è un progetto e-commerce creato per approfondire Redux Toolkit, RTK Query e logiche di filtraggio con js. L'app simula la gestione di un magazzino e di un carrello, permettendo di acquistare e rimuovere prodotti. Include due sezioni principali: una per visualizzare i prodotti disponibili e una per gestire il carrello. RTK Query viene utilizzato per caricare i prodotti da Fake Store API, mentre Redux Toolkit gestisce lo stato globale con slice separati per magazzino e carrello, aggiornando dinamicamente la disponibilità dei prodotti.",
         linkRepo: 'https://github.com/MattiaAngelini/redux-shopping-cart',
         images:['/projects-img/myshopscreen.jpg', ]
       },
@@ -185,19 +185,19 @@ export const useMainStore = defineStore('main', {
 
     //************FOOTER************//
     logoFooter: [
-      { image: '/images/logos/bootstrap.png', altText: 'bootstrap' },
-      { image: '/images/logos/css.png', altText: 'css' },
       { image: '/images/logos/html.png', altText: 'html' },
-      { image: '/images/logos/js.png', altText: 'js' },
-      { image: '/images/logos/laravel.png', altText: 'laravel' },
+      { image: '/images/logos/css.png', altText: 'css' },
+      { image: '/images/logos/bootstrap.png', altText: 'bootstrap' },
+      { image: '/images/logos/js.png', altText: 'js' }, 
+      { image: '/images/logos/logo-react.svg', altText: 'react' },
+      { image: '/images/logos/vue.png', altText: 'vue' },
+      { image: '/images/logos/ts.png', altText: 'ts' },
+      { image: '/images/logos/sass.png', altText: 'sass' },
       { image: '/images/logos/mysql.png', altText: 'mysql' },
       { image: '/images/logos/php.png', altText: 'php' },
-      { image: '/images/logos/sass.png', altText: 'sass' },
-      { image: '/images/logos/ts.png', altText: 'ts' },
-      { image: '/images/logos/vue.png', altText: 'vue' },
+      { image: '/images/logos/laravel.png', altText: 'laravel' },
       { image: '/images/logos/node.png', altText: 'node' },
       { image: '/images/logos/github.png', altText: 'github' },
-      { image: '', altText: '' },
       { image: '', altText: '' },
       { image: '', altText: '' },
     ],
