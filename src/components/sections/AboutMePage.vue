@@ -89,41 +89,39 @@ section{
         position: relative;
 
         .picProfile {
-    position: relative;
+          position: relative;
 
-    .borderAnimation {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(0deg); // Inizia senza rotazione
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        border-top: 0.2rem solid transparent;
-        border-bottom: 0.2rem solid transparent;
-        border-left: 0.2rem solid $baffo;
-        border-right: 0.2rem solid $baffo;
-        animation: spin 5s linear infinite; // Associa l'animazione
-    }
+            .borderAnimation {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(0deg); // Inizia senza rotazione
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                border-top: 0.2rem solid transparent;
+                border-bottom: 0.2rem solid transparent;
+                border-left: 0.2rem solid $baffo;
+                border-right: 0.2rem solid $baffo;
+                animation: spin 5s linear infinite; // Associa l'animazione
+            }
 
-    @keyframes spin {
-        0% {
-            transform: translate(-50%, -50%) rotate(0deg); // Partenza senza rotazione
+            @keyframes spin {
+                0% {
+                    transform: translate(-50%, -50%) rotate(0deg); // Partenza senza rotazione
+                }
+                100% {
+                    transform: translate(-50%, -50%) rotate(360deg); // Rotazione completa
+                }
+            }
+
+            img {
+                border-radius: 50%;
+                position: relative;
+                z-index: 1; // L'immagine rimane sopra il bordo animato
+                object-fit: cover;
+            }
         }
-        100% {
-            transform: translate(-50%, -50%) rotate(360deg); // Rotazione completa
-        }
-    }
-
-    img {
-        border-radius: 50%;
-        position: relative;
-        z-index: 1; // L'immagine rimane sopra il bordo animato
-    }
-}
-
-        
-          
     }
 }
 </style>
